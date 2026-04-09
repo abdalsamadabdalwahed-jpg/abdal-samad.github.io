@@ -22,32 +22,32 @@
         
         body { 
             font-family: 'Amiri', serif; 
-            background-color: #010a01; 
+            background-color: #4b0082; /* تغيير الخلفية إلى اللون البنفسجي الغامق (Indigo) */
             color: #fff; 
             margin: 0; 
             overflow-x: hidden; 
             font-size: 1.15rem;
         }
         
-        .glass-card { background: rgba(5, 30, 5, 0.95); border: 1px solid #145a32; border-radius: 20px; transition: 0.3s; }
+        .glass-card { background: rgba(75, 0, 130, 0.8); border: 1px solid #9370db; border-radius: 20px; transition: 0.3s; }
         .btn-green { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; }
         .btn-green:hover { transform: scale(1.02); filter: brightness(1.1); }
         
-        .marquee-footer { position: fixed; bottom: 0; width: 100%; background: #000; border-top: 2px solid #2ecc71; overflow: hidden; padding: 12px 0; z-index: 9999; }
+        .marquee-footer { position: fixed; bottom: 0; width: 100%; background: #2d004d; border-top: 2px solid #2ecc71; overflow: hidden; padding: 12px 0; z-index: 9999; }
         .marquee-content { display: inline-block; white-space: nowrap; animation: scroll-ltr 60s linear infinite; color: #f1c40f; font-weight: bold; font-size: 1.1rem; }
         @keyframes scroll-ltr { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
 
         .hidden-section { display: none !important; }
-        input, select, textarea { background: #000 !important; border: 1px solid #145a32 !important; color: white !important; outline: none; }
-        .badge-price { background: #145a32; color: #2ecc71; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
+        input, select, textarea { background: #310054 !important; border: 1px solid #9370db !important; color: white !important; outline: none; }
+        .badge-price { background: #6a0dad; color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
         .social-link { transition: 0.3s; }
         .social-link:hover { opacity: 0.8; transform: translateY(-2px); }
         
-        .blog-card { border-right: 4px solid #2ecc71; padding: 15px; background: #051e05; border-radius: 10px; margin-bottom: 15px; cursor: pointer; transition: 0.3s; }
-        .blog-card:hover { background: #0a2e0a; transform: scale(1.02); }
+        .blog-card { border-right: 4px solid #2ecc71; padding: 15px; background: rgba(75, 0, 130, 0.9); border-radius: 10px; margin-bottom: 15px; cursor: pointer; transition: 0.3s; }
+        .blog-card:hover { background: #5a009d; transform: scale(1.02); }
 
         /* نافذة المقالات */
-        #contentModal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 30000; overflow-y: auto; display: none; padding: 20px; }
+        #contentModal { position: fixed; inset: 0; background: rgba(45, 0, 77, 0.95); z-index: 30000; overflow-y: auto; display: none; padding: 20px; }
         .content-body { line-height: 2; text-align: justify; }
 
         /* --- تنسيق الشعار الصوري الجديد والمتحرك المطور لإخفاء الخلفية الشفافة --- */
@@ -56,9 +56,8 @@
             height: auto;
             object-fit: contain;
             border-radius: 50%; 
-            /* التعديل الجوهري: إضافة ظل داخلي وخارجي داكن لدمج الشفافية مع الموقع */
             background-color: transparent;
-            box-shadow: 0 0 30px #010a01, 0 0 20px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 0 30px #4b0082, 0 0 20px rgba(147, 112, 219, 0.4);
             animation: logoPulseLux 4s infinite alternate ease-in-out;
             border: 2px solid #d4af37; /* إطار ذهبي فخم */
         }
@@ -67,15 +66,14 @@
             50% { transform: scale(1.05); filter: drop-shadow(0 0 25px #2ecc71); }
             100% { transform: scale(1); filter: drop-shadow(0 0 10px #d4af37); }
         }
-        /* ---------------------------------- */
     </style>
 </head>
 <body class="pb-24">
 
     <div id="contentModal">
-        <div class="max-w-3xl mx-auto bg-zinc-900 border border-green-600 rounded-3xl p-8 mt-10 relative shadow-2xl">
+        <div class="max-w-3xl mx-auto bg-indigo-950 border border-green-600 rounded-3xl p-8 mt-10 relative shadow-2xl">
             <button onclick="closeContent()" class="absolute top-4 left-4 text-red-500 text-3xl">&times;</button>
-            <div id="modalTitle" class="text-3xl font-bold text-green-500 mb-6 border-b border-green-900 pb-4"></div>
+            <div id="modalTitle" class="text-3xl font-bold text-green-500 mb-6 border-b border-indigo-900 pb-4"></div>
             <div id="modalBody" class="content-body text-zinc-100"></div>
             <button onclick="closeContent()" class="btn-green w-full py-3 mt-8">إِغْلَاقُ النَّافِذَةِ</button>
         </div>
@@ -93,36 +91,36 @@
             <button onclick="enterSite()" class="btn-green w-full py-4 text-xl mb-4">دُخُولُ الْمَنْظُومَةِ</button>
             
             <div class="flex justify-center gap-4 mt-2">
-                <button onclick="openWhatsAppDirect('مرحبا، أود الاستفسار عن خدماتكم')" class="social-link text-green-500 flex items-center gap-2 text-sm">
+                <button onclick="openWhatsAppDirect('مرحبا، أود الاستفسار عن خدماتكم')" class="social-link text-green-400 flex items-center gap-2 text-sm">
                     <i class="fab fa-whatsapp text-xl"></i> واتساب
                 </button>
-                <a href="https://www.facebook.com/share/1XzN3tmCTj/" target="_blank" class="social-link text-blue-500 flex items-center gap-2 text-sm">
+                <a href="https://www.facebook.com/share/1XzN3tmCTj/" target="_blank" class="social-link text-blue-400 flex items-center gap-2 text-sm">
                     <i class="fab fa-facebook text-xl"></i> فيسبوك
                 </a>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-green-900/50">
-                <button onclick="adminAccess()" class="text-green-500 text-sm font-bold">🔐 بَوَّابَةُ الْإِدَارَةِ (الْمُدِيرِ وَالنَّائِبِ)</button>
+            <div class="mt-6 pt-4 border-t border-indigo-900/50">
+                <button onclick="adminAccess()" class="text-green-400 text-sm font-bold">🔐 بَوَّابَةُ الْإِدَارَةِ (الْمُدِيرِ وَالنَّائِبِ)</button>
             </div>
         </div>
     </div>
 
     <div id="mainDashboard" class="hidden-section min-h-screen">
-        <nav class="p-4 border-b border-green-900 flex justify-between items-center bg-black/80 sticky top-0 z-50">
+        <nav class="p-4 border-b border-indigo-900 flex justify-between items-center bg-indigo-950/80 sticky top-0 z-50">
             <div class="flex items-center gap-2">
                 <img src="logo.png" alt="شعار صغير" class="w-10 h-10 rounded-full border border-green-500">
                 <span class="font-bold text-xl">الشيخ عبدالصمد</span>
             </div>
             <div class="flex gap-4">
-                <button onclick="openMessengerDirect('استفسار من الصفحة الرئيسية')" class="text-blue-500 text-xl"><i class="fab fa-facebook-messenger"></i></button>
-                <button onclick="openWhatsAppDirect('مرحبا، أحتاج مساعدة في الموقع')" class="text-green-500 text-xl"><i class="fab fa-whatsapp"></i></button>
+                <button onclick="openMessengerDirect('استفسار من الصفحة الرئيسية')" class="text-blue-400 text-xl"><i class="fab fa-facebook-messenger"></i></button>
+                <button onclick="openWhatsAppDirect('مرحبا، أحتاج مساعدة في الموقع')" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></button>
                 <button onclick="location.reload()" class="bg-red-900/20 text-red-500 px-4 py-1 rounded-lg border border-red-800 text-xs">خُرُوج</button>
             </div>
         </nav>
 
         <main class="max-w-5xl mx-auto p-4">
             
-            <div class="glass-card p-6 mb-8 border-green-500 bg-green-950/20 shadow-lg">
+            <div class="glass-card p-6 mb-8 border-green-500 bg-indigo-900/20 shadow-lg">
                 <h3 class="text-lg mb-3 font-bold text-green-400"><i class="fas fa-file-medical"></i> نَمُوذَجُ تَشْخِيصِ الْحَالَةِ (سِرِّيٌّ لِلدُّكْتُورِ):</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                     <input type="number" id="userAge" placeholder="الْعُمْرُ.." class="p-3 rounded-xl">
@@ -140,23 +138,23 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10 text-center">
-                <button onclick="renderCategory('رقية')" class="glass-card p-6 hover:bg-green-900/30">
+                <button onclick="renderCategory('رقية')" class="glass-card p-6 hover:bg-indigo-900/30">
                     <i class="fas fa-book-open text-3xl text-green-500 mb-2"></i>
                     <p class="text-xs font-bold">الرُّقْيَةُ الشَّرْعِيَّةُ</p>
                 </button>
-                <button onclick="renderCategory('اعشاب')" class="glass-card p-6 hover:bg-green-900/30">
+                <button onclick="renderCategory('اعشاب')" class="glass-card p-6 hover:bg-indigo-900/30">
                     <i class="fas fa-leaf text-3xl text-green-500 mb-2"></i>
                     <p class="text-xs font-bold">الْأَعْشَابُ الطَّبِيعِيَّةُ</p>
                 </button>
-                <button onclick="renderCategory('زيوت')" class="glass-card p-6 hover:bg-green-900/30">
+                <button onclick="renderCategory('زيوت')" class="glass-card p-6 hover:bg-indigo-900/30">
                     <i class="fas fa-flask text-3xl text-green-500 mb-2"></i>
                     <p class="text-xs font-bold">الزُّيُوتُ الْمَرْقِيَّةُ</p>
                 </button>
-                <button onclick="renderCategory('عسل')" class="glass-card p-6 hover:bg-green-900/30">
+                <button onclick="renderCategory('عسل')" class="glass-card p-6 hover:bg-indigo-900/30">
                     <i class="fas fa-honey-pot text-3xl text-green-500 mb-2"></i>
                     <p class="text-xs font-bold">عَسَلُ النَّحْلِ</p>
                 </button>
-                <button onclick="renderCategory('بخور')" class="glass-card p-6 hover:bg-green-900/30">
+                <button onclick="renderCategory('بخور')" class="glass-card p-6 hover:bg-indigo-900/30">
                     <i class="fas fa-wind text-3xl text-green-500 mb-2"></i>
                     <p class="text-xs font-bold">بُخُورُ الْغُبُشِ</p>
                 </button>
@@ -169,11 +167,11 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                 <section>
-                    <h3 class="text-xl font-bold text-green-500 mb-4 border-b border-green-900 pb-2"><i class="fas fa-feather-alt"></i> مَقَالَاتٌ عِلْمِيَّةٌ وَتَفْصِيلِيَّةٌ:</h3>
+                    <h3 class="text-xl font-bold text-green-500 mb-4 border-b border-indigo-900 pb-2"><i class="fas fa-feather-alt"></i> مَقَالَاتٌ عِلْمِيَّةٌ وَتَفْصِيلِيَّةٌ:</h3>
                     <div class="blog-card" onclick="openArticle('bakhour')">
                         <p class="font-bold text-sm text-green-400">بُخُورُ الْغُبُشِ: عِلْمُ التَّطْهِيرِ وَفِيزْيَاءُ الدُّخَانِ</p>
                         <p class="text-[11px] text-zinc-300">كَيْفَ يَعْمَلُ الْبُخُورُ عَلَى مَسْتَوَى الطَّاقَةِ وَالتَّطْهِيرِ الرُّوحِيِّ وَالْمَادِّيِّ..</p>
-                        <p class="text-[10px] text-zinc-500 mt-1">بِقَلَمِ: د. عَبْدَالصَّمَد</p>
+                        <p class="text-[10px] text-zinc-400 mt-1">بِقَلَمِ: د. عَبْدَالصَّمَد</p>
                     </div>
                     <div class="blog-card" onclick="openArticle('sections')">
                         <p class="font-bold text-sm text-green-400">الْفَوَائِدُ الْعِلْمِيَّةُ وَالطِّبِّيَّةُ لِمُنْتَجَاتِنَا</p>
@@ -181,12 +179,12 @@
                     </div>
                 </section>
                 <section>
-                    <h3 class="text-xl font-bold text-green-500 mb-4 border-b border-green-900 pb-2"><i class="fas fa-heart"></i> أَدْعِيَةٌ وَأَذْكارٌ تُلَامِسُ الرُّوحَ:</h3>
+                    <h3 class="text-xl font-bold text-green-500 mb-4 border-b border-indigo-900 pb-2"><i class="fas fa-heart"></i> أَدْعِيَةٌ وَأَذْكارٌ تُلَامِسُ الرُّوحَ:</h3>
                     <div class="blog-card" onclick="openArticle('prayers')">
                         <p class="font-bold text-sm text-yellow-500 italic">مُنَاجَاةُ الرُّوحِ لِطَلَبِ الشِّفَاءِ وَالْفَرَجِ</p>
                         <p class="text-[11px] text-zinc-300">أَدْعِيَةٌ جَامِعَةٌ مَأْثُورَةٌ لِرَاحَةِ الْقَلْبِ وَدَفْعِ عَيْنِ الْحُسَّادِ..</p>
                     </div>
-                    <div class="italic text-sm bg-zinc-900 p-4 rounded-xl border-r-4 border-yellow-600">
+                    <div class="italic text-sm bg-indigo-950 p-4 rounded-xl border-r-4 border-yellow-600">
                         "اللَّهُمَّ اجْعَلْ هَذَا الْمَوْقِعَ سَبَباً فِي شِفَاءِ كُلِّ مَرِيضٍ وَرَاحَةِ كُلِّ مَهْمُومٍ."
                         <p class="text-left font-bold text-green-500 mt-2">آمِينَ</p>
                     </div>
@@ -196,8 +194,8 @@
         </main>
     </div>
 
-    <div id="chatModal" class="fixed inset-0 bg-black z-[10000] hidden-section flex flex-col">
-        <div class="p-4 bg-green-900 flex justify-between items-center shadow-xl">
+    <div id="chatModal" class="fixed inset-0 bg-indigo-950 z-[10000] hidden-section flex flex-col">
+        <div class="p-4 bg-indigo-900 flex justify-between items-center shadow-xl">
             <div class="flex items-center gap-3">
                 <button onclick="closeChat()" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></button>
                 <div>
@@ -211,8 +209,8 @@
             </div>
         </div>
         
-        <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-zinc-950">
-            <div class="bg-zinc-900 p-6 rounded-2xl border border-yellow-600 shadow-2xl">
+        <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-indigo-950">
+            <div class="bg-indigo-900 p-6 rounded-2xl border border-yellow-600 shadow-2xl">
                 <p class="text-yellow-500 font-bold mb-4 underline">بَيَانَاتُ التَّحْوِيلِ لِتَأْكِيدِ الطَّلَبِ:</p>
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between items-center bg-black p-3 rounded-lg border border-zinc-800">
@@ -228,7 +226,7 @@
             </div>
         </div>
 
-        <div class="p-4 bg-zinc-900 flex flex-col gap-3 border-t border-zinc-800">
+        <div class="p-4 bg-indigo-900 flex flex-col gap-3 border-t border-indigo-800">
             <div class="flex items-center gap-3">
                 <input type="text" id="chatMsg" placeholder="أُكْتُبْ رِسَالَتَكَ..." class="flex-1 p-4 rounded-full text-sm">
                 <button onclick="finalWhatsApp()" class="bg-green-600 w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
@@ -308,7 +306,7 @@
                         <p class="text-xl text-yellow-500 font-bold">"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ."</p>
                         <p class="text-xl">"اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَماً."</p>
                         <p class="text-xl text-green-400">"بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ."</p>
-                        <hr class="border-green-900">
+                        <hr class="border-indigo-900">
                         <p class="text-lg">"يَا حَيُّ يَا قَيُّومُ، بِرَحْمَتِكَ نَسْتَغِيثُ، طَهِّرْ أَبْدَانَنَا مِنَ الْأَسْقَامِ، وَقُلُوبَنَا مِنَ الْأَوْهَامِ، وَاحْمِنَا مِنْ شَرِّ مَنْ حَسَدَ وَمَنْ سَحَرَ."</p>
                         <p class="mt-6 font-bold text-yellow-500">ملاحظة: كرر هذه الأدعية بيقين تام، فَالشِّفَاءُ مِنَ اللَّهِ وَالْمَوْقِعُ سَبَبٌ.</p>
                     </div>
