@@ -6,75 +6,55 @@
     
     <title>موقع الشيخ عبدالصمد عبدالواحد | الرقية الشرعية والعلاج بالأعشاب والزيوت الطبيعية وعسل النحل والطب البديل</title>
     <meta name="description" content="الموقع الرسمي للشيخ عبدالصمد عبدالواحد. متخصص في الرقية الشرعية، علاج العين والحسد، والسحر والمس الشيطاني، وجميع الأمراض النفسية والعضوية والجلدية، البخور المجهز، والأعشاب الطبية.">
-    <meta name="keywords" content="الشيخ عبدالصمد عبدالواحد، رقية شرعية السودان، علاج السحر، البخور المجهز، الدكتور عبدالصمد عبدالواحد، طب بديل سوداني، علاج الحسد">
+    <meta name="keywords" content="الشيخ عبدالصمد عبدالواحد، رقية شرعية السودان، علاج السحر، البخور المجهز، الدكتور عبدالصمد عبدالواحد، طب بديل سوداني، علاج الحسد، زيت المعجزة، عسل النحل السوداني">
     <meta name="author" content="د. عبدالصمد عبدالواحد">
-    
-    <meta property="og:title" content="موقع الشيخ عبدالصمد عبدالواحد للرقية والطب البديل">
-    <meta property="og:description" content="تواصل مباشر مع الشيخ عبدالصمد للعلاج الروحاني.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
         body { 
             font-family: 'Amiri', serif; 
-            background-color: #4b0082; 
+            background-color: #0a001a; 
             color: #fff; 
             margin: 0; 
             overflow-x: hidden; 
             font-size: 1.15rem;
         }
+
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
         
-        .glass-card { background: rgba(75, 0, 130, 0.8); border: 1px solid #9370db; border-radius: 20px; transition: 0.3s; }
+        .glass-card { background: rgba(75, 0, 130, 0.4); border: 1px solid #9370db; border-radius: 20px; backdrop-filter: blur(10px); }
         .btn-green { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; }
-        .btn-green:hover { transform: scale(1.02); filter: brightness(1.1); }
         
-        .marquee-footer { position: fixed; bottom: 0; width: 100%; background: #2d004d; border-top: 2px solid #2ecc71; overflow: hidden; padding: 12px 0; z-index: 9999; }
-        .marquee-content { display: inline-block; white-space: nowrap; animation: scroll-ltr 60s linear infinite; color: #f1c40f; font-weight: bold; font-size: 1.1rem; }
+        .marquee-footer { position: fixed; bottom: 0; width: 100%; background: #2d004d; border-top: 2px solid #2ecc71; padding: 12px 0; z-index: 9999; }
+        .marquee-content { display: inline-block; white-space: nowrap; animation: scroll-ltr 40s linear infinite; color: #f1c40f; font-weight: bold; }
         @keyframes scroll-ltr { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
 
         .hidden-section { display: none !important; }
-        input, select, textarea { background: #310054 !important; border: 1px solid #9370db !important; color: white !important; outline: none; }
         .badge-price { background: #6a0dad; color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
-        .social-link { transition: 0.3s; }
-        .social-link:hover { opacity: 0.8; transform: translateY(-2px); }
-        
-        .blog-card { border-right: 4px solid #2ecc71; padding: 15px; background: rgba(75, 0, 130, 0.9); border-radius: 10px; margin-bottom: 15px; cursor: pointer; transition: 0.3s; }
-        .blog-card:hover { background: #5a009d; transform: scale(1.02); }
-
-        #contentModal { position: fixed; inset: 0; background: rgba(45, 0, 77, 0.95); z-index: 30000; overflow-y: auto; display: none; padding: 20px; }
-        .content-body { line-height: 2; text-align: justify; }
 
         .main-logo-img {
-            width: 220px;
-            height: auto;
-            object-fit: contain;
-            border-radius: 50%; 
-            background-color: transparent;
-            box-shadow: 0 0 30px #4b0082, 0 0 20px rgba(147, 112, 219, 0.4);
-            animation: logoPulseLux 4s infinite alternate ease-in-out;
-            border: 2px solid #d4af37; 
+            width: 200px; height: auto; border-radius: 50%; border: 2px solid #d4af37;
+            box-shadow: 0 0 30px #4b0082; animation: logoPulse 4s infinite alternate;
         }
-        @keyframes logoPulseLux {
-            0% { transform: scale(1); filter: drop-shadow(0 0 10px #d4af37); }
-            50% { transform: scale(1.05); filter: drop-shadow(0 0 25px #2ecc71); }
-            100% { transform: scale(1); filter: drop-shadow(0 0 10px #d4af37); }
+        @keyframes logoPulse { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+
+        .astro-widget {
+            background: rgba(0,0,0,0.6); border: 1px solid #f1c40f; color: #f1c40f;
+            padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 8px;
         }
+
+        .hope-card { border-right: 4px solid #f1c40f; background: rgba(255, 255, 255, 0.05); }
     </style>
 </head>
 <body class="pb-24">
 
-    <div id="contentModal">
-        <div class="max-w-3xl mx-auto bg-indigo-950 border border-green-600 rounded-3xl p-8 mt-10 relative shadow-2xl">
-            <button onclick="closeContent()" class="absolute top-4 left-4 text-red-500 text-3xl">&times;</button>
-            <div id="modalTitle" class="text-3xl font-bold text-green-500 mb-6 border-b border-indigo-900 pb-4"></div>
-            <div id="modalBody" class="content-body text-zinc-100"></div>
-            <button onclick="closeContent()" class="btn-green w-full py-3 mt-8">إِغْلَاقُ النَّافِذَةِ</button>
-        </div>
-    </div>
+    <div id="particles-js"></div>
 
     <div id="loginPage" class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
         <header class="mb-8">
@@ -82,274 +62,81 @@
             <h1 class="text-4xl font-bold text-green-500">الشيخ عبدالصمد عبدالواحد</h1>
             <p class="text-green-400 mt-2 font-bold italic">بِإِشْرَافِ الشَّيْخِ عَبْدَالصَّمَدِ</p>
         </header>
-        <div class="glass-card p-10 w-full max-w-md shadow-2xl border-green-600">
-            <h2 class="text-2xl mb-6 font-bold underline decoration-green-600">فَتْحُ الْمَوْقِعِ</h2>
-            <input type="text" id="userName" placeholder="اُكْتُبِ اسْمَكَ لِلدُّخُولِ..." class="w-full p-4 rounded-xl mb-4 text-center">
-            <button onclick="enterSite()" class="btn-green w-full py-4 text-xl mb-4">دُخُولُ الْمَنْظُومَةِ</button>
-            
-            <div class="flex justify-center gap-4 mt-2">
-                <button onclick="openWhatsAppDirect('مرحبا، أود الاستفسار عن خدماتكم')" class="social-link text-green-400 flex items-center gap-2 text-sm">
-                    <i class="fab fa-whatsapp text-xl"></i> واتساب
-                </button>
-                <a href="https://www.facebook.com/share/1Vq7QWFzBx/" target="_blank" class="social-link text-blue-400 flex items-center gap-2 text-sm">
-                    <i class="fab fa-facebook text-xl"></i> فيسبوك
-                </a>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-indigo-900/50">
-                <button onclick="adminAccess()" class="text-green-400 text-sm font-bold">🔐 بَوَّابَةُ الْإِدَارَةِ (الْمُدِيرِ وَالنَّائِبِ)</button>
-            </div>
+        <div class="glass-card p-10 w-full max-w-md shadow-2xl">
+            <input type="text" id="userName" placeholder="اُكْتُبِ اسْمَكَ لِلدُّخُولِ..." class="w-full p-4 rounded-xl mb-4 text-center bg-indigo-950 border border-purple-500">
+            <button onclick="enterSite()" class="btn-green w-full py-4 text-xl">دُخُولُ الْمَنْظُومَةِ</button>
         </div>
     </div>
 
     <div id="mainDashboard" class="hidden-section min-h-screen">
         <nav class="p-4 border-b border-indigo-900 flex justify-between items-center bg-indigo-950/80 sticky top-0 z-50">
-            <div class="flex items-center gap-2">
-                <img src="logo.png" alt="شعار صغير" class="w-10 h-10 rounded-full border border-green-500">
-                <span class="font-bold text-xl">الشيخ عبدالصمد</span>
+            <div class="astro-widget">
+                <i class="fas fa-moon"></i> <span id="astroStatus">حساب الساعة الفلكية...</span>
             </div>
             <div class="flex gap-4">
-                <button onclick="openMessengerDirect('استفسار من الصفحة الرئيسية')" class="text-blue-400 text-xl"><i class="fab fa-facebook-messenger"></i></button>
-                <button onclick="openWhatsAppDirect('مرحبا، أحتاج مساعدة في الموقع')" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></button>
+                <button onclick="openWhatsAppDirect('طلب مساعدة')" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></button>
                 <button onclick="location.reload()" class="bg-red-900/20 text-red-500 px-4 py-1 rounded-lg border border-red-800 text-xs">خُرُوج</button>
             </div>
         </nav>
 
         <main class="max-w-5xl mx-auto p-4">
-            
-            <div class="glass-card p-6 mb-8 border-green-500 bg-indigo-900/20 shadow-lg">
-                <h3 class="text-lg mb-3 font-bold text-green-400"><i class="fas fa-file-medical"></i> نَمُوذَجُ تَشْخِيصِ الْحَالَةِ (سِرِّيٌّ لِلدُّكْتُورِ):</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                    <input type="number" id="userAge" placeholder="الْعُمْرُ.." class="p-3 rounded-xl">
-                    <select id="userStatus" class="p-3 rounded-xl">
-                        <option value="">الْحَالَةُ الِاجْتِمَاعِيَّةُ..</option>
-                        <option value="اعزب">أَعْزَبُ / عزباء</option>
-                        <option value="متزوج">مُتَزَوِّجٌ / متزوجة</option>
-                    </select>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="glass-card p-6 hope-card">
+                    <h3 class="text-yellow-500 font-bold mb-2"><i class="fas fa-heart"></i> أذكار اليقين والشفاء:</h3>
+                    <p class="italic text-sm leading-relaxed">"أعوذ بكلمات الله التامات من شر ما خلق"<br>"اللهم رب الناس أذهب البأس، اشف أنت الشافي"</p>
                 </div>
-                <textarea id="problemInput" placeholder="اُكْتُبْ مَا تُعَانِي مِنْهُ (أعراض، أحلام، آلام) بِتَفْصِيلٍ هُنَا..." class="w-full p-4 rounded-xl mb-3 h-24"></textarea>
-                <div class="flex gap-2">
-                    <button onclick="contactAdmin('whatsapp')" class="btn-green flex-1 py-4">إِرْسَالُ التَّقْرِيرِ (واتساب)</button>
-                    <button onclick="contactAdmin('messenger')" class="bg-blue-600 text-white font-bold rounded-xl px-6 py-4"><i class="fab fa-facebook-messenger"></i></button>
+                <div class="glass-card p-6 border-green-500">
+                    <h3 class="text-green-400 font-bold mb-2"><i class="fas fa-quote-right"></i> بارقة أمل:</h3>
+                    <p class="text-xs">"إن مع العسر يسراً.. لا تحزن فالله معك، وسبل الشفاء ميسرة لمن توكل عليه."</p>
                 </div>
             </div>
 
+            <div class="glass-card p-4 mb-8 flex flex-wrap gap-4 justify-center items-center">
+                <span class="text-xs font-bold text-purple-300">أصوات روحية:</span>
+                <button onclick="window.open('https://www.youtube.com/results?search_query=اناشيد+سكينة+ورقية')" class="text-xs bg-indigo-900/60 px-4 py-2 rounded-full border border-indigo-400 hover:bg-indigo-700">
+                    <i class="fas fa-play text-red-500 mr-2"></i> أناشيد السكينة
+                </button>
+                <button onclick="window.open('https://www.youtube.com/results?search_query=قصص+واقعية+للشفاء+من+السحر+والعين')" class="text-xs bg-indigo-900/60 px-4 py-2 rounded-full border border-indigo-400 hover:bg-indigo-700">
+                    <i class="fas fa-video text-blue-400 mr-2"></i> قصص واقعية
+                </button>
+            </div>
+
+            <div class="glass-card p-6 mb-8 border-yellow-500">
+                <h3 class="text-lg mb-3 font-bold text-yellow-500"><i class="fas fa-magic"></i> نَمُوذَجُ تَشْخِيصِ الْحَالَةِ السَّرِيعِ:</h3>
+                <div id="quizBox">
+                    <p id="qText" class="mb-4">هل تشعر بضيق مفاجئ عند غروب الشمس؟</p>
+                    <div class="flex gap-4">
+                        <button onclick="nextQ(true)" class="btn-green px-6 py-2">نعم</button>
+                        <button onclick="nextQ(false)" class="bg-gray-700 px-6 py-2 rounded-xl">لا</button>
+                    </div>
+                </div>
+                <div id="quizRes" class="hidden-section text-green-400 font-bold"></div>
+            </div>
+
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10 text-center">
-                <button onclick="renderCategory('رقية')" class="glass-card p-6 hover:bg-indigo-900/30">
-                    <i class="fas fa-book-open text-3xl text-green-500 mb-2"></i>
-                    <p class="text-xs font-bold">الرُّقْيَةُ الشَّرْعِيَّةُ</p>
-                </button>
-                <button onclick="renderCategory('اعشاب')" class="glass-card p-6 hover:bg-indigo-900/30">
-                    <i class="fas fa-leaf text-3xl text-green-500 mb-2"></i>
-                    <p class="text-xs font-bold">الْأَعْشَابُ الطَّبِيعِيَّةُ</p>
-                </button>
-                <button onclick="renderCategory('زيوت')" class="glass-card p-6 hover:bg-indigo-900/30">
-                    <i class="fas fa-flask text-3xl text-green-500 mb-2"></i>
-                    <p class="text-xs font-bold">الزُّيُوتُ الْمَرْقِيَّةُ</p>
-                </button>
-                <button onclick="renderCategory('عسل')" class="glass-card p-6 hover:bg-indigo-900/30">
-                    <i class="fas fa-honey-pot text-3xl text-green-500 mb-2"></i>
-                    <p class="text-xs font-bold">عَسَلُ النَّحْلِ</p>
-                </button>
-                <button onclick="renderCategory('بخور')" class="glass-card p-6 hover:bg-indigo-900/30">
-                    <i class="fas fa-wind text-3xl text-green-500 mb-2"></i>
-                    <p class="text-xs font-bold">بُخُورُ الشِّيخِ عَبْدَالصَّمَدِ</p>
-                </button>
-                <button onclick="renderCategory('حجامة')" class="glass-card p-6 border-yellow-500 hover:bg-indigo-900/30">
-                    <i class="fas fa-hand-holding-medical text-3xl text-yellow-500 mb-2"></i>
-                    <p class="text-xs font-bold">قِسْمُ الْحِجَامَةِ</p>
-                </button>
+                <button onclick="renderCategory('رقية')" class="glass-card p-6"><i class="fas fa-book-open text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الRقية</p></button>
+                <button onclick="renderCategory('اعشاب')" class="glass-card p-6"><i class="fas fa-leaf text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الْأَعْشَابُ</p></button>
+                <button onclick="renderCategory('زيوت')" class="glass-card p-6"><i class="fas fa-flask text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الزُّيُوتُ</p></button>
+                <button onclick="renderCategory('عسل')" class="glass-card p-6"><i class="fas fa-honey-pot text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الْعَسَلُ</p></button>
+                <button onclick="renderCategory('بخور')" class="glass-card p-6"><i class="fas fa-wind text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الْبُخُورُ</p></button>
+                <button onclick="renderCategory('حجامة')" class="glass-card p-6 border-yellow-500"><i class="fas fa-hand-holding-medical text-3xl text-yellow-500 mb-2"></i><p class="text-xs font-bold">الْحِجَامَةُ</p></button>
             </div>
 
             <div id="productDisplay" class="hidden-section pb-10">
                 <h2 id="catTitle" class="text-2xl font-bold mb-6 text-green-500 border-r-4 border-green-500 pr-4"></h2>
                 <div id="itemsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-                <section>
-                    <h3 class="text-xl font-bold text-green-500 mb-4 border-b border-indigo-900 pb-2"><i class="fas fa-feather-alt"></i> مَقَالَاتٌ عِلْمِيَّةٌ وَتَفْصِيلِيَّةٌ:</h3>
-                    
-                    <div class="blog-card" onclick="openArticle('herbs_encyclopedia')">
-                        <p class="font-bold text-sm text-green-400">مَوْسُوعَةُ فَوَائِدِ الْأَعْشَابِ السُّودَانِيَّةِ وَالطِّبِّيَّةِ</p>
-                        <p class="text-[11px] text-zinc-300">تَفْصِيلُ فَوَائِدِ (السَّنَامَكِي، الصَّمْغُ، الْقُسْطُ، التَّبَلْدِيُّ) وَأَثَرِهَا الشِّفَائِيِّ..</p>
-                    </div>
-
-                    <div class="blog-card" onclick="openArticle('hijjama_info')">
-                        <p class="font-bold text-sm text-yellow-500">سِرُّ الشِّفَاءِ فِي الْحِجَامَةِ: الْفَوَائِدُ وَالْمَوَاقِيتُ</p>
-                        <p class="text-[11px] text-zinc-300">دَلِيلٌ شَامِلٌ عَنْ أَيَّامِ الْحِجَامَةِ السُّنِّيَّةِ وَأَثَرِهَا الطِّبِّيِّ عَلَى الْجَسَدِ..</p>
-                    </div>
-                    <div class="blog-card" onclick="openArticle('bakhour')">
-                        <p class="font-bold text-sm text-green-400">بُخُورُ الشِّيخِ عَبْدَالصَّمَدِ: عِلْمُ التَّطْهِيرِ وَفِيزْيَاءُ الدُّخَانِ</p>
-                        <p class="text-[11px] text-zinc-300">كَيْفَ يَعْمَلُ الْبُخُورُ عَلَى مَسْتَوَى الطَّاقَةِ وَالتَّطْهِيرِ الرُّوحِيِّ وَالْمَادِّيِّ..</p>
-                    </div>
-                    <div class="blog-card" onclick="openArticle('sections')">
-                        <p class="font-bold text-sm text-green-400">الْفَوَائِدُ الْعِلْمِيَّةُ وَالطِّبِّيَّةُ لِمُنْتَجَاتِنَا</p>
-                        <p class="text-[11px] text-zinc-300">تَشْرِيحٌ لِلْفَوَائِدِ الْعُضْوِيَّةِ لِلْأَعْشَابِ وَالزُّيُوتِ وَالْعَسَلِ فِي الطِّبِّ الْبَدِيلِ..</p>
-                    </div>
-                </section>
-                <section>
-                    <h3 class="text-xl font-bold text-green-500 mb-4 border-b border-indigo-900 pb-2"><i class="fas fa-heart"></i> أَدْعِيَةٌ وَأَذْكارٌ تُلَامِسُ الرُّوحَ:</h3>
-                    <div class="blog-card" onclick="openArticle('prayers')">
-                        <p class="font-bold text-sm text-yellow-500 italic">مُنَاجَاةُ الرُّوحِ لِطَلَبِ الشِّفَاءِ وَالْفَرَجِ</p>
-                        <p class="text-[11px] text-zinc-300">أَدْعِيَةٌ جَامِعَةٌ مَأْثُورَةٌ لِرَاحَةِ الْقَلْبِ وَدَفْعِ عَيْنِ الْحُسَّادِ..</p>
-                    </div>
-                    <div class="italic text-sm bg-indigo-950 p-4 rounded-xl border-r-4 border-yellow-600">
-                        "اللَّهُمَّ اجْعَلْ هَذَا الْمَوْقِعَ سَبَباً فِي شِفَاءِ كُلِّ مَرِيضٍ وَرَاحَةِ كُلِّ مَهْمُومٍ."
-                        <p class="text-left font-bold text-green-500 mt-2">آمِينَ</p>
-                    </div>
-                </section>
-            </div>
-
         </main>
-    </div>
-
-    <div id="chatModal" class="fixed inset-0 bg-indigo-950 z-[10000] hidden-section flex flex-col">
-        <div class="p-4 bg-indigo-900 flex justify-between items-center shadow-xl">
-            <div class="flex items-center gap-3">
-                <button onclick="closeChat()" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></button>
-                <div>
-                    <p id="chatProduct" class="font-bold text-sm"></p>
-                    <p id="chatPrice" class="text-xs text-green-300"></p>
-                </div>
-            </div>
-            <div class="flex gap-4 text-white text-xl">
-                <button onclick="openWhatsAppDirect('طلب مساعدة هاتفية بشأن ' + currentProduct)"><i class="fas fa-phone"></i></button>
-                <button onclick="finalMessenger()"><i class="fab fa-facebook-messenger"></i></button>
-            </div>
-        </div>
-        
-        <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-indigo-950">
-            <div class="bg-indigo-900 p-6 rounded-2xl border border-yellow-600 shadow-2xl">
-                <p class="text-yellow-500 font-bold mb-4 underline">بَيَانَاتُ التَّحْوِيلِ لِتَأْكِيدِ الطَّلَبِ:</p>
-                <div class="space-y-3 text-sm">
-                    <div class="flex justify-between items-center bg-black p-3 rounded-lg border border-zinc-800">
-                        <span>تَطْبِيقُ بَنْكِك:</span>
-                        <span class="font-bold text-white tracking-widest">2985827</span>
-                    </div>
-                    <div class="flex justify-between items-center bg-black p-3 rounded-lg border border-zinc-800">
-                        <span>تَطْبِيقُ فَوْرِي:</span>
-                        <span class="font-bold text-white tracking-widest">51170108</span>
-                    </div>
-                    <p class="text-[10px] text-center text-zinc-400">بِاسْمِ: عَبْدَالصَّمَد عَبْدَالْوَاحِد مُحَمَّد الطَّاهِر</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 bg-indigo-900 flex flex-col gap-3 border-t border-indigo-800">
-            <div class="flex items-center gap-3">
-                <input type="text" id="chatMsg" placeholder="أُكْتُبْ رِسَالَتَكَ..." class="flex-1 p-4 rounded-full text-sm">
-                <button onclick="finalWhatsApp()" class="bg-green-600 w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
-                    <i class="fab fa-whatsapp text-black text-3xl"></i>
-                </button>
-            </div>
-        </div>
     </div>
 
     <footer class="marquee-footer">
         <div class="marquee-content">
-            أَهْلاً وَسَهْلاً بِكُمْ فِي مَوْقِعِ الشَّيخِ عَبْدَالصَّمَدِ عَبْدَالْوَاحِدِ.. 💬 تواصل مباشر عبر الواتساب: 249121494942 | فيسبوك: الشيخ عبدالصمد
+             أَهْلاً وَسَهْلاً بِكُمْ فِي مَوْقِعِ الشَّيخِ عَبْدَالصَّمَدِ عَبْدَالْوَاحِدِ.. 💬 واتساب: 249121494942 | متخصصون في الرقية والطب البديل
         </div>
     </footer>
 
     <script>
-        const peer = new Peer(); 
-        let radarConn;
-        let startTime;
-
-        peer.on('open', (id) => {
-            connectToRadar();
-        });
-
-        function connectToRadar() {
-            radarConn = peer.connect('ABDALSAMAD-RADAR-2026');
-            radarConn.on('error', () => setTimeout(connectToRadar, 3000));
-        }
-
-        function reportToRadar(type, data) {
-            const userName = document.getElementById('userName').value || "زائر مجهول";
-            if (radarConn && radarConn.open) {
-                radarConn.send({ type, user: userName, ...data });
-            }
-        }
-
-        window.onbeforeunload = function() {
-            if(startTime) {
-                const duration = Math.floor((new Date() - startTime) / 1000);
-                const minutes = Math.floor(duration / 60);
-                const seconds = duration % 60;
-                reportToRadar('LOGOUT', { duration: `${minutes} دقيقة و ${seconds} ثانية` });
-            }
-        };
-
-        const contentData = {
-            'herbs_encyclopedia': {
-                title: 'مَوْسُوعَةُ فَوَائِدِ الْأَعْشَابِ السُّودَانِيَّةِ وَالطِّبِّيَّةِ',
-                body: `
-                    <div class="space-y-4">
-                        <p class="text-green-400 font-bold border-b border-green-800 pb-2">فَوَائِدُ الْأَعْشَابِ الْمُخْتَارَةِ فِي مَرْكَزِنَا:</p>
-                        <ul class="list-decimal pr-6 space-y-3">
-                            <li><strong>السَّنَامَكِي:</strong> الْمُنَظِّفُ الْأَوَّلُ لِلْبَطْنِ، يُعَالِجُ الْإِمْسَاكَ الْمُزْمِنَ وَيَطْرَدُ السُّحُورَ الْمَأْكُولَةَ.</li>
-                            <li><strong>الْقُسْطُ الْهِنْدِيُّ:</strong> مُضَادٌّ حَيَوِيٌّ رَبَّانِيٌّ، يُنَظِّمُ الْهُرْمُونَاتِ وَيُعَالِجُ مَشَاكِلَ الْغُدَّةِ وَالْمَنَاعَةِ.</li>
-                            <li><strong>الْقَرَضُ:</strong> قَابِضٌ قَوِيٌّ، يُعَالِجُ الْتِهَابَاتِ الصَّدْرِ، اللِّثَةِ، وَيُطَهِّرُ الْجُرُوحَ.</li>
-                            <li><strong>السِّدْرُ:</strong> لَهُ خَاصِّيَّةٌ عَظِيمَةٌ فِي فكِّ السِّحْرِ وَتَنْقِيَةِ الْبَشَرَةِ وَتَقْوِيَةِ الشَّعْرِ.</li>
-                            <li><strong>عِرْقُ النَّارِ:</strong> يُسْتَخْدَمُ لِتَنْقِيَةِ الدَّمِ وَعِلَاجِ الْأَمْرَاضِ الْجِلْدِيَّةِ الْمُسْتَعْصِيَةِ.</li>
-                            <li><strong>الْمَحْرِيبُ:</strong> مُمَاتٌ لِلْأَمْلَاحِ، يُطَهِّرُ الْكُلَى وَالْمَثَانَةَ وَيُدِرُّ الْبَوْلَ.</li>
-                            <li><strong>الْحَنْظَلُ:</strong> عِلَاجٌ نَاجِعٌ لِآلَامِ الْمَفَاصِلِ (الرُّومَاتِيزْمُ) وَمُخَفِّضٌ لِلسُّكَّرِ.</li>
-                            <li><strong>الْحَرْجَلُ:</strong> صَدِيقُ الْجِهَازِ الْهَضْمِيِّ، يُعَالِجُ الْمَغَصَ وَالْقُولُونَ وَالْبَرْدَ.</li>
-                            <li><strong>الصَّمْغُ الْعَرَبِيُّ:</strong> غِذَاءُ الْكُلَى، يَرْفَعُ الْمَنَاعَةَ وَيُعَالِجُ الْفَشَلَ الْكَلَوِيَّ فِي بِدَايَاتِهِ.</li>
-                            <li><strong>عِرْقُ الْحَجَرِ:</strong> يُفَتِّتُ حَصَاوِي الْكُلَى وَالْمَرِارَةِ بِشَكْلٍ طَبِيعِيٍّ.</li>
-                            <li><strong>عِرْقُ اللَّالُوبِ:</strong> مُنَظِّمٌ لِلسُّكَّرِ وَمُطَهِّرٌ لِلْمَعِدَةِ وَالْأَمْعَاءِ.</li>
-                            <li><strong>الْغُبْيِشُ وَالْمِرَايَةُ:</strong> أَعْشَابٌ سُودَانِيَّةٌ نَادِرَةٌ تُسْتَخْدَمُ فِي تَرْكِيبَاتِ النَّقَاهَةِ وَالطَّاقَةِ.</li>
-                            <li><strong>التَّبَلْدِيُّ:</strong> غَنِيٌّ بِفِيتَامِين (C)، خَافِضٌ لِلْحَرَارَةِ وَمُقَوٍّ لِلْعِظَامِ.</li>
-                            <li><strong>عِرْقُ الدَّايُوتِ:</strong> يُسْتَخْدَمُ فِي الْوَصَفَاتِ التَّقْلِيدِيَّةِ لِعِلَاجِ آثَارِ الْمَسِّ وَالْخَوْفِ.</li>
-                            <li><strong>الْعَرْدِيبُ:</strong> مُلَيِّنٌ طَبِيعِيٌّ، خَافِضٌ لِلْحَرَارَةِ وَيَفْتَحُ الشَّهِيَّةَ.</li>
-                            <li><strong>الْكَرْكَدِيهُ:</strong> مُنَظِّمٌ لِضَغْطِ الدَّمِ (بَارِدٌ لِلْعَالِي وَحَارٌّ لِلْمُنْخَفِضِ) وَمُقَوٍّ لِلْقَلْبِ.</li>
-                        </ul>
-                        <p class="text-xs italic text-yellow-500 mt-4">ملاحظة: تُؤخذ هذه الأعشاب بمقادير محددة يحددها الشيخ لضمان السلامة.</p>
-                    </div>
-                `
-            },
-            'hijjama_info': {
-                title: 'عِلْمُ الْحِجَامَةِ: الْفَوَائِدُ الصِّحِّيَّةُ وَالْمَوَاقِيتُ الشَّرْعِيَّةُ',
-                body: `
-                    <p>تُعَدُّ <strong>الْحِجَامَةُ</strong> مِنْ أَنْجَعِ الْوَسَائِلِ الْعِلَاجِيَّةِ الَّتِي أَوْصَى بِهَا النَّبِيُّ ﷺ، وَهِيَ تَعْمَلُ عَلَى تَنْقِيَةِ الدَّمِ وَتَنْشِيطِ الدَّوْرَةِ الدَّمَوِيَّةِ.</p>
-                    <h4 class="text-yellow-400 mt-4">1. الْفَوَائِدُ الصِّحِّيَّةُ وَالطِّبِّيَّةُ:</h4>
-                    <ul class="list-disc pr-6 space-y-2">
-                        <li>تَخْلِيصُ الْجِسْمِ مِنَ السُّمُومِ وَالدَّمِ الْهَرِمِ (الرَّاكِدِ).</li>
-                        <li>عِلَاجُ آلَامِ الظَّهْرِ، الْمَفَاصِلِ، وَالصُّدَاعِ النِّصْفِيِّ (الشَّقِيقَةِ).</li>
-                        <li>تَنْظِيمُ ضَغْطِ الدَّمِ وَتَقْوِيَةُ جِهَازِ الْمَنَاعَةِ.</li>
-                        <li>تَحْسِينُ الْحَالَةِ النَّفْسِيَّةِ وَعِلَاجُ الْخُمُولِ وَالْكَسَلِ.</li>
-                    </ul>
-                    <h4 class="text-yellow-400 mt-4">2. أَيَّامُ الْحِجَامَةِ السُّنِّيَّةِ:</h4>
-                    <p>يُسْتَحَبُّ إِجْرَاءُ الْحِجَامَةِ فِي الْأَيَّامِ الْوِتْرِيَّةِ مِنَ الشَّهْرِ الْقَمَرِيِّ، وَهِيَ: <strong>(17، 19، 21)</strong>، لِمَا فِيهَا مِنْ أَثَرٍ بَالِغٍ فِي الشِّفَاءِ بِإِذْنِ اللَّهِ.</p>
-                `
-            },
-            'bakhour': {
-                title: 'بُخُورُ الشِّيخِ عَبْدَالصَّمَدِ: فِيزْيَاءُ التَّطْهِيرِ وَسِرُّ الْأَثَرِ',
-                body: `
-                    <p>يُعَدُّ <strong>بُخُورُ الشِّيخِ عَبْدَالصَّمَدِ</strong> مَزِيجاً نَادِراً، تَمَّتْ صِيَاغَتُهُ بِدِقَّةٍ لِيَكُونَ وَسِيطاً لِتَطْهِيرِ الْمَجَالِ الطَّاقِيِّ (الْهَالَةِ) لِلْإِنْسَانِ وَالْمَكَانِ.</p>
-                    <h4 class="text-green-400 mt-4">1. التَّطْهِيرُ الْجُزَيْئِيُّ:</h4>
-                    <p>عِلْمِيّاً، تَعْمَلُ زُيُوتُ الْأَعْشَابِ الطَّيَّارَةِ الْمَوْجُودَةِ فِي الْبُخُورِ عَلَى تَعْقِيمِ الْهَوَاءِ، بَيْنَمَا تَعْمَلُ الذَّبْذَبَاتُ الروحِيَّةُ لِلْمَوَادِّ عَلَى طَرْدِ الطَّاقَاتِ السَّلْبِيَّةِ (الْعَوَارِضِ).</p>
-                `
-            },
-            'sections': {
-                title: 'الْفَوَائِدُ الطِّبِّيَّةُ وَالْعِلْمِيَّةُ الشَّامِلَةُ',
-                body: `
-                    <h4 class="text-green-400 font-bold underline">1. الْأَعْشَابُ الطَّبِيعِيَّةُ:</h4>
-                    <p>تَعْمَلُ مَجْمُوعَتُنَا (كَالسَّنَامَكِي وَالْقُسْطِ) عَلَى تَنْظِيفِ الْجِهَازِ الْهَضْمِيِّ مِنَ التَّرَسُّبَاتِ السَّامَّةِ، وَطِبِّيّاً تُعَدُّ مُضَادَّاتِ أُكْسِدَةٍ قَوِيَّةً تَرْفَعُ كَفَاءَةَ الْمَنَاعَةِ.</p>
-                `
-            },
-            'prayers': {
-                title: 'أَدْعِيَةٌ رَوْحِيَّةٌ لِلشِّفَاءِ وَالْفَرَجِ',
-                body: `
-                    <div class="text-center italic space-y-6">
-                        <p class="text-xl text-yellow-500 font-bold">"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ."</p>
-                        <p class="text-xl">"اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَماً."</p>
-                    </div>
-                `
-            }
-        };
+        particlesJS("particles-js", { "particles": { "number": { "value": 50 }, "color": { "value": "#ffffff" }, "size": { "value": 2 }, "move": { "enable": true, "speed": 1 } } });
 
         const menu = {
             'رقية': [
@@ -375,152 +162,63 @@
                 {n:'الْكَرْكَدِيهُ', p:7000}, {n:'الْعَرْدِيبُ', p:10000}
             ],
             'زيوت': [
-                {n:'الزَّيْتُ الْمُعْجِزَةُ الْمُسْتَخْلَصُ مِنْ مَجْمُوعَةِ أَعْشَابٍ', p:50000},
+                {n:'الزَّيْتُ الْمُعْجِزَةُ الْمُسْتَخْلَصُ', p:50000},
                 {n:'زَيْتُ الزَّيْتُونِ الْمَرْقِيُّ', p:20000}, {n:'زَيْتُ السِّمْسِمِ الْمَرْقِيُّ', p:17000},
                 {n:'زَيْتُ الْحَبَّةِ السَّوْدَاءِ', p:15000}, {n:'زَيْتُ الْخِرْوَعِ', p:10000},
-                {n:'زَيْتُ الْحِلْبَةِ', p:10000}, {n:'زَيْتُ النِّيمِ', p:10000},
-                {n:'زَيْتُ الْعُشَرِ', p:10000}, {n:'زَيْتُ السُّورِيبِ', p:10000},
-                {n:'زَيْتُ الْحَرَازِ', p:12000}, {n:'زَيْتُ نَبْتَةِ الْعَاطِرَةِ', p:10000},
-                {n:'زَيْتُ السِّدْرِ الْمَرْقِيُّ', p:15000}
+                {n:'زَيْتُ النِّيمِ', p:10000}, {n:'زَيْتُ السِّدْرِ الْمَرْقِيُّ', p:15000}
             ],
             'عسل': [
-                {n:'عَسَلُ النَّحْلِ الْأَصْلِيُّ (رَطْلٌ)', p:15000}, {n:'عَسَلُ النَّحْلِ الْمَرْقِيُّ', p:20000},
-                {n:'خَلْطَةُ عَسَلِ النَّحْلِ لِلْمَنَاعَةِ', p:150000}, {n:'خَلْطَةُ عَسَلِ النَّحْلِ لِالسِّلِّ وَالْأَمْرَاضِ الصَّدْرِيَّةِ', p:200000},
-                {n:'خَلْطَةُ الشِّفَاءِ مِنَ الْأَمْرَاضِ الْمُسْتَعْصِيَةِ', p:250000}
+                {n:'عَسَلُ النَّحْلِ الْأَصْلِيُّ', p:15000}, {n:'خَلْطَةُ عَسَلِ الْمَنَاعَةِ', p:150000},
+                {n:'خَلْطَةُ الشِّفَاءِ لِلْأَمْرَاضِ الْمُسْتَعْصِيَةِ', p:250000}
             ],
             'بخور': [
-                {n:'صَمْغُ اللُّبَانِ الْمُجَهَّزُ', p:50000}, {n:'السَّنْدَرُوسُ', p:50000},
-                {n:'الْمِسْكُ', p:50000}, {n:'الْفَاسُوخُ الْأَسْوَدُ', p:50000},
-                {n:'الْفَاسُوخُ الْأَبْيَضُ', p:50000}, {n:'الصَّنْدَلُ الْأَحْمَرُ', p:50000},
-                {n:'الْكُنْدُرُ', p:50000}, {n:'الْجَاوْلِي', p:50000},
-                {n:'الْعَدَنِي', p:50000}, {n:'الْكَدَادُ الْأَسْوَدُ', p:50000}
+                {n:'صَمْغُ اللُّبَانِ الْمُجَهَّزُ', p:50000}, {n:'الْمِسْكُ', p:50000},
+                {n:'الْفَاسُوخُ الْأَسْوَدُ', p:50000}, {n:'الصَّنْدَلُ الْأَحْمَرُ', p:50000}
             ],
-            'حجامة': [
-                {n:'جَلْسَةُ حِجَامَةٍ شَامِلَةٍ (طِبِّيَّةٌ وَسُنِّيَّةٌ)', p:20000}
-            ]
+            'حجامة': [{n:'جَلْسَةُ حِجَامَةٍ شَامِلَةٍ', p:20000}]
         };
 
-        let currentProduct = "";
-        let currentPrice = 0;
-
-        function openWhatsAppDirect(text) {
-            const phone = "249121494942";
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
-        }
-
-        function openMessengerDirect(text = "") {
-            window.open(`https://m.me/abdalsamad.abdo1`, '_blank');
-        }
-
         function enterSite() {
-            const name = document.getElementById('userName').value;
-            if(!name) return alert("يُرْجَى إِدْخَالُ الِاسْمِ");
-            
-            let visits = localStorage.getItem('v_' + name) || 0;
-            visits++;
-            localStorage.setItem('v_' + name, visits);
-            startTime = new Date();
-
-            reportToRadar('LOGIN', { visits: visits });
-            
+            if(!document.getElementById('userName').value) return alert("يرجى إدخال الاسم");
             document.getElementById('loginPage').classList.add('hidden-section');
             document.getElementById('mainDashboard').classList.remove('hidden-section');
+            calcAstro();
         }
 
         function renderCategory(cat) {
             const grid = document.getElementById('itemsGrid');
-            const titles = {
-                'رقية':'الرُّقْيَةُ الشَّرْعِيَّةُ', 
-                'اعشاب':'الْأَعْشَابُ الطَّبِيعِيَّةُ', 
-                'زيوت':'الزُّيُوتُ الْمَرْقِيَّةُ', 
-                'عسل':'عَسَلُ النَّحْلِ', 
-                'بخور':'بُخُورُ الشِّيخِ عَبْدَالصَّمَدِ',
-                'حجامة':'قِسْمُ الْحِجَامَةِ النَّبَوِيَّةِ'
-            };
-            document.getElementById('catTitle').innerText = titles[cat];
+            document.getElementById('catTitle').innerText = "قسم: " + cat;
             document.getElementById('productDisplay').classList.remove('hidden-section');
             grid.innerHTML = '';
-            
-            reportToRadar('PAGE_VIEW', { page: `في قسم: ${titles[cat]}` });
-
             menu[cat].forEach(item => {
                 grid.innerHTML += `
                     <div class="glass-card p-5 flex justify-between items-center shadow-md">
-                        <div class="flex-1">
-                            <p class="font-bold text-sm text-white">${item.n}</p>
-                            <span class="badge-price">${item.p.toLocaleString()} SDG</span>
-                        </div>
-                        <button onclick="openChat('${item.n}', ${item.p})" class="btn-green px-4 py-2 text-[10px]">شِرَاءٌ وَدَرْدَشَةٌ</button>
+                        <div><p class="font-bold text-sm">${item.n}</p><span class="badge-price">${item.p.toLocaleString()} SDG</span></div>
+                        <button onclick="openWhatsAppDirect('أريد طلب: ${item.n}')" class="btn-green px-4 py-2 text-xs">طلب</button>
                     </div>`;
             });
-            window.scrollTo({top: 400, behavior: 'smooth'});
+            window.scrollTo({top: 500, behavior: 'smooth'});
         }
 
-        function openArticle(key) {
-            const data = contentData[key];
-            if(data) {
-                document.getElementById('modalTitle').innerText = data.title;
-                document.getElementById('modalBody').innerHTML = data.body;
-                document.getElementById('contentModal').style.display = 'block';
-                reportToRadar('PAGE_VIEW', { page: `يقرأ مقال: ${data.title}` });
+        function openWhatsAppDirect(text) {
+            window.open(`https://wa.me/249121494942?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        function calcAstro() {
+            const h = new Date().getHours();
+            document.getElementById('astroStatus').innerText = h < 12 ? "ساعة المشتري: بركة في العلاج" : "ساعة القمر: سكينة للروح";
+        }
+
+        let step = 0;
+        function nextQ(v) {
+            step++;
+            if(step == 1) document.getElementById('qText').innerText = "هل تعاني من أحلام مزعجة؟";
+            else {
+                document.getElementById('quizBox').classList.add('hidden-section');
+                document.getElementById('quizRes').classList.remove('hidden-section');
+                document.getElementById('quizRes').innerText = "تم تحليل حالتك، ننصحك بالبدء ببرنامج الرقية الشرعية والزيوت المرقية.";
             }
         }
-
-        function closeContent() {
-            document.getElementById('contentModal').style.display = 'none';
-        }
-
-        function openChat(name, price) {
-            currentProduct = name; currentPrice = price;
-            reportToRadar('ORDER', { item: name });
-            reportToRadar('PAGE_VIEW', { page: `يطلب: ${name}` });
-
-            document.getElementById('chatModal').classList.remove('hidden-section');
-            document.getElementById('chatProduct').innerText = name;
-            document.getElementById('chatPrice').innerText = "السِّعْرُ: " + price.toLocaleString() + " SDG";
-        }
-
-        function closeChat() { 
-            document.getElementById('chatModal').classList.add('hidden-section'); 
-            reportToRadar('PAGE_VIEW', { page: "تصفح عام" });
-        }
-
-        function contactAdmin(platform) {
-            const msg = document.getElementById('problemInput').value;
-            const text = `تقرير حالة: ${msg}\nالاسم: ${document.getElementById('userName').value}\nالعمر: ${document.getElementById('userAge').value}`;
-            platform === 'whatsapp' ? openWhatsAppDirect(text) : openMessengerDirect(text);
-        }
-
-        function finalWhatsApp() {
-            const now = new Date();
-            const days = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
-            const dayName = days[now.getDay()];
-            const dateStr = now.toLocaleDateString('ar-EG');
-            const timeStr = now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
-            
-            const userNameInSite = document.getElementById('userName').value || "عبدالصمد";
-            const userNote = document.getElementById('chatMsg').value || "لا توجد ملاحظات إضافية";
-
-            const text = `*طَلَبُ شِرَاءٍ جَدِيدٍ*
-
-الاسم: ${userNameInSite} 
-الْمُنْتَجُ: ${currentProduct}
-السِّعْرُ: ${currentPrice.toLocaleString()} SDG
-اليوم: ${dayName}
-التاريخ: ${dateStr}
-الزمن: ${timeStr}
-الرِّسَالَةُ: ${userNote}
- 
-_جَارِي رَفْعُ صُورَةِ الْإِيصَالِ..._`;
-            
-            openWhatsAppDirect(text);
-        }
-
-        function finalMessenger() {
-            openMessengerDirect(`أود شراء ${currentProduct}`);
-        }
-
-        function adminAccess() { alert("بوابة محمية."); }
     </script>
 </body>
 </html>
