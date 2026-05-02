@@ -29,7 +29,8 @@
         #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
         
         .glass-card { background: rgba(75, 0, 130, 0.4); border: 1px solid #9370db; border-radius: 20px; backdrop-filter: blur(10px); }
-        .btn-green { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; }
+        .btn-green { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; transition: 0.3s; }
+        .btn-green:hover { transform: scale(1.05); box-shadow: 0 0 15px #2ecc71; }
         
         .marquee-footer { position: fixed; bottom: 0; width: 100%; background: #2d004d; border-top: 2px solid #2ecc71; padding: 12px 0; z-index: 9999; }
         .marquee-content { display: inline-block; white-space: nowrap; animation: scroll-ltr 40s linear infinite; color: #f1c40f; font-weight: bold; }
@@ -50,11 +51,25 @@
         }
 
         .hope-card { border-right: 4px solid #f1c40f; background: rgba(255, 255, 255, 0.05); }
+
+        /* نبض الاستشارة الصوتية */
+        .voice-pulse {
+            position: fixed; bottom: 85px; left: 20px; z-index: 1000;
+            background: #ff4757; color: white; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 71, 87, 0.5); animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red { 0% { transform: scale(0.95); } 70% { transform: scale(1.1); } 100% { transform: scale(0.95); } }
     </style>
 </head>
 <body class="pb-24">
 
     <div id="particles-js"></div>
+
+    <!-- زر الاستشارة الصوتية الجديد -->
+    <div class="voice-pulse" onclick="openWhatsAppDirect('أود إرسال استشارة صوتية للشيخ عبدالصمد')">
+        <i class="fas fa-microphone-alt text-2xl"></i>
+    </div>
 
     <div id="loginPage" class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
         <header class="mb-8">
@@ -63,7 +78,7 @@
             <p class="text-green-400 mt-2 font-bold italic">بِإِشْرَافِ الشَّيْخِ عَبْدَالصَّمَدِ</p>
         </header>
         <div class="glass-card p-10 w-full max-w-md shadow-2xl">
-            <input type="text" id="userName" placeholder="اُكْتُبِ اسْمَكَ لِلدُّخُولِ..." class="w-full p-4 rounded-xl mb-4 text-center bg-indigo-950 border border-purple-500">
+            <input type="text" id="userName" placeholder="اُكْتُبِ اسْمَكَ لِلدُّخُولِ..." class="w-full p-4 rounded-xl mb-4 text-center bg-indigo-950 border border-purple-500 text-white">
             <button onclick="enterSite()" class="btn-green w-full py-4 text-xl">دُخُولُ الْمَنْظُومَةِ</button>
         </div>
     </div>
@@ -80,6 +95,7 @@
         </nav>
 
         <main class="max-w-5xl mx-auto p-4">
+            <!-- قسم الترحيب والأذكار -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div class="glass-card p-6 hope-card">
                     <h3 class="text-yellow-500 font-bold mb-2"><i class="fas fa-heart"></i> أذكار اليقين والشفاء:</h3>
@@ -91,6 +107,7 @@
                 </div>
             </div>
 
+            <!-- قسم الوسائط التفاعلية -->
             <div class="glass-card p-4 mb-8 flex flex-wrap gap-4 justify-center items-center">
                 <span class="text-xs font-bold text-purple-300">أصوات روحية:</span>
                 <button onclick="window.open('https://www.youtube.com/results?search_query=اناشيد+سكينة+ورقية')" class="text-xs bg-indigo-900/60 px-4 py-2 rounded-full border border-indigo-400 hover:bg-indigo-700">
@@ -101,6 +118,7 @@
                 </button>
             </div>
 
+            <!-- التشخيص السريع -->
             <div class="glass-card p-6 mb-8 border-yellow-500">
                 <h3 class="text-lg mb-3 font-bold text-yellow-500"><i class="fas fa-magic"></i> نَمُوذَجُ تَشْخِيصِ الْحَالَةِ السَّرِيعِ:</h3>
                 <div id="quizBox">
@@ -113,13 +131,15 @@
                 <div id="quizRes" class="hidden-section text-green-400 font-bold"></div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10 text-center">
-                <button onclick="renderCategory('رقية')" class="glass-card p-6"><i class="fas fa-book-open text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الRقية</p></button>
-                <button onclick="renderCategory('اعشاب')" class="glass-card p-6"><i class="fas fa-leaf text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الْأَعْشَابُ</p></button>
-                <button onclick="renderCategory('زيوت')" class="glass-card p-6"><i class="fas fa-flask text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الزُّيُوتُ</p></button>
-                <button onclick="renderCategory('عسل')" class="glass-card p-6"><i class="fas fa-honey-pot text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الْعَسَلُ</p></button>
-                <button onclick="renderCategory('بخور')" class="glass-card p-6"><i class="fas fa-wind text-3xl text-green-500 mb-2"></i><p class="text-xs font-bold">الْبُخُورُ</p></button>
-                <button onclick="renderCategory('حجامة')" class="glass-card p-6 border-yellow-500"><i class="fas fa-hand-holding-medical text-3xl text-yellow-500 mb-2"></i><p class="text-xs font-bold">الْحِجَامَةُ</p></button>
+            <!-- الأقسام الرئيسية -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4 mb-10 text-center">
+                <button onclick="renderCategory('باقات')" class="glass-card p-4 border-yellow-500"><i class="fas fa-box-open text-2xl text-yellow-500 mb-2"></i><p class="text-[10px] font-bold">باقات العلاج</p></button>
+                <button onclick="renderCategory('رقية')" class="glass-card p-4"><i class="fas fa-book-open text-2xl text-green-500 mb-2"></i><p class="text-[10px] font-bold">الرُّقية</p></button>
+                <button onclick="renderCategory('اعشاب')" class="glass-card p-4"><i class="fas fa-leaf text-2xl text-green-500 mb-2"></i><p class="text-[10px] font-bold">الْأَعْشَابُ</p></button>
+                <button onclick="renderCategory('زيوت')" class="glass-card p-4"><i class="fas fa-flask text-2xl text-green-500 mb-2"></i><p class="text-[10px] font-bold">الزُّيُوتُ</p></button>
+                <button onclick="renderCategory('عسل')" class="glass-card p-4"><i class="fas fa-honey-pot text-2xl text-green-500 mb-2"></i><p class="text-[10px] font-bold">الْعَسَلُ</p></button>
+                <button onclick="renderCategory('بخور')" class="glass-card p-4"><i class="fas fa-wind text-2xl text-green-500 mb-2"></i><p class="text-[10px] font-bold">الْبُخُورُ</p></button>
+                <button onclick="renderCategory('حجامة')" class="glass-card p-4"><i class="fas fa-hand-holding-medical text-2xl text-yellow-500 mb-2"></i><p class="text-[10px] font-bold">الْحِجَامَةُ</p></button>
             </div>
 
             <div id="productDisplay" class="hidden-section pb-10">
@@ -131,7 +151,7 @@
 
     <footer class="marquee-footer">
         <div class="marquee-content">
-             أَهْلاً وَسَهْلاً بِكُمْ فِي مَوْقِعِ الشَّيخِ عَبْدَالصَّمَدِ عَبْدَالْوَاحِدِ.. 💬 واتساب: 249121494942 | متخصصون في الرقية والطب البديل
+             أَهْلاً وَسَهْلاً بِكُمْ فِي مَوْقِعِ الشَّيخِ عَبْدَالصَّمَدِ عَبْدَالْوَاحِدِ.. 💬 واتساب: 249121494942 | متخصصون في الرقية والطب البديل وبيع الأعشاب السودانية النادرة
         </div>
     </footer>
 
@@ -139,6 +159,11 @@
         particlesJS("particles-js", { "particles": { "number": { "value": 50 }, "color": { "value": "#ffffff" }, "size": { "value": 2 }, "move": { "enable": true, "speed": 1 } } });
 
         const menu = {
+            'باقات': [
+                {n:'باقة التحصين الشاملة (زيت + عسل + بخور)', p:250000},
+                {n:'برنامج علاج السحر المأكول المكثف', p:180000},
+                {n:'باقة السكينة للأمراض النفسية', p:120000}
+            ],
             'رقية': [
                 {n:'الْعَيْنُ وَالْحَسَدُ', p:100000}, {n:'السِّحْرُ الْمَأْكُولُ وَالْمَشْرُوبُ', p:100000},
                 {n:'السِّحْرُ الْأَسْوَدُ', p:100000}, {n:'السِّحْرُ الْأَحْمَرُ', p:100000},
@@ -151,15 +176,15 @@
                 {n:'الرِّيحُ الْأَحْمَرُ', p:100000}, {n:'الْقَرِينُ', p:100000}
             ],
             'اعشاب': [
+                {n:'الْمَحْرِيبُ (لتفتيت الحصى ومطهر)', p:20000}, {n:'عِرْقُ اللَّالُوبِ (للسكري والجلد)', p:7000},
+                {n:'التَّبَلْدِيُّ (مقوي مناعة)', p:10000}, {n:'الْعَرْدِيبُ (خافض حرارة)', p:10000},
                 {n:'الْقُسْطُ الْهِنْدِيُّ', p:50000}, {n:'السَّنَامَكِي', p:50000},
                 {n:'السِّدْرُ الْمَسْحُونُ', p:50000}, {n:'الْقَرَضُ الْمَسْحُونُ', p:10000},
-                {n:'الْمَحْرِيبُ', p:20000}, {n:'عِرْقُ النَّارِ', p:10000},
-                {n:'الْحَرْجَلُ', p:10000}, {n:'الْحَنْظَلُ', p:10000},
-                {n:'عِرْقُ الْحَجَرِ', p:20000}, {n:'الصَّمْغُ السُّودَانِيُّ', p:20000},
-                {n:'عِرْقُ اللَّالُوبِ', p:7000}, {n:'عِرْقُ السُّوسِ', p:10000},
+                {n:'عِرْقُ النَّارِ', p:10000}, {n:'الْحَرْجَلُ', p:10000},
+                {n:'الْحَنْظَلُ', p:10000}, {n:'عِرْقُ الْحَجَرِ', p:20000},
+                {n:'الصَّمْغُ السُّودَانِيُّ', p:20000}, {n:'عِرْقُ السُّوسِ', p:10000},
                 {n:'الْمِرَايَةُ', p:5000}, {n:'الْغُبْيِشُ', p:5000},
-                {n:'عِرْقُ الدَّايُوتِ', p:5000}, {n:'التَّبَلْدِيُّ', p:10000},
-                {n:'الْكَرْكَدِيهُ', p:7000}, {n:'الْعَرْدِيبُ', p:10000}
+                {n:'عِرْقُ الدَّايُوتِ', p:5000}, {n:'الْكَرْكَدِيهُ', p:7000}
             ],
             'زيوت': [
                 {n:'الزَّيْتُ الْمُعْجِزَةُ الْمُسْتَخْلَصُ', p:50000},
@@ -192,7 +217,7 @@
             grid.innerHTML = '';
             menu[cat].forEach(item => {
                 grid.innerHTML += `
-                    <div class="glass-card p-5 flex justify-between items-center shadow-md">
+                    <div class="glass-card p-5 flex justify-between items-center shadow-md border-indigo-400/30">
                         <div><p class="font-bold text-sm">${item.n}</p><span class="badge-price">${item.p.toLocaleString()} SDG</span></div>
                         <button onclick="openWhatsAppDirect('أريد طلب: ${item.n}')" class="btn-green px-4 py-2 text-xs">طلب</button>
                     </div>`;
@@ -216,7 +241,7 @@
             else {
                 document.getElementById('quizBox').classList.add('hidden-section');
                 document.getElementById('quizRes').classList.remove('hidden-section');
-                document.getElementById('quizRes').innerText = "تم تحليل حالتك، ننصحك بالبدء ببرنامج الرقية الشرعية والزيوت المرقية.";
+                document.getElementById('quizRes').innerText = "تم تحليل إجابتك، يوصي الشيخ بالبدء ببرنامج تحصين شامل والتواصل عبر واتساب لمتابعة الحالة.";
             }
         }
     </script>
