@@ -4,41 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>دار الشفاء | الرقية الشرعية والأعشاب والحجامة والعسل والزيوت</title>
+<title>دار الشفاء للعلاج الطبيعي | رقية شرعية وأعشاب وحجامة</title>
 
-<meta name="description" content="موقع دار الشفاء - الرقية الشرعية، الحجامة، الأعشاب الطبيعية، الزيوت، عسل النحل والاستشارات. تواصل معنا عبر واتساب واحجز خدمتك.">
-<meta name="keywords" content="دار الشفاء, رقية شرعية, حجامة, أعشاب طبيعية, زيوت طبيعية, عسل النحل, السودان">
-<meta name="author" content="دار الشفاء">
+<meta name="description" content="موقع دار الشفاء للعلاج الطبيعي. الرقية الشرعية، الأعشاب الطبيعية، الزيوت المستخلصة، خلطة عسل النحل، الحجامة النبوية والاستشارات.">
+<meta name="keywords" content="دار الشفاء، العلاج الطبيعي، الرقية الشرعية، الحجامة، الأعشاب الطبيعية، الزيوت، عسل النحل، السودان">
+<meta name="author" content="دار الشفاء للعلاج الطبيعي">
 
-<meta name="theme-color" content="#071b16">
+<meta name="theme-color" content="#062b12">
 
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <style>
+
 :root{
-    --green:#0b5d45;
-    --green-dark:#062f24;
-    --green-light:#15966d;
-    --gold:#d7ae4d;
-    --gold-light:#f1d37a;
-    --cream:#fffaf0;
-    --white:#ffffff;
-    --text:#17332a;
-    --muted:#6c7b75;
-    --bg:#f5f8f5;
-    --shadow:0 15px 45px rgba(0,0,0,.10);
-    --radius:22px;
+    --green:#0b3d1d;
+    --green2:#12652f;
+    --green3:#1b7a3b;
+    --gold:#d4af37;
+    --gold2:#f0d477;
+    --dark:#03150a;
+    --card:rgba(5,35,17,.86);
+    --text:#f5f5e9;
 }
 
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 html{
@@ -46,190 +41,63 @@ html{
 }
 
 body{
-    font-family:"Cairo",sans-serif;
-    background:var(--bg);
+    margin:0;
+    background:
+        radial-gradient(circle at top,#0c4a23 0%,#03150a 42%,#010903 100%);
     color:var(--text);
-    line-height:1.8;
+    font-family:'Cairo','Amiri',serif;
+    overflow-x:hidden;
+}
+
+#particles-js{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    opacity:.55;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
-button,
-input,
-textarea,
-select{
-    font-family:inherit;
+.gold{
+    color:var(--gold2);
 }
 
-button{
-    border:0;
-    cursor:pointer;
+.section{
+    padding:75px 20px;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-.header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(11,93,69,.10);
-}
-
-.nav{
-    max-width:1200px;
+.container{
+    max-width:1150px;
     margin:auto;
-    min-height:78px;
-    padding:10px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
+.glass{
+    background:var(--card);
+    border:1px solid rgba(212,175,55,.28);
+    box-shadow:0 15px 45px rgba(0,0,0,.35);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
 
-.brand img{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid var(--gold);
+.card{
+    border-radius:22px;
+    transition:.3s ease;
 }
 
-.brand-text h1{
-    color:var(--green);
-    font-size:22px;
-    font-weight:800;
-}
-
-.brand-text span{
-    color:var(--gold);
-    font-size:12px;
-    font-weight:700;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:5px;
-}
-
-.nav-links a{
-    padding:9px 13px;
-    border-radius:10px;
-    font-size:14px;
-    font-weight:600;
-    transition:.25s;
-}
-
-.nav-links a:hover{
-    background:#edf6f2;
-    color:var(--green);
-}
-
-.menu-btn{
-    display:none;
-    width:44px;
-    height:44px;
-    border-radius:12px;
-    background:var(--green);
-    color:white;
-    font-size:20px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:650px;
-    position:relative;
-    overflow:hidden;
-    background:
-        radial-gradient(circle at 20% 20%,rgba(215,174,77,.18),transparent 30%),
-        radial-gradient(circle at 80% 70%,rgba(21,150,109,.20),transparent 30%),
-        linear-gradient(135deg,#062f24,#0b5d45 60%,#083e30);
-    color:white;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-    background-size:45px 45px;
-}
-
-.hero-container{
-    max-width:1200px;
-    min-height:650px;
-    margin:auto;
-    padding:70px 20px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:60px;
-    position:relative;
-    z-index:1;
-}
-
-.hero-content .label{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    color:var(--gold-light);
-    border:1px solid rgba(241,211,122,.4);
-    background:rgba(255,255,255,.06);
-    padding:7px 15px;
-    border-radius:50px;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h2{
-    font-family:"Amiri",serif;
-    font-size:clamp(42px,6vw,76px);
-    line-height:1.15;
-    margin-bottom:15px;
-}
-
-.hero h2 strong{
-    color:var(--gold-light);
-}
-
-.hero p{
-    max-width:650px;
-    color:rgba(255,255,255,.82);
-    font-size:17px;
-    margin-bottom:28px;
-}
-
-.hero-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+.card:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+    box-shadow:0 18px 50px rgba(212,175,55,.13);
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
+    border:0;
+    cursor:pointer;
+    border-radius:14px;
     padding:13px 22px;
-    border-radius:13px;
+    font-family:inherit;
     font-weight:700;
     transition:.25s;
 }
@@ -239,782 +107,572 @@ button{
 }
 
 .btn-gold{
-    background:var(--gold);
-    color:#17220e;
+    color:#111;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));
+}
+
+.btn-green{
+    color:#fff;
+    background:linear-gradient(135deg,#188344,#07521f);
 }
 
 .btn-outline{
-    border:1px solid rgba(255,255,255,.35);
-    background:rgba(255,255,255,.07);
-    color:white;
+    color:var(--gold2);
+    border:1px solid var(--gold);
+    background:transparent;
 }
 
-.hero-logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.logo-ring{
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    padding:12px;
-    background:linear-gradient(135deg,var(--gold),transparent,var(--gold));
-    box-shadow:0 0 100px rgba(215,174,77,.18);
-}
-
-.logo-ring img{
-    width:100%;
-    height:100%;
+.logo{
+    width:155px;
+    height:155px;
     object-fit:cover;
     border-radius:50%;
-    border:8px solid rgba(255,255,255,.1);
+    border:3px solid var(--gold);
+    box-shadow:0 0 35px rgba(212,175,55,.3);
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-    padding:80px 20px;
+.small-logo{
+    width:52px;
+    height:52px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid var(--gold);
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(2,18,8,.93);
+    border-bottom:1px solid rgba(212,175,55,.35);
+    backdrop-filter:blur(15px);
 }
 
-.section-head{
+.nav-link{
+    color:#eee;
+    font-size:14px;
+    transition:.2s;
+}
+
+.nav-link:hover{
+    color:var(--gold2);
+}
+
+.hero{
+    min-height:calc(100vh - 75px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero-box{
+    max-width:850px;
+    padding:35px 20px;
+}
+
+.hero h1{
+    font-size:clamp(34px,6vw,68px);
+    line-height:1.25;
+    margin:20px 0 8px;
+    font-weight:800;
+    background:linear-gradient(90deg,#fff,#f0d477,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h2{
+    color:#48d77b;
+    font-size:clamp(20px,3vw,32px);
+    margin:5px 0 20px;
+}
+
+.hero p{
+    color:#d5e8d8;
+    line-height:2;
+    font-size:17px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid var(--gold);
+    border-radius:50px;
+    color:var(--gold2);
+    background:rgba(0,0,0,.3);
+    font-size:14px;
+}
+
+.section-title{
     text-align:center;
     margin-bottom:45px;
 }
 
-.section-head .mini{
-    color:var(--green-light);
-    font-size:14px;
+.section-title h2{
+    color:var(--gold2);
+    font-size:32px;
+    margin:0 0 10px;
     font-weight:800;
-    margin-bottom:6px;
 }
 
-.section-head h2{
-    font-size:34px;
-    color:var(--green-dark);
-    margin-bottom:8px;
+.section-title p{
+    color:#b8d0bd;
+    margin:0;
 }
-
-.section-head p{
-    color:var(--muted);
-    max-width:650px;
-    margin:auto;
-}
-
-/* =========================
-   SERVICES
-========================= */
 
 .services{
-    background:white;
-}
-
-.services-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.service-card{
-    position:relative;
-    overflow:hidden;
-    background:#fff;
-    border:1px solid #e8eee9;
-    border-radius:var(--radius);
-    padding:28px;
-    box-shadow:var(--shadow);
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(11,93,69,.25);
-}
-
-.service-icon{
-    width:62px;
-    height:62px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:18px;
-    background:#edf7f2;
-    color:var(--green);
-    font-size:25px;
-    margin-bottom:18px;
-}
-
-.service-card h3{
-    color:var(--green-dark);
-    margin-bottom:8px;
-}
-
-.service-card p{
-    color:var(--muted);
-    font-size:14px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    background:var(--cream);
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    gap:55px;
-    align-items:center;
-}
-
-.about-box{
-    background:white;
-    padding:35px;
-    border-radius:28px;
-    box-shadow:var(--shadow);
-    border-right:5px solid var(--gold);
-}
-
-.about-box h2{
-    color:var(--green-dark);
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.about-box p{
-    color:#52635d;
-    margin-bottom:15px;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin-top:20px;
-}
-
-.feature{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:14px;
-    font-weight:700;
-}
-
-.feature i{
-    color:var(--gold);
-}
-
-.about-logo{
-    display:flex;
-    justify-content:center;
-}
-
-.about-logo img{
-    width:320px;
-    max-width:90%;
-    border-radius:30px;
-    box-shadow:var(--shadow);
-}
-
-/* =========================
-   PRODUCTS
-========================= */
-
-.products{
-    background:#f5f8f5;
-}
-
-.category-tabs{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:30px;
-}
-
-.category-tabs button{
-    padding:10px 17px;
-    border-radius:50px;
-    background:white;
-    border:1px solid #dfe9e3;
-    color:var(--green-dark);
-    font-weight:700;
-}
-
-.category-tabs button.active,
-.category-tabs button:hover{
-    background:var(--green);
-    color:white;
-    border-color:var(--green);
-}
-
-.search-box{
-    max-width:600px;
-    margin:0 auto 35px;
-    position:relative;
-}
-
-.search-box i{
-    position:absolute;
-    right:18px;
-    top:16px;
-    color:#8b9b94;
-}
-
-.search-box input{
-    width:100%;
-    padding:14px 50px 14px 18px;
-    border:1px solid #dfe9e3;
-    border-radius:15px;
-    outline:none;
-    background:white;
-    font-size:15px;
-}
-
-.search-box input:focus{
-    border-color:var(--green);
-}
-
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.product-card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid #e6ece8;
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
-    transition:.3s;
-}
-
-.product-card:hover{
-    transform:translateY(-5px);
-}
-
-.product-image{
-    height:170px;
-    background:
-        radial-gradient(circle at 50% 20%,rgba(215,174,77,.2),transparent 35%),
-        linear-gradient(135deg,#0b5d45,#07372a);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--gold-light);
-    font-size:55px;
-}
-
-.product-info{
-    padding:20px;
-}
-
-.product-info h3{
-    color:var(--green-dark);
-    font-size:17px;
-    margin-bottom:6px;
-}
-
-.product-info p{
-    color:var(--muted);
-    font-size:13px;
-    min-height:48px;
-}
-
-.product-bottom{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    margin-top:15px;
-}
-
-.price{
-    color:var(--green);
-    font-weight:800;
-}
-
-.order-btn{
-    background:var(--green);
-    color:white;
-    padding:9px 15px;
-    border-radius:10px;
-    font-size:13px;
-    font-weight:700;
-}
-
-/* =========================
-   QURAN / REMINDER
-========================= */
-
-.reminder{
-    background:linear-gradient(135deg,#062f24,#0b5d45);
-    color:white;
+.service{
+    padding:30px 22px;
     text-align:center;
 }
 
-.reminder-box{
-    max-width:850px;
-    margin:auto;
+.service-icon{
+    width:72px;
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 18px;
+    border-radius:20px;
+    background:rgba(212,175,55,.09);
+    border:1px solid rgba(212,175,55,.3);
+    color:var(--gold2);
+    font-size:30px;
 }
 
-.reminder i{
-    color:var(--gold-light);
-    font-size:40px;
-    margin-bottom:20px;
+.service h3{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-.reminder h2{
-    font-family:"Amiri",serif;
-    font-size:34px;
-    margin-bottom:15px;
+.service p{
+    color:#b9cdbc;
+    line-height:1.9;
+    font-size:14px;
 }
 
-.reminder p{
-    color:rgba(255,255,255,.85);
-}
-
-/* =========================
-   BOOKING
-========================= */
-
-.booking{
-    background:white;
-}
-
-.booking-grid{
+.about{
     display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:35px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
-.contact-card{
-    background:var(--green-dark);
-    color:white;
-    border-radius:25px;
+.about-box{
     padding:32px;
 }
 
-.contact-card h2{
+.about-box h3{
+    color:var(--gold2);
+    font-size:24px;
+    margin-top:0;
+}
+
+.about-box p{
+    color:#c8dbcc;
+    line-height:2;
+}
+
+.quote{
+    border-right:4px solid var(--gold);
+    padding:22px;
+    background:rgba(255,255,255,.035);
+    border-radius:15px;
+    color:#e7f4e9;
+    line-height:2;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.category{
+    padding:28px 20px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.category i{
+    font-size:38px;
+    color:var(--gold2);
     margin-bottom:15px;
+}
+
+.category h3{
+    margin:0;
+    color:white;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.product{
+    padding:22px;
+    position:relative;
+}
+
+.product h3{
+    font-size:17px;
+    margin:0 0 15px;
+    color:#fff;
+}
+
+.product-desc{
+    color:#aac3af;
+    font-size:13px;
+    line-height:1.8;
+    min-height:48px;
+}
+
+.product-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-top:18px;
+}
+
+.price{
+    color:var(--gold2);
+    font-weight:800;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-box{
+    padding:30px;
 }
 
 .contact-item{
     display:flex;
-    align-items:flex-start;
-    gap:13px;
+    align-items:center;
+    gap:15px;
     padding:15px 0;
-    border-bottom:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .contact-item i{
-    color:var(--gold-light);
-    width:25px;
-    margin-top:5px;
+    color:var(--gold2);
+    width:30px;
+    text-align:center;
 }
 
-.form-card{
-    background:#f8faf8;
-    border:1px solid #e4ebe6;
-    border-radius:25px;
-    padding:32px;
+.transfer{
+    padding:25px;
+    border:1px solid rgba(212,175,55,.35);
+    background:rgba(0,0,0,.22);
+    border-radius:18px;
 }
 
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
+.transfer strong{
+    color:var(--gold2);
 }
-
-.field{
-    display:flex;
-    flex-direction:column;
-    gap:6px;
-}
-
-.field.full{
-    grid-column:1/-1;
-}
-
-.field label{
-    font-size:13px;
-    font-weight:700;
-}
-
-.field input,
-.field textarea,
-.field select{
-    width:100%;
-    border:1px solid #dce6e0;
-    background:white;
-    border-radius:12px;
-    padding:12px;
-    outline:none;
-}
-
-.field textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
-.field input:focus,
-.field textarea:focus,
-.field select:focus{
-    border-color:var(--green);
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 .footer{
-    background:#041d16;
-    color:white;
-    padding:50px 20px 100px;
-}
-
-.footer-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.2fr .8fr .8fr;
-    gap:35px;
-}
-
-.footer h3{
-    color:var(--gold-light);
-    margin-bottom:15px;
-}
-
-.footer p,
-.footer a{
-    color:rgba(255,255,255,.7);
-    font-size:14px;
-}
-
-.footer-links{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-}
-
-.footer-bottom{
-    max-width:1200px;
-    margin:35px auto 0;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.1);
+    background:#010b05;
+    border-top:1px solid rgba(212,175,55,.35);
+    padding:40px 20px 85px;
     text-align:center;
-    color:rgba(255,255,255,.55);
-    font-size:12px;
 }
-
-/* =========================
-   FLOATING BUTTONS
-========================= */
 
 .whatsapp{
     position:fixed;
     left:20px;
-    bottom:25px;
-    z-index:999;
+    bottom:75px;
     width:58px;
     height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:50%;
-    background:#25d366;
-    color:white;
-    font-size:28px;
-    box-shadow:0 10px 30px rgba(37,211,102,.35);
+    font-size:29px;
+    z-index:1500;
+    box-shadow:0 8px 30px rgba(37,211,102,.35);
 }
 
-.top-btn{
+.bottom-bar{
     position:fixed;
-    right:20px;
-    bottom:25px;
-    z-index:999;
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:var(--green);
-    color:white;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:1400;
+    background:rgba(2,17,8,.97);
+    border-top:1px solid var(--gold);
+    padding:9px;
+    overflow:hidden;
+}
+
+.marquee{
+    white-space:nowrap;
+    display:inline-block;
+    animation:move 35s linear infinite;
+    color:var(--gold2);
+    font-size:13px;
+}
+
+@keyframes move{
+    from{transform:translateX(-100%);}
+    to{transform:translateX(100%);}
+}
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.86);
+    z-index:3000;
     display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu{
-    display:none;
-    position:absolute;
-    top:78px;
-    right:10px;
-    left:10px;
-    background:white;
-    border-radius:18px;
-    padding:12px;
-    box-shadow:var(--shadow);
+.modal.active{
+    display:flex;
 }
 
-.mobile-menu a{
-    display:block;
-    padding:12px;
-    border-radius:10px;
+.modal-box{
+    width:100%;
+    max-width:550px;
+    padding:28px;
+    border-radius:25px;
+    max-height:90vh;
+    overflow:auto;
 }
 
-.mobile-menu a:hover{
-    background:#eef7f2;
+.input,
+textarea{
+    width:100%;
+    padding:14px;
+    background:#031a0b;
+    border:1px solid #235c31;
+    color:#fff;
+    border-radius:12px;
+    outline:none;
+    font-family:inherit;
+    margin-bottom:12px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.input:focus,
+textarea:focus{
+    border-color:var(--gold);
+}
 
-@media(max-width:900px){
+.close{
+    border:0;
+    background:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+@media(max-width:850px){
+    .services,
+    .categories,
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 
     .nav-links{
         display:none;
     }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .hero-container{
-        grid-template-columns:1fr;
-        text-align:center;
-        gap:35px;
-        padding-top:55px;
-    }
-
-    .hero-content p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .logo-ring{
-        width:250px;
-        height:250px;
-    }
-
-    .services-grid,
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .about-grid,
-    .booking-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-logo{
-        order:-1;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
 }
 
-@media(max-width:600px){
-
-    section{
-        padding:60px 15px;
+@media(max-width:550px){
+    .section{
+        padding:55px 14px;
     }
 
-    .nav{
-        padding:8px 12px;
+    .services,
+    .categories,
+    .products{
+        grid-template-columns:1fr;
     }
 
-    .brand img{
-        width:48px;
-        height:48px;
-    }
-
-    .brand-text h1{
-        font-size:18px;
+    .logo{
+        width:125px;
+        height:125px;
     }
 
     .hero{
-        min-height:auto;
-    }
-
-    .hero-container{
-        min-height:auto;
-        padding:60px 15px 70px;
-    }
-
-    .hero h2{
-        font-size:48px;
+        min-height:calc(100vh - 65px);
     }
 
     .hero p{
         font-size:15px;
     }
 
-    .services-grid,
-    .products-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
+    .hero-buttons{
+        flex-direction:column;
     }
 
-    .features,
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .field.full{
-        grid-column:auto;
-    }
-
-    .section-head h2{
-        font-size:28px;
-    }
-
-    .contact-card,
-    .form-card,
-    .about-box{
-        padding:23px;
-    }
-
-    .whatsapp{
-        left:15px;
-        bottom:18px;
-    }
-
-    .top-btn{
-        right:15px;
-        bottom:18px;
+    .btn{
+        width:100%;
     }
 }
 
-/* animation */
-
-.fade-up{
-    animation:fadeUp .7s ease both;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.hidden{
-    display:none!important;
-}
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<div id="particles-js"></div>
 
-<header class="header">
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container flex items-center justify-between py-3 px-4">
 
-<nav class="nav">
+        <a href="#home" class="flex items-center gap-3">
+            <img src="logo.png" class="small-logo" alt="شعار دار الشفاء">
+            <div>
+                <div class="font-bold text-green-400">دار الشفاء</div>
+                <div class="text-xs text-yellow-500">للعلاج الطبيعي</div>
+            </div>
+        </a>
 
-<a href="#home" class="brand">
-    <img src="logo.png" alt="شعار دار الشفاء">
-    <div class="brand-text">
-        <h1>دار الشفاء</h1>
-        <span>للرقية والحجامة والعلاج الطبيعي</span>
+        <div class="nav-links flex gap-6 items-center">
+            <a href="#home" class="nav-link">الرئيسية</a>
+            <a href="#about" class="nav-link">من نحن</a>
+            <a href="#services" class="nav-link">خدماتنا</a>
+            <a href="#products" class="nav-link">منتجاتنا</a>
+            <a href="#contact" class="nav-link">تواصل معنا</a>
+        </div>
+
+        <button class="btn btn-gold text-sm" onclick="openConsultation()">
+            <i class="fab fa-whatsapp"></i>
+            استشارة
+        </button>
+
     </div>
-</a>
-
-<div class="nav-links">
-    <a href="#home">الرئيسية</a>
-    <a href="#services">خدماتنا</a>
-    <a href="#about">عن دار الشفاء</a>
-    <a href="#products">المنتجات</a>
-    <a href="#booking">الحجز والتواصل</a>
-</div>
-
-<button class="menu-btn" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-</button>
-
 </nav>
 
-<div id="mobileMenu" class="mobile-menu">
-    <a href="#home" onclick="toggleMenu()">الرئيسية</a>
-    <a href="#services" onclick="toggleMenu()">خدماتنا</a>
-    <a href="#about" onclick="toggleMenu()">عن دار الشفاء</a>
-    <a href="#products" onclick="toggleMenu()">المنتجات</a>
-    <a href="#booking" onclick="toggleMenu()">الحجز والتواصل</a>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-box">
+
+        <span class="badge">
+            <i class="fas fa-leaf"></i>
+            أهلاً بكم في دار الشفاء
+        </span>
+
+        <img src="logo.png"
+             alt="شعار دار الشفاء للعلاج الطبيعي"
+             class="logo mt-7 mb-2">
+
+        <h1>دار الشفاء</h1>
+
+        <h2>للعلاج الطبيعي والرقية الشرعية</h2>
+
+        <p>
+            رقية شرعية • أعشاب طبيعية • زيوت مستخلصة
+            • خلطة عسل النحل • حجامة نبوية • استشارات
+        </p>
+
+        <div class="hero-buttons flex gap-3 justify-center mt-7">
+
+            <a href="#services" class="btn btn-gold">
+                <i class="fas fa-hand-holding-heart"></i>
+                خدماتنا
+            </a>
+
+            <button onclick="openConsultation()" class="btn btn-green">
+                <i class="fab fa-whatsapp"></i>
+                تواصل معنا
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>من نحن</h2>
+    <p>دار الشفاء للعلاج الطبيعي</p>
 </div>
 
-</header>
+<div class="about">
 
+    <div class="glass card about-box">
 
-<!-- ================= HERO ================= -->
+        <h3>
+            <i class="fas fa-hospital-user"></i>
+            دار الشفاء
+        </h3>
 
-<section class="hero" id="home">
+        <p>
+            نقدم مجموعة من الخدمات والمنتجات الطبيعية التي تهدف إلى
+            مساعدة الزائر في الوصول إلى خيارات مناسبة للعناية بالصحة
+            والعافية، مع الاهتمام بالرقية الشرعية والحجامة والأعشاب
+            والزيوت الطبيعية.
+        </p>
 
-<div class="hero-container">
+        <div class="quote">
+            <i class="fas fa-quote-right gold"></i>
+            <br>
+            نسعى لأن تكون دار الشفاء وجهة موثوقة لخدمات ومنتجات
+            العناية الطبيعية والاستشارات.
+        </div>
 
-<div class="hero-content fade-up">
+    </div>
 
-<div class="label">
-    <i class="fas fa-star"></i>
-    أهلاً بكم في دار الشفاء
-</div>
+    <div class="glass card about-box">
 
-<h2>
-    <strong>دار الشفاء</strong><br>
-    للعناية والراحة والسكينة
-</h2>
+        <h3>
+            <i class="fas fa-star"></i>
+            رسالتنا
+        </h3>
 
-<p>
-    نقدم خدمات الرقية الشرعية والاستشارات، والحجامة،
-    والأعشاب الطبيعية، والزيوت، وعسل النحل،
-    مع الاهتمام براحة الزائر وحسن التعامل.
-</p>
+        <p>
+            تقديم خدماتنا بطريقة منظمة وسهلة، وتمكين العملاء من
+            التعرف على الخدمات والمنتجات والتواصل معنا مباشرة عبر
+            واتساب.
+        </p>
 
-<div class="hero-buttons">
+        <div class="grid grid-cols-2 gap-3 mt-5">
 
-<a href="#services" class="btn btn-gold">
-    <i class="fas fa-compass"></i>
-    اكتشف خدماتنا
-</a>
+            <div class="glass p-4 rounded-xl text-center">
+                <i class="fas fa-leaf gold text-2xl"></i>
+                <p class="text-sm mt-2">منتجات طبيعية</p>
+            </div>
 
-<button onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات دار الشفاء')" class="btn btn-outline">
-    <i class="fab fa-whatsapp"></i>
-    تواصل معنا
-</button>
+            <div class="glass p-4 rounded-xl text-center">
+                <i class="fas fa-heart gold text-2xl"></i>
+                <p class="text-sm mt-2">اهتمام بالعميل</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-<div class="hero-logo">
-
-<div class="logo-ring">
-    <img src="logo.png" alt="دار الشفاء">
-</div>
+    </div>
 
 </div>
 
@@ -1023,388 +681,222 @@ section{
 </section>
 
 
-<!-- ================= SERVICES ================= -->
-
-<section class="services" id="services">
+<!-- SERVICES -->
+<section id="services" class="section">
 
 <div class="container">
 
-<div class="section-head">
-    <div class="mini">ماذا نقدم؟</div>
+<div class="section-title">
     <h2>خدمات دار الشفاء</h2>
-    <p>
-        مجموعة من الخدمات التي يمكنك الاستفسار عنها والحجز من خلال التواصل المباشر.
-    </p>
+    <p>مجموعة من الخدمات المتنوعة في مكان واحد</p>
 </div>
 
-<div class="services-grid">
+<div class="services">
 
-<div class="service-card">
-    <div class="service-icon">
+    <div class="glass card service">
+        <div class="service-icon">
+            <i class="fas fa-book-quran"></i>
+        </div>
+        <h3>الرقية الشرعية</h3>
+        <p>
+            خدمة الرقية الشرعية والاستشارات المتعلقة بالتحصين
+            والأذكار وفق المنهج الشرعي.
+        </p>
+        <button onclick="openConsultation('الرقية الشرعية')" class="btn btn-green">
+            استفسار
+        </button>
+    </div>
+
+
+    <div class="glass card service">
+        <div class="service-icon">
+            <i class="fas fa-leaf"></i>
+        </div>
+        <h3>الأعشاب الطبيعية</h3>
+        <p>
+            مجموعة من الأعشاب والمواد الطبيعية المتوفرة لدى دار الشفاء.
+        </p>
+        <button onclick="showProducts('اعشاب')" class="btn btn-green">
+            عرض الأعشاب
+        </button>
+    </div>
+
+
+    <div class="glass card service">
+        <div class="service-icon">
+            <i class="fas fa-flask"></i>
+        </div>
+        <h3>الزيوت المستخلصة</h3>
+        <p>
+            زيوت طبيعية ومستحضرات معدة للاستخدام الخارجي حسب المنتج.
+        </p>
+        <button onclick="showProducts('زيوت')" class="btn btn-green">
+            عرض الزيوت
+        </button>
+    </div>
+
+
+    <div class="glass card service">
+        <div class="service-icon">
+            <i class="fas fa-jar"></i>
+        </div>
+        <h3>عسل النحل</h3>
+        <p>
+            عسل النحل والخلطات المتوفرة لدى دار الشفاء.
+        </p>
+        <button onclick="showProducts('عسل')" class="btn btn-green">
+            عرض العسل
+        </button>
+    </div>
+
+
+    <div class="glass card service">
+        <div class="service-icon">
+            <i class="fas fa-fire"></i>
+        </div>
+        <h3>البخور</h3>
+        <p>
+            مجموعة من منتجات البخور والروائح الطبيعية.
+        </p>
+        <button onclick="showProducts('بخور')" class="btn btn-green">
+            عرض البخور
+        </button>
+    </div>
+
+
+    <div class="glass card service">
+        <div class="service-icon">
+            <i class="fas fa-heart-pulse"></i>
+        </div>
+        <h3>الحجامة</h3>
+        <p>
+            خدمات الحجامة والاستفسار عن المواعيد والتفاصيل عبر واتساب.
+        </p>
+        <button onclick="openConsultation('الحجامة')" class="btn btn-green">
+            احجز استشارة
+        </button>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>منتجات دار الشفاء</h2>
+    <p>اختر القسم الذي تريد الاطلاع عليه</p>
+</div>
+
+<div class="categories mb-8">
+
+    <div onclick="showProducts('رقية')" class="glass card category">
         <i class="fas fa-book-quran"></i>
+        <h3>الرقية الشرعية</h3>
     </div>
-    <h3>الرقية الشرعية</h3>
-    <p>
-        رقية شرعية وفق القرآن الكريم والأدعية المأثورة،
-        مع الاستشارة والتوجيه المناسب.
-    </p>
-</div>
 
-<div class="service-card">
-    <div class="service-icon">
-        <i class="fas fa-hand-holding-medical"></i>
-    </div>
-    <h3>الحجامة</h3>
-    <p>
-        خدمات الحجامة والاستفسار عن المواعيد المناسبة
-        وطريقة الحجز.
-    </p>
-</div>
-
-<div class="service-card">
-    <div class="service-icon">
+    <div onclick="showProducts('اعشاب')" class="glass card category">
         <i class="fas fa-leaf"></i>
+        <h3>الأعشاب</h3>
     </div>
-    <h3>الأعشاب الطبيعية</h3>
-    <p>
-        مجموعة من الأعشاب والمواد الطبيعية المتوفرة
-        لدى دار الشفاء.
-    </p>
-</div>
 
-<div class="service-card">
-    <div class="service-icon">
+    <div onclick="showProducts('زيوت')" class="glass card category">
         <i class="fas fa-flask"></i>
+        <h3>الزيوت</h3>
     </div>
-    <h3>الزيوت الطبيعية</h3>
-    <p>
-        زيوت طبيعية متنوعة يمكن الاستفسار عن أنواعها
-        وأسعارها وطرق استخدامها.
-    </p>
-</div>
 
-<div class="service-card">
-    <div class="service-icon">
-        <i class="fas fa-droplet"></i>
+    <div onclick="showProducts('عسل')" class="glass card category">
+        <i class="fas fa-jar"></i>
+        <h3>العسل</h3>
     </div>
-    <h3>عسل النحل</h3>
-    <p>
-        عسل النحل ومنتجات العسل والخلطات المتوفرة
-        لدى دار الشفاء.
-    </p>
-</div>
 
-<div class="service-card">
-    <div class="service-icon">
-        <i class="fas fa-comments"></i>
+    <div onclick="showProducts('بخور')" class="glass card category">
+        <i class="fas fa-fire"></i>
+        <h3>البخور</h3>
     </div>
-    <h3>الاستشارات</h3>
-    <p>
-        يمكنك إرسال استفسارك والتواصل مع دار الشفاء
-        مباشرة عبر واتساب.
-    </p>
-</div>
+
+    <div onclick="showProducts('حجامة')" class="glass card category">
+        <i class="fas fa-heart-pulse"></i>
+        <h3>الحجامة</h3>
+    </div>
 
 </div>
+
+<div id="productArea" class="products"></div>
+
 </div>
+
 </section>
 
 
-<!-- ================= ABOUT ================= -->
-
-<section class="about" id="about">
+<!-- CONTACT -->
+<section id="contact" class="section">
 
 <div class="container">
 
-<div class="about-grid">
-
-<div class="about-logo">
-    <img src="logo.png" alt="دار الشفاء">
+<div class="section-title">
+    <h2>تواصل معنا</h2>
+    <p>نحن هنا للرد على استفساراتكم وطلباتكم</p>
 </div>
 
-<div class="about-box">
+<div class="contact-grid">
 
-<h2>عن دار الشفاء</h2>
+    <div class="glass card contact-box">
 
-<p>
-    مرحباً بكم في <strong>دار الشفاء</strong>،
-    وجهتكم للتواصل والاستفادة من خدمات الرقية الشرعية
-    والحجامة والأعشاب والزيوت الطبيعية وعسل النحل والاستشارات.
-</p>
+        <h3 class="text-2xl font-bold gold mb-5">
+            <i class="fas fa-comments"></i>
+            التواصل
+        </h3>
 
-<p>
-    نحرص على تقديم المعلومات بطريقة واضحة،
-    والتواصل المباشر مع الزوار عبر واتساب للاستفسار
-    عن الخدمات والمنتجات والمواعيد.
-</p>
+        <div class="contact-item">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <div>
+                <div class="text-sm text-gray-400">واتساب</div>
+                <div class="font-bold">249121494942</div>
+            </div>
+        </div>
 
-<div class="features">
+        <button onclick="openConsultation()" class="btn btn-green w-full mt-5">
+            <i class="fab fa-whatsapp"></i>
+            تواصل عبر واتساب
+        </button>
 
-<div class="feature">
-    <i class="fas fa-check-circle"></i>
-    الرقية الشرعية
-</div>
-
-<div class="feature">
-    <i class="fas fa-check-circle"></i>
-    الحجامة
-</div>
-
-<div class="feature">
-    <i class="fas fa-check-circle"></i>
-    الأعشاب الطبيعية
-</div>
-
-<div class="feature">
-    <i class="fas fa-check-circle"></i>
-    الزيوت الطبيعية
-</div>
-
-<div class="feature">
-    <i class="fas fa-check-circle"></i>
-    عسل النحل
-</div>
-
-<div class="feature">
-    <i class="fas fa-check-circle"></i>
-    الاستشارات
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</section>
-
-
-<!-- ================= REMINDER ================= -->
-
-<section class="reminder">
-
-<div class="reminder-box">
-
-<i class="fas fa-heart"></i>
-
-<h2>
-    وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ
-</h2>
-
-<p>
-    نسأل الله لكم العافية والشفاء والطمأنينة،
-    ونسعد بتواصلكم مع دار الشفاء للاستفسار عن خدماتنا.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- ================= PRODUCTS ================= -->
-
-<section class="products" id="products">
-
-<div class="container">
-
-<div class="section-head">
-    <div class="mini">متجر دار الشفاء</div>
-    <h2>المنتجات والخدمات</h2>
-    <p>
-        اختر القسم ثم اضغط على طلب لإرسال المنتج مباشرة عبر واتساب.
-    </p>
-</div>
-
-<div class="search-box">
-
-<i class="fas fa-search"></i>
-
-<input
-    type="text"
-    id="searchInput"
-    placeholder="ابحث عن منتج أو خدمة..."
-    oninput="filterProducts()">
-
-</div>
-
-<div class="category-tabs">
-
-<button class="active" onclick="setCategory('all',this)">
-    الكل
-</button>
-
-<button onclick="setCategory('رقية',this)">
-    الرقية
-</button>
-
-<button onclick="setCategory('أعشاب',this)">
-    الأعشاب
-</button>
-
-<button onclick="setCategory('زيوت',this)">
-    الزيوت
-</button>
-
-<button onclick="setCategory('عسل',this)">
-    العسل
-</button>
-
-<button onclick="setCategory('بخور',this)">
-    البخور
-</button>
-
-<button onclick="setCategory('حجامة',this)">
-    الحجامة
-</button>
-
-</div>
-
-<div id="productsGrid" class="products-grid"></div>
-
-</div>
-
-</section>
-
-
-<!-- ================= BOOKING ================= -->
-
-<section class="booking" id="booking">
-
-<div class="container">
-
-<div class="section-head">
-    <div class="mini">تواصل معنا</div>
-    <h2>الحجز والاستفسار</h2>
-    <p>
-        املأ البيانات التالية وسيتم تجهيز رسالة واتساب لك تلقائياً.
-    </p>
-</div>
-
-<div class="booking-grid">
-
-<div class="contact-card">
-
-<h2>دار الشفاء</h2>
-
-<p>
-    نحن سعداء بتواصلكم واستفساراتكم.
-</p>
-
-<div class="contact-item">
-    <i class="fab fa-whatsapp"></i>
-    <div>
-        <strong>واتساب</strong>
-        <br>
-        <span>249121494942</span>
     </div>
-</div>
 
-<div class="contact-item">
-    <i class="fas fa-clock"></i>
-    <div>
-        <strong>المواعيد</strong>
-        <br>
-        <span>يرجى التواصل عبر واتساب لمعرفة المواعيد المتاحة.</span>
+
+    <div class="glass card contact-box">
+
+        <h3 class="text-2xl font-bold gold mb-5">
+            <i class="fas fa-money-bill-transfer"></i>
+            بيانات التحويل
+        </h3>
+
+        <div class="transfer">
+
+            <p>
+                <strong>بنكك:</strong>
+                <span>2985827</span>
+            </p>
+
+            <p>
+                <strong>فوري:</strong>
+                <span>51170108</span>
+            </p>
+
+            <p class="text-sm text-gray-300 mt-4">
+                باسم:
+                عبدالصمد عبدالواحد محمد الطاهر
+            </p>
+
+        </div>
+
     </div>
-</div>
-
-<div class="contact-item">
-    <i class="fas fa-location-dot"></i>
-    <div>
-        <strong>الموقع</strong>
-        <br>
-        <span>السودان</span>
-    </div>
-</div>
-
-</div>
-
-
-<div class="form-card">
-
-<form id="bookingForm" onsubmit="sendBooking(event)">
-
-<div class="form-grid">
-
-<div class="field">
-
-<label>الاسم</label>
-
-<input
-    type="text"
-    id="clientName"
-    placeholder="اكتب اسمك"
-    required>
-
-</div>
-
-<div class="field">
-
-<label>رقم الهاتف</label>
-
-<input
-    type="tel"
-    id="clientPhone"
-    placeholder="رقم الهاتف"
-    required>
-
-</div>
-
-<div class="field">
-
-<label>الخدمة</label>
-
-<select id="clientService">
-
-<option>استفسار عام</option>
-<option>الرقية الشرعية</option>
-<option>الحجامة</option>
-<option>الأعشاب الطبيعية</option>
-<option>الزيوت الطبيعية</option>
-<option>عسل النحل</option>
-<option>البخور</option>
-<option>استشارة</option>
-
-</select>
-
-</div>
-
-<div class="field">
-
-<label>الوقت المفضل</label>
-
-<input
-    type="text"
-    id="preferredTime"
-    placeholder="مثال: مساءً">
-
-</div>
-
-<div class="field full">
-
-<label>رسالتك</label>
-
-<textarea
-    id="clientMessage"
-    placeholder="اكتب استفسارك أو طلبك هنا"></textarea>
-
-</div>
-
-<div class="field full">
-
-<button class="btn btn-gold" type="submit">
-    <i class="fab fa-whatsapp"></i>
-    إرسال الطلب عبر واتساب
-</button>
-
-</div>
-
-</div>
-
-</form>
-
-</div>
 
 </div>
 
@@ -1413,511 +905,153 @@ section{
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer class="footer">
 
-<div class="footer-grid">
+    <img src="logo.png" class="small-logo mb-3" alt="دار الشفاء">
 
-<div>
+    <h2 class="text-2xl font-bold text-green-400">
+        دار الشفاء للعلاج الطبيعي
+    </h2>
 
-<h3>دار الشفاء</h3>
+    <p class="text-gray-400 mt-2">
+        رقية شرعية • أعشاب طبيعية • زيوت مستخلصة
+        • عسل النحل • حجامة نبوية • استشارات
+    </p>
 
-<p>
-    الرقية الشرعية والحجامة والأعشاب والزيوت الطبيعية
-    وعسل النحل والاستشارات.
-</p>
-
-<br>
-
-<button
-onclick="openWhatsApp('السلام عليكم، أريد التواصل مع دار الشفاء')"
-class="btn btn-gold">
-
-<i class="fab fa-whatsapp"></i>
-تواصل معنا
-
-</button>
-
-</div>
-
-
-<div>
-
-<h3>روابط الموقع</h3>
-
-<div class="footer-links">
-
-<a href="#home">الرئيسية</a>
-<a href="#services">خدماتنا</a>
-<a href="#about">عن دار الشفاء</a>
-<a href="#products">المنتجات</a>
-<a href="#booking">الحجز والتواصل</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>خدماتنا</h3>
-
-<div class="footer-links">
-
-<a href="#products">الرقية الشرعية</a>
-<a href="#products">الحجامة</a>
-<a href="#products">الأعشاب</a>
-<a href="#products">الزيوت</a>
-<a href="#products">عسل النحل</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-© <span id="year"></span> دار الشفاء — جميع الحقوق محفوظة
-
-</div>
+    <div class="mt-6 text-yellow-500 text-sm">
+        © <span id="year"></span> دار الشفاء - جميع الحقوق محفوظة
+    </div>
 
 </footer>
 
 
-<!-- WHATSAPP -->
-
-<a
-class="whatsapp"
-href="https://wa.me/249121494942"
-target="_blank"
-aria-label="واتساب">
-
-<i class="fab fa-whatsapp"></i>
-
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/249121494942"
+   target="_blank"
+   class="whatsapp"
+   aria-label="واتساب">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 
-<!-- TOP -->
+<!-- BOTTOM BAR -->
+<div class="bottom-bar">
+    <div class="marquee">
+        🌿 أهلاً وسهلاً بكم في دار الشفاء للعلاج الطبيعي
+        • رقية شرعية • أعشاب طبيعية • زيوت مستخلصة
+        • عسل النحل • حجامة نبوية • استشارات
+        • واتساب: 249121494942
+    </div>
+</div>
 
-<button
-id="topBtn"
-class="top-btn"
-onclick="window.scrollTo({top:0,behavior:'smooth'})">
 
-<i class="fas fa-arrow-up"></i>
+<!-- CONSULTATION MODAL -->
+<div id="consultModal" class="modal">
 
-</button>
+    <div class="glass modal-box">
+
+        <div class="flex justify-between items-center mb-5">
+
+            <h2 class="text-xl font-bold gold">
+                <i class="fab fa-whatsapp"></i>
+                التواصل مع دار الشفاء
+            </h2>
+
+            <button class="close" onclick="closeModal()">&times;</button>
+
+        </div>
+
+        <p class="text-gray-300 text-sm mb-5">
+            اكتب بياناتك أو استفسارك وسيتم تحويلك مباشرة إلى واتساب.
+        </p>
+
+        <input id="clientName"
+               class="input"
+               placeholder="الاسم">
+
+        <input id="clientPhone"
+               class="input"
+               placeholder="رقم الهاتف">
+
+        <textarea id="clientMessage"
+                  rows="5"
+                  placeholder="اكتب طلبك أو استفسارك هنا..."></textarea>
+
+        <button onclick="sendWhatsApp()" class="btn btn-green w-full">
+            <i class="fab fa-whatsapp"></i>
+            إرسال عبر واتساب
+        </button>
+
+    </div>
+
+</div>
 
 
 <script>
 
 /* =========================
-   DATA
+   PARTICLES
 ========================= */
 
-const products = [
-
-{
-name:"الرقية الشرعية",
-category:"رقية",
-icon:"fa-book-quran",
-price:"للاستفسار",
-description:"خدمة الرقية الشرعية والاستشارة."
-},
-
-{
-name:"جلسة حجامة شاملة",
-category:"حجامة",
-icon:"fa-hand-holding-medical",
-price:"20,000 SDG",
-description:"للاستفسار والحجز عن موعد الحجامة."
-},
-
-{
-name:"القسط الهندي",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"50,000 SDG",
-description:"من الأعشاب الطبيعية المتوفرة."
-},
-
-{
-name:"السنامكي",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"50,000 SDG",
-description:"منتج عشبي طبيعي."
-},
-
-{
-name:"السدر المسحون",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"50,000 SDG",
-description:"السدر المسحون."
-},
-
-{
-name:"القرّاض المسحون",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"10,000 SDG",
-description:"من المنتجات العشبية المتوفرة."
-},
-
-{
-name:"المحريب",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"20,000 SDG",
-description:"منتج عشبي."
-},
-
-{
-name:"الكركديه",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"7,000 SDG",
-description:"كركديه طبيعي."
-},
-
-{
-name:"العرديب",
-category:"أعشاب",
-icon:"fa-leaf",
-price:"10,000 SDG",
-description:"عرديب طبيعي."
-},
-
-{
-name:"الزيت المستخلص",
-category:"زيوت",
-icon:"fa-flask",
-price:"50,000 SDG",
-description:"زيت طبيعي مستخلص."
-},
-
-{
-name:"زيت الزيتون",
-category:"زيوت",
-icon:"fa-flask",
-price:"20,000 SDG",
-description:"زيت الزيتون."
-},
-
-{
-name:"زيت السمسم",
-category:"زيوت",
-icon:"fa-flask",
-price:"17,000 SDG",
-description:"زيت السمسم."
-},
-
-{
-name:"زيت الحبة السوداء",
-category:"زيوت",
-icon:"fa-flask",
-price:"15,000 SDG",
-description:"زيت الحبة السوداء."
-},
-
-{
-name:"زيت الخروع",
-category:"زيوت",
-icon:"fa-flask",
-price:"10,000 SDG",
-description:"زيت الخروع."
-},
-
-{
-name:"زيت النيم",
-category:"زيوت",
-icon:"fa-flask",
-price:"10,000 SDG",
-description:"زيت النيم."
-},
-
-{
-name:"زيت السدر",
-category:"زيوت",
-icon:"fa-flask",
-price:"15,000 SDG",
-description:"زيت السدر."
-},
-
-{
-name:"عسل النحل الأصلي",
-category:"عسل",
-icon:"fa-jar",
-price:"15,000 SDG",
-description:"عسل النحل."
-},
-
-{
-name:"خلطة عسل المناعة",
-category:"عسل",
-icon:"fa-jar",
-price:"150,000 SDG",
-description:"خلطة من منتجات العسل."
-},
-
-{
-name:"خلطة العسل",
-category:"عسل",
-icon:"fa-jar",
-price:"250,000 SDG",
-description:"خلطة عسل متوفرة لدى دار الشفاء."
-},
-
-{
-name:"صمغ اللبان المجهز",
-category:"بخور",
-icon:"fa-wind",
-price:"50,000 SDG",
-description:"صمغ اللبان."
-},
-
-{
-name:"المسك",
-category:"بخور",
-icon:"fa-wind",
-price:"50,000 SDG",
-description:"المسك."
-},
-
-{
-name:"الفاسوخ الأسود",
-category:"بخور",
-icon:"fa-wind",
-price:"50,000 SDG",
-description:"منتج بخور."
-},
-
-{
-name:"الصندل الأحمر",
-category:"بخور",
-icon:"fa-wind",
-price:"50,000 SDG",
-description:"الصندل الأحمر."
-}
-
-];
-
-
-/* =========================
-   VARIABLES
-========================= */
-
-let currentCategory = "all";
-
-
-/* =========================
-   RENDER PRODUCTS
-========================= */
-
-function renderProducts(){
-
-    const grid = document.getElementById("productsGrid");
-
-    const search =
-        document.getElementById("searchInput")
-        .value
-        .trim()
-        .toLowerCase();
-
-    const filtered = products.filter(product => {
-
-        const categoryMatch =
-            currentCategory === "all" ||
-            product.category === currentCategory;
-
-        const searchMatch =
-            product.name.toLowerCase().includes(search) ||
-            product.category.toLowerCase().includes(search);
-
-        return categoryMatch && searchMatch;
-
-    });
-
-
-    if(filtered.length === 0){
-
-        grid.innerHTML = `
-        <div style="grid-column:1/-1;text-align:center;padding:50px;color:#718078">
-            <i class="fas fa-search" style="font-size:35px;margin-bottom:10px"></i>
-            <p>لم يتم العثور على نتائج.</p>
-        </div>`;
-
-        return;
-    }
-
-
-    grid.innerHTML = filtered.map(product => `
-
-        <article class="product-card">
-
-            <div class="product-image">
-                <i class="fas ${product.icon}"></i>
-            </div>
-
-            <div class="product-info">
-
-                <h3>${product.name}</h3>
-
-                <p>${product.description}</p>
-
-                <div class="product-bottom">
-
-                    <span class="price">
-                        ${product.price}
-                    </span>
-
-                    <button
-                    class="order-btn"
-                    onclick="orderProduct('${escapeText(product.name)}')">
-
-                        <i class="fab fa-whatsapp"></i>
-                        طلب
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-    `).join("");
-
-}
-
-
-function escapeText(text){
-
-    return text.replace(/'/g,"\\'");
-
-}
-
-
-/* =========================
-   CATEGORY
-========================= */
-
-function setCategory(category,button){
-
-    currentCategory = category;
-
-    document.querySelectorAll(".category-tabs button")
-    .forEach(btn => btn.classList.remove("active"));
-
-    button.classList.add("active");
-
-    renderProducts();
-
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-function filterProducts(){
-
-    renderProducts();
-
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
-
-function openWhatsApp(message){
-
-    const phone = "249121494942";
-
-    const url =
-        "https://wa.me/" +
-        phone +
-        "?text=" +
-        encodeURIComponent(message);
-
-    window.open(url,"_blank");
-
-}
-
-
-function orderProduct(product){
-
-    openWhatsApp(
-        "السلام عليكم، أريد طلب: " + product +
-        "\nمن موقع دار الشفاء."
-    );
-
-}
-
-
-/* =========================
-   BOOKING
-========================= */
-
-function sendBooking(event){
-
-    event.preventDefault();
-
-    const name =
-        document.getElementById("clientName").value.trim();
-
-    const phone =
-        document.getElementById("clientPhone").value.trim();
-
-    const service =
-        document.getElementById("clientService").value;
-
-    const time =
-        document.getElementById("preferredTime").value.trim();
-
-    const message =
-        document.getElementById("clientMessage").value.trim();
-
-
-    const whatsappMessage =
-`السلام عليكم ورحمة الله وبركاته
-
-أرغب في التواصل مع دار الشفاء.
-
-الاسم: ${name}
-رقم الهاتف: ${phone}
-الخدمة المطلوبة: ${service}
-الوقت المفضل: ${time || "غير محدد"}
-
-الرسالة:
-${message || "لا توجد رسالة إضافية"}
-
-تم إرسال الطلب من موقع دار الشفاء.`;
-
-
-    openWhatsApp(whatsappMessage);
-
-}
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-function toggleMenu(){
-
-    const menu =
-        document.getElementById("mobileMenu");
-
-    if(menu.style.display === "block"){
-        menu.style.display = "none";
-    }else{
-        menu.style.display = "block";
-    }
+if(window.particlesJS){
+
+particlesJS("particles-js",{
+    particles:{
+        number:{
+            value:45,
+            density:{
+                enable:true,
+                value_area:900
+            }
+        },
+        color:{
+            value:"#d4af37"
+        },
+        opacity:{
+            value:.25
+        },
+        size:{
+            value:2
+        },
+        line_linked:{
+            enable:true,
+            distance:130,
+            color:"#1b7a3b",
+            opacity:.18,
+            width:1
+        },
+        move:{
+            enable:true,
+            speed:.7
+        }
+    },
+    interactivity:{
+        detect_on:"canvas",
+        events:{
+            onhover:{
+                enable:true,
+                mode:"grab"
+            },
+            onclick:{
+                enable:true,
+                mode:"push"
+            }
+        },
+        modes:{
+            grab:{
+                distance:140,
+                line_linked:{
+                    opacity:.3
+                }
+            },
+            push:{
+                particles_nb:2
+            }
+        }
+    },
+    retina_detect:true
+});
 
 }
 
@@ -1931,55 +1065,245 @@ document.getElementById("year").textContent =
 
 
 /* =========================
-   TOP BUTTON
+   PRODUCTS
 ========================= */
 
-window.addEventListener("scroll",function(){
+const products = {
 
-    const topBtn =
-        document.getElementById("topBtn");
+"رقية":[
+    "السِّحْرُ الْمَأْكُولُ",
+    "السِّحْرُ الْمَشْرُوبُ",
+    "السِّحْرُ الْأَسْوَدُ",
+    "السِّحْرُ الْأَحْمَرُ",
+    "السِّحْرُ الْمَدْفُونُ",
+    "السِّحْرُ الْمَرْشُوشُ",
+    "سِحْرُ الْفِرَاقِ",
+    "الرِّيحُ الْأَحْمَرُ",
+    "الْعَيْنُ وَالْحَسَدُ",
+    "الْمَسُّ الشَّيْطَانِيُّ",
+    "الْقَرِينُ",
+    "سِحْرُ التَّبْوِيرِ",
+    "الْجِنُّ الطَّيَّارُ",
+    "سِحْرُ الْأَرْحَامِ",
+    "عِلاجُ التَّوَابِعِ",
+    "الرُّقْيَةُ الشَّامِلَةُ",
+    "تَحْصِينُ الْمَنَازِلِ",
+    "فَكُّ الرَّبْطِ"
+],
 
-    if(window.scrollY > 500){
-        topBtn.style.display = "flex";
-        topBtn.style.alignItems = "center";
-        topBtn.style.justifyContent = "center";
-    }else{
-        topBtn.style.display = "none";
-    }
+"اعشاب":[
+    "الْعَرَيْدِيبُ",
+    "اللَّالُوبُ",
+    "الْقُسْطُ الْهِنْدِيُّ",
+    "السَّنَامَكِي",
+    "الصَّمْغُ الْعَرَبِيُّ",
+    "التَّبَلْدِيُّ",
+    "الْكَرْكَدِيهُ",
+    "الْقَرَضُ",
+    "الْمَحْرِيبُ",
+    "عِرْقُ النَّارِ",
+    "الْحَنْظَلُ",
+    "السِّدْرُ",
+    "الْحَرْجَلُ",
+    "عِرْقُ السُّوسِ",
+    "الْمِرَايَةُ",
+    "الْغُبْيِشُ",
+    "الدَّايُوتُ",
+    "الْحَرَّازُ"
+],
 
-});
+"زيوت":[
+    "زَيْتُ الْمُعْجِزَةِ الْمُسْتَخْلَصُ",
+    "زَيْتُ السِّدْرِ الْمَرْقِيُّ",
+    "زَيْتُ الزَّيْتُونِ",
+    "زَيْتُ السِّمْسِمِ",
+    "زَيْتُ الْحَبَّةِ السَّوْدَاءِ",
+    "زَيْتُ النِّيمِ"
+],
+
+"عسل":[
+    "عَسَلُ السِّدْرِ الْمَرْقِيُّ",
+    "خَلْطَةُ الْمَنَاعَةِ",
+    "عَسَلُ الشِّفَاءِ"
+],
+
+"بخور":[
+    "اللُّبَانُ الْمُجَهَّزُ",
+    "مِسْكُ السَّكِينَةِ",
+    "الْفَاسُوخُ"
+],
+
+"حجامة":[
+    "حِجَامَةٌ سُنِّيَّةٌ",
+    "حِجَامَةٌ طِبِّيَّةٌ"
+]
+
+};
 
 
 /* =========================
-   CLOSE MOBILE MENU
+   SHOW PRODUCTS
 ========================= */
 
-document.addEventListener("click",function(event){
+function showProducts(category){
 
-    const menu =
-        document.getElementById("mobileMenu");
+    const area =
+        document.getElementById("productArea");
 
-    const button =
-        document.querySelector(".menu-btn");
+    area.innerHTML = "";
 
-    if(
-        menu.style.display === "block" &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-    ){
-        menu.style.display = "none";
-    }
+    const list = products[category] || [];
 
-});
+    list.forEach(function(name){
+
+        const item =
+        document.createElement("div");
+
+        item.className =
+            "glass card product";
+
+        item.innerHTML = `
+
+            <h3>
+                <i class="fas fa-leaf gold ml-2"></i>
+                ${name}
+            </h3>
+
+            <div class="product-desc">
+                للاستفسار عن المنتج والتوفر وطريقة الطلب
+                تواصل معنا مباشرة عبر واتساب.
+            </div>
+
+            <div class="product-footer">
+
+                <span class="price">
+                    متاح للاستفسار
+                </span>
+
+                <button
+                    class="btn btn-green text-xs"
+                    onclick="openConsultation('${name.replace(/'/g,"")}')">
+                    طلب / استفسار
+                </button>
+
+            </div>
+        `;
+
+        area.appendChild(item);
+
+    });
+
+    document.getElementById("products")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+}
 
 
 /* =========================
-   INITIALIZE
+   MODAL
 ========================= */
 
-renderProducts();
+function openConsultation(service=""){
+
+    document
+        .getElementById("consultModal")
+        .classList.add("active");
+
+    if(service){
+
+        document
+            .getElementById("clientMessage")
+            .value =
+            "السلام عليكم، أريد الاستفسار عن: " + service;
+
+    }
+
+}
+
+function closeModal(){
+
+    document
+        .getElementById("consultModal")
+        .classList.remove("active");
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+function sendWhatsApp(){
+
+    const name =
+        document.getElementById("clientName").value.trim();
+
+    const phone =
+        document.getElementById("clientPhone").value.trim();
+
+    const message =
+        document.getElementById("clientMessage").value.trim();
+
+    if(!name){
+
+        alert("يرجى كتابة الاسم");
+
+        return;
+    }
+
+    const finalMessage =
+`السلام عليكم ورحمة الله وبركاته
+
+من موقع دار الشفاء للعلاج الطبيعي
+
+الاسم: ${name}
+رقم الهاتف: ${phone || "لم يتم إدخاله"}
+
+الطلب / الاستفسار:
+${message || "أرغب في الاستفسار عن خدمات دار الشفاء."}`;
+
+    window.open(
+        "https://wa.me/249121494942?text=" +
+        encodeURIComponent(finalMessage),
+        "_blank"
+    );
+
+}
+
+
+/* =========================
+   CLOSE MODAL OUTSIDE
+========================= */
+
+document
+    .getElementById("consultModal")
+    .addEventListener("click",function(e){
+
+        if(e.target === this){
+
+            closeModal();
+
+        }
+
+    });
+
+
+/* =========================
+   ESCAPE
+========================= */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key === "Escape"){
+
+        closeModal();
+
+    }
+
+});
 
 </script>
 
 </body>
-    </html>
+        </html>
