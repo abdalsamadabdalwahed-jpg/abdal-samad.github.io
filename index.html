@@ -4,32 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>دار الشفاء للعلاج الطبيعي | رقية شرعية وأعشاب وحجامة</title>
+<title>دار الشفاء | الرقية الشرعية والأعشاب والزيوت والحجامة</title>
 
-<meta name="description" content="موقع دار الشفاء للعلاج الطبيعي. الرقية الشرعية، الأعشاب الطبيعية، الزيوت المستخلصة، خلطة عسل النحل، الحجامة النبوية والاستشارات.">
-<meta name="keywords" content="دار الشفاء، العلاج الطبيعي، الرقية الشرعية، الحجامة، الأعشاب الطبيعية، الزيوت، عسل النحل، السودان">
-<meta name="author" content="دار الشفاء للعلاج الطبيعي">
+<meta name="description"
+content="موقع دار الشفاء بإشراف الشيخ عبدالصمد عبدالواحد. الرقية الشرعية، الأعشاب الطبيعية، الزيوت، العسل، الحجامة والاستشارات.">
 
-<meta name="theme-color" content="#062b12">
+<meta name="keywords"
+content="دار الشفاء، الشيخ عبدالصمد عبدالواحد، رقية شرعية، أعشاب سودانية، زيوت طبيعية، عسل، حجامة، السودان">
+
+<meta name="author" content="دار الشفاء - عبدالصمد عبدالواحد">
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
 :root{
-    --green:#0b3d1d;
-    --green2:#12652f;
-    --green3:#1b7a3b;
+    --green:#0b5d32;
+    --green2:#168447;
+    --dark:#02150b;
     --gold:#d4af37;
-    --gold2:#f0d477;
-    --dark:#03150a;
-    --card:rgba(5,35,17,.86);
-    --text:#f5f5e9;
+    --gold2:#f0cf65;
+    --cream:#fff8df;
 }
 
 *{
@@ -42,493 +43,681 @@ html{
 
 body{
     margin:0;
+    font-family:'Amiri',serif;
     background:
-        radial-gradient(circle at top,#0c4a23 0%,#03150a 42%,#010903 100%);
-    color:var(--text);
-    font-family:'Cairo','Amiri',serif;
+        radial-gradient(circle at top,#07351d 0%,#02150b 45%,#010b06 100%);
+    color:#f5f5f5;
     overflow-x:hidden;
+    padding-bottom:85px;
 }
 
 #particles-js{
     position:fixed;
     inset:0;
-    z-index:-2;
-    opacity:.55;
+    z-index:-5;
 }
 
-a{
-    text-decoration:none;
+.overlay{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 0%,rgba(28,130,75,.18),transparent 40%);
+    pointer-events:none;
+    z-index:-4;
+}
+
+/* ---------- GENERAL ---------- */
+
+.hidden-section{
+    display:none !important;
 }
 
 .gold{
     color:var(--gold2);
 }
 
-.section{
-    padding:75px 20px;
+.green{
+    color:#48d487;
 }
 
 .container{
-    max-width:1150px;
+    width:min(1100px,94%);
     margin:auto;
 }
 
-.glass{
-    background:var(--card);
-    border:1px solid rgba(212,175,55,.28);
-    box-shadow:0 15px 45px rgba(0,0,0,.35);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-}
-
-.card{
+.glass-card{
+    background:rgba(2,28,15,.78);
+    border:1px solid rgba(212,175,55,.35);
     border-radius:22px;
-    transition:.3s ease;
+    backdrop-filter:blur(12px);
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.30),
+        inset 0 0 30px rgba(25,130,70,.04);
 }
 
-.card:hover{
-    transform:translateY(-5px);
+.glass-card:hover{
+    border-color:rgba(212,175,55,.75);
+}
+
+/* ---------- LOGIN ---------- */
+
+#loginPage{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.login-box{
+    width:min(480px,100%);
+    text-align:center;
+}
+
+.main-logo{
+    width:185px;
+    height:185px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid var(--gold);
+    box-shadow:
+        0 0 0 8px rgba(212,175,55,.08),
+        0 0 45px rgba(40,200,110,.35);
+    animation:logoPulse 4s infinite ease-in-out;
+}
+
+@keyframes logoPulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.045)}
+}
+
+.brand-title{
+    font-size:clamp(2.4rem,7vw,4.2rem);
+    font-weight:bold;
+    margin-top:20px;
+    background:linear-gradient(90deg,#f5d978,#fff,#f5d978);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.brand-subtitle{
+    color:#54d88c;
+    font-size:1.25rem;
+}
+
+.login-card{
+    margin-top:30px;
+    padding:30px;
+}
+
+.input{
+    width:100%;
+    padding:16px;
+    border-radius:14px;
+    border:1px solid #23663d;
+    background:rgba(0,0,0,.45);
+    color:white;
+    text-align:center;
+    outline:none;
+    font-family:inherit;
+    font-size:1.1rem;
+}
+
+.input:focus{
     border-color:var(--gold);
-    box-shadow:0 18px 50px rgba(212,175,55,.13);
+    box-shadow:0 0 20px rgba(212,175,55,.12);
 }
 
 .btn{
     border:0;
     cursor:pointer;
-    border-radius:14px;
-    padding:13px 22px;
     font-family:inherit;
-    font-weight:700;
     transition:.25s;
 }
 
 .btn:hover{
     transform:translateY(-2px);
-}
-
-.btn-gold{
-    color:#111;
-    background:linear-gradient(135deg,var(--gold2),var(--gold));
+    filter:brightness(1.08);
 }
 
 .btn-green{
-    color:#fff;
-    background:linear-gradient(135deg,#188344,#07521f);
+    background:linear-gradient(135deg,#29bd69,#096b35);
+    color:white;
+    font-weight:bold;
+    border-radius:14px;
 }
 
-.btn-outline{
+.btn-gold{
+    background:linear-gradient(135deg,#f3d56b,#a77c13);
+    color:#111;
+    font-weight:bold;
+    border-radius:14px;
+}
+
+/* ---------- HEADER ---------- */
+
+.top-info{
+    background:rgba(0,0,0,.75);
+    border-bottom:1px solid rgba(212,175,55,.5);
     color:var(--gold2);
-    border:1px solid var(--gold);
-    background:transparent;
+    text-align:center;
+    padding:8px;
+    font-size:.9rem;
 }
 
-.logo{
-    width:155px;
-    height:155px;
-    object-fit:cover;
-    border-radius:50%;
-    border:3px solid var(--gold);
-    box-shadow:0 0 35px rgba(212,175,55,.3);
+nav{
+    position:sticky;
+    top:0;
+    z-index:900;
+    background:rgba(1,18,9,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(212,175,55,.25);
 }
 
-.small-logo{
-    width:52px;
-    height:52px;
+.nav-inner{
+    min-height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-logo{
+    width:48px;
+    height:48px;
     object-fit:cover;
     border-radius:50%;
     border:2px solid var(--gold);
 }
 
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(2,18,8,.93);
-    border-bottom:1px solid rgba(212,175,55,.35);
-    backdrop-filter:blur(15px);
+.nav-title{
+    font-weight:bold;
+    color:#e9cf6b;
+    font-size:1.25rem;
 }
 
-.nav-link{
-    color:#eee;
-    font-size:14px;
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.circle-btn{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid rgba(212,175,55,.35);
+    background:rgba(255,255,255,.04);
+    color:white;
+    cursor:pointer;
     transition:.2s;
 }
 
-.nav-link:hover{
-    color:var(--gold2);
+.circle-btn:hover{
+    background:rgba(212,175,55,.15);
+    transform:translateY(-2px);
 }
+
+/* ---------- HERO ---------- */
 
 .hero{
-    min-height:calc(100vh - 75px);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    padding:55px 0 35px;
     text-align:center;
+}
+
+.hero-card{
+    padding:38px 25px;
     position:relative;
+    overflow:hidden;
 }
 
-.hero-box{
-    max-width:850px;
-    padding:35px 20px;
-}
-
-.hero h1{
-    font-size:clamp(34px,6vw,68px);
-    line-height:1.25;
-    margin:20px 0 8px;
-    font-weight:800;
-    background:linear-gradient(90deg,#fff,#f0d477,#fff);
-    -webkit-background-clip:text;
-    color:transparent;
+.hero-card:before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(212,175,55,.06);
+    border-radius:50%;
+    top:-130px;
+    right:-80px;
 }
 
 .hero h2{
-    color:#48d77b;
-    font-size:clamp(20px,3vw,32px);
-    margin:5px 0 20px;
+    color:#f1d36c;
+    font-size:clamp(1.8rem,5vw,3rem);
+    margin:0 0 12px;
 }
 
 .hero p{
-    color:#d5e8d8;
-    line-height:2;
-    font-size:17px;
+    color:#c8e6d3;
+    font-size:1.15rem;
+    line-height:1.9;
+    max-width:800px;
+    margin:auto;
 }
 
-.badge{
-    display:inline-block;
-    padding:8px 18px;
-    border:1px solid var(--gold);
-    border-radius:50px;
-    color:var(--gold2);
-    background:rgba(0,0,0,.3);
-    font-size:14px;
-}
+/* ---------- CARDS ---------- */
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+    margin:35px 0 20px;
 }
 
 .section-title h2{
-    color:var(--gold2);
-    font-size:32px;
-    margin:0 0 10px;
-    font-weight:800;
+    color:#f0cf65;
+    font-size:1.8rem;
+    margin:0;
 }
 
 .section-title p{
-    color:#b8d0bd;
+    color:#8fd7ae;
+    margin:4px 0;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.info-card{
+    padding:22px;
+}
+
+.info-icon{
+    font-size:30px;
+    color:var(--gold2);
+    margin-bottom:8px;
+}
+
+.info-card h3{
+    color:#53d88c;
+    margin:0 0 8px;
+}
+
+.info-card p{
+    color:#d7e9dd;
+    line-height:1.8;
     margin:0;
 }
 
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.service{
-    padding:30px 22px;
-    text-align:center;
-}
-
-.service-icon{
-    width:72px;
-    height:72px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 18px;
-    border-radius:20px;
-    background:rgba(212,175,55,.09);
-    border:1px solid rgba(212,175,55,.3);
-    color:var(--gold2);
-    font-size:30px;
-}
-
-.service h3{
-    color:#fff;
-    font-size:20px;
-    margin-bottom:10px;
-}
-
-.service p{
-    color:#b9cdbc;
-    line-height:1.9;
-    font-size:14px;
-}
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.about-box{
-    padding:32px;
-}
-
-.about-box h3{
-    color:var(--gold2);
-    font-size:24px;
-    margin-top:0;
-}
-
-.about-box p{
-    color:#c8dbcc;
-    line-height:2;
-}
-
-.quote{
-    border-right:4px solid var(--gold);
-    padding:22px;
-    background:rgba(255,255,255,.035);
-    border-radius:15px;
-    color:#e7f4e9;
-    line-height:2;
-}
+/* ---------- CATEGORIES ---------- */
 
 .categories{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
 }
 
 .category{
-    padding:28px 20px;
+    padding:20px 10px;
     text-align:center;
     cursor:pointer;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    background:rgba(12,85,44,.45);
 }
 
 .category i{
-    font-size:38px;
+    display:block;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.category span{
+    font-weight:bold;
+    font-size:.95rem;
+}
+
+.category.gold-icon i{
     color:var(--gold2);
-    margin-bottom:15px;
 }
 
-.category h3{
-    margin:0;
-    color:white;
+.category.green-icon i{
+    color:#43d681;
 }
 
-.products{
+.category.blue-icon i{
+    color:#62b8df;
+}
+
+.category.red-icon i{
+    color:#e86c6c;
+}
+
+/* ---------- PRODUCTS ---------- */
+
+#productDisplay{
+    margin-top:30px;
+    padding-bottom:30px;
+}
+
+.category-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+}
+
+.category-header h2{
+    color:#50d889;
+    border-right:4px solid var(--gold);
+    padding-right:12px;
+}
+
+.close-category{
+    background:rgba(120,20,20,.3);
+    color:#ff9d9d;
+    border:1px solid rgba(255,100,100,.3);
+    padding:7px 14px;
+    border-radius:9px;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.items-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:14px;
 }
 
 .product{
-    padding:22px;
-    position:relative;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
-.product h3{
-    font-size:17px;
-    margin:0 0 15px;
-    color:#fff;
-}
-
-.product-desc{
-    color:#aac3af;
-    font-size:13px;
-    line-height:1.8;
-    min-height:48px;
+.product-name{
+    color:#f4f4f4;
+    font-weight:bold;
+    font-size:1.05rem;
+    line-height:1.7;
 }
 
 .product-footer{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:10px;
-    margin-top:18px;
+    gap:8px;
+}
+
+.order-btn{
+    padding:9px 15px;
+    border-radius:10px;
 }
 
 .price{
-    color:var(--gold2);
-    font-weight:800;
+    color:#f1d36c;
+    font-size:.9rem;
 }
 
-.contact-grid{
+/* ---------- SERVICES ---------- */
+
+.services{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
+
+.service{
+    padding:25px;
+    text-align:center;
+}
+
+.service i{
+    font-size:38px;
+    color:var(--gold2);
+    margin-bottom:12px;
+}
+
+.service h3{
+    color:#51d889;
+    margin:5px 0;
+}
+
+.service p{
+    color:#bddac8;
+    line-height:1.7;
+}
+
+/* ---------- CONTACT ---------- */
 
 .contact-box{
-    padding:30px;
+    padding:28px;
+    text-align:center;
 }
 
-.contact-item{
+.contact-buttons{
     display:flex;
-    align-items:center;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:18px;
 }
 
-.contact-item i{
-    color:var(--gold2);
-    width:30px;
-    text-align:center;
+.contact-btn{
+    padding:12px 20px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s;
 }
 
-.transfer{
-    padding:25px;
-    border:1px solid rgba(212,175,55,.35);
-    background:rgba(0,0,0,.22);
-    border-radius:18px;
-}
-
-.transfer strong{
-    color:var(--gold2);
-}
-
-.footer{
-    background:#010b05;
-    border-top:1px solid rgba(212,175,55,.35);
-    padding:40px 20px 85px;
-    text-align:center;
+.contact-btn:hover{
+    transform:translateY(-3px);
 }
 
 .whatsapp{
-    position:fixed;
-    left:20px;
-    bottom:75px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:29px;
-    z-index:1500;
-    box-shadow:0 8px 30px rgba(37,211,102,.35);
+    background:#20b85a;
+    color:white;
 }
 
-.bottom-bar{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    z-index:1400;
-    background:rgba(2,17,8,.97);
-    border-top:1px solid var(--gold);
-    padding:9px;
-    overflow:hidden;
+.messenger{
+    background:#1877f2;
+    color:white;
 }
 
-.marquee{
-    white-space:nowrap;
-    display:inline-block;
-    animation:move 35s linear infinite;
+.facebook{
+    background:#2859b8;
+    color:white;
+}
+
+/* ---------- PAYMENT ---------- */
+
+.payment-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.payment-card{
+    padding:22px;
+}
+
+.payment-card h3{
     color:var(--gold2);
-    font-size:13px;
+    margin-top:0;
 }
 
-@keyframes move{
-    from{transform:translateX(-100%);}
-    to{transform:translateX(100%);}
+.account-number{
+    font-size:1.5rem;
+    color:white;
+    direction:ltr;
+    display:inline-block;
+    margin:5px 0;
+    font-weight:bold;
 }
+
+.copy-btn{
+    background:rgba(212,175,55,.12);
+    border:1px solid rgba(212,175,55,.4);
+    color:var(--gold2);
+    padding:6px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+/* ---------- MODAL ---------- */
 
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.86);
-    z-index:3000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.modal.active{
+    z-index:2000;
+    background:rgba(0,0,0,.88);
     display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px;
 }
 
-.modal-box{
-    width:100%;
-    max-width:550px;
-    padding:28px;
-    border-radius:25px;
+.modal-card{
+    width:min(550px,100%);
+    padding:25px;
     max-height:90vh;
     overflow:auto;
 }
 
-.input,
-textarea{
-    width:100%;
-    padding:14px;
-    background:#031a0b;
-    border:1px solid #235c31;
-    color:#fff;
-    border-radius:12px;
-    outline:none;
-    font-family:inherit;
-    margin-bottom:12px;
+.modal-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.input:focus,
-textarea:focus{
-    border-color:var(--gold);
+.modal-head h2{
+    color:var(--gold2);
 }
 
 .close{
     border:0;
     background:none;
-    color:#fff;
+    color:white;
     font-size:30px;
     cursor:pointer;
 }
 
-@media(max-width:850px){
-    .services,
-    .categories,
-    .products{
+textarea{
+    width:100%;
+    min-height:130px;
+    resize:vertical;
+    border-radius:13px;
+    padding:14px;
+    background:rgba(0,0,0,.5);
+    color:white;
+    border:1px solid #235d3a;
+    font-family:inherit;
+    outline:none;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    margin-top:45px;
+    border-top:1px solid rgba(212,175,55,.3);
+    padding:30px 0 100px;
+    text-align:center;
+}
+
+.footer-brand{
+    color:var(--gold2);
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.footer-text{
+    color:#a8cdb5;
+    line-height:1.8;
+}
+
+.marquee-footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:1500;
+    background:rgba(0,12,6,.97);
+    border-top:2px solid var(--gold);
+    overflow:hidden;
+    padding:9px 0;
+}
+
+.marquee-content{
+    white-space:nowrap;
+    display:inline-block;
+    color:#f1d36c;
+    animation:marquee 45s linear infinite;
+}
+
+@keyframes marquee{
+    from{transform:translateX(-100%)}
+    to{transform:translateX(100%)}
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:900px){
+
+    .categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .items-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .about,
-    .contact-grid{
+    .services{
         grid-template-columns:1fr;
-    }
-
-    .nav-links{
-        display:none;
     }
 }
 
-@media(max-width:550px){
-    .section{
-        padding:55px 14px;
-    }
+@media(max-width:650px){
 
-    .services,
-    .categories,
-    .products{
+    .info-grid,
+    .payment-grid{
         grid-template-columns:1fr;
     }
 
-    .logo{
-        width:125px;
-        height:125px;
+    .items-grid{
+        grid-template-columns:1fr;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .nav-title{
+        font-size:1rem;
+    }
+
+    .nav-actions .desktop-only{
+        display:none;
     }
 
     .hero{
-        min-height:calc(100vh - 65px);
+        padding-top:30px;
     }
 
-    .hero p{
-        font-size:15px;
+    .hero-card{
+        padding:28px 18px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .btn{
-        width:100%;
+    .main-logo{
+        width:150px;
+        height:150px;
     }
 }
 
@@ -538,450 +727,727 @@ textarea:focus{
 <body>
 
 <div id="particles-js"></div>
+<div class="overlay"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="container flex items-center justify-between py-3 px-4">
+<!-- ================= صفحة الدخول ================= -->
 
-        <a href="#home" class="flex items-center gap-3">
-            <img src="logo.png" class="small-logo" alt="شعار دار الشفاء">
-            <div>
-                <div class="font-bold text-green-400">دار الشفاء</div>
-                <div class="text-xs text-yellow-500">للعلاج الطبيعي</div>
-            </div>
-        </a>
+<section id="loginPage">
 
-        <div class="nav-links flex gap-6 items-center">
-            <a href="#home" class="nav-link">الرئيسية</a>
-            <a href="#about" class="nav-link">من نحن</a>
-            <a href="#services" class="nav-link">خدماتنا</a>
-            <a href="#products" class="nav-link">منتجاتنا</a>
-            <a href="#contact" class="nav-link">تواصل معنا</a>
-        </div>
-
-        <button class="btn btn-gold text-sm" onclick="openConsultation()">
-            <i class="fab fa-whatsapp"></i>
-            استشارة
-        </button>
-
-    </div>
-</nav>
-
-
-<!-- HERO -->
-<section id="home" class="hero">
-
-    <div class="hero-box">
-
-        <span class="badge">
-            <i class="fas fa-leaf"></i>
-            أهلاً بكم في دار الشفاء
-        </span>
+    <div class="login-box">
 
         <img src="logo.png"
-             alt="شعار دار الشفاء للعلاج الطبيعي"
-             class="logo mt-7 mb-2">
+             alt="شعار دار الشفاء"
+             class="main-logo">
 
-        <h1>دار الشفاء</h1>
+        <h1 class="brand-title">دار الشفاء</h1>
 
-        <h2>للعلاج الطبيعي والرقية الشرعية</h2>
-
-        <p>
-            رقية شرعية • أعشاب طبيعية • زيوت مستخلصة
-            • خلطة عسل النحل • حجامة نبوية • استشارات
+        <p class="brand-subtitle">
+            بإشراف الشيخ عبدالصمد عبدالواحد
         </p>
 
-        <div class="hero-buttons flex gap-3 justify-center mt-7">
+        <p class="text-gray-300 mt-3">
+            الرقية الشرعية • الأعشاب الطبيعية • الزيوت • العسل • الحجامة
+        </p>
 
-            <a href="#services" class="btn btn-gold">
-                <i class="fas fa-hand-holding-heart"></i>
-                خدماتنا
-            </a>
+        <div class="glass-card login-card">
 
-            <button onclick="openConsultation()" class="btn btn-green">
-                <i class="fab fa-whatsapp"></i>
-                تواصل معنا
+            <h2 class="text-xl font-bold gold mb-5">
+                مرحباً بكم في دار الشفاء
+            </h2>
+
+            <input
+                id="userName"
+                class="input mb-4"
+                type="text"
+                maxlength="50"
+                placeholder="اكتب اسمك للدخول">
+
+            <button
+                onclick="enterSite()"
+                class="btn btn-green w-full py-4 text-xl">
+
+                <i class="fas fa-door-open ml-2"></i>
+                دخول الموقع
+
+            </button>
+
+            <p class="text-gray-400 text-sm mt-4">
+                أهلاً وسهلاً بكم
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= الموقع الرئيسي ================= -->
+
+<section id="mainDashboard" class="hidden-section">
+
+    <!-- الشريط العلوي -->
+
+    <div class="top-info">
+
+        <i class="fas fa-leaf ml-1"></i>
+
+        أهلاً بكم في دار الشفاء
+        • بإشراف الشيخ عبدالصمد عبدالواحد
+
+    </div>
+
+
+    <!-- NAV -->
+
+    <nav>
+
+        <div class="container nav-inner">
+
+            <div class="nav-brand">
+
+                <img src="logo.png"
+                     alt="دار الشفاء"
+                     class="nav-logo">
+
+                <div>
+
+                    <div class="nav-title">
+                        دار الشفاء
+                    </div>
+
+                    <div class="text-xs text-gray-400">
+                        بإشراف الشيخ عبدالصمد
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="nav-actions">
+
+                <a
+                    href="https://m.me/abdalsamad.abdo1"
+                    target="_blank"
+                    class="circle-btn desktop-only"
+                    title="Messenger">
+
+                    <i class="fab fa-facebook-messenger"></i>
+
+                </a>
+
+                <a
+                    href="https://www.facebook.com/abdalsamad.abdo1"
+                    target="_blank"
+                    class="circle-btn desktop-only"
+                    title="Facebook">
+
+                    <i class="fab fa-facebook"></i>
+
+                </a>
+
+                <button
+                    onclick="openWhatsAppDirect('السلام عليكم، أريد الاستفسار عن خدمات دار الشفاء')"
+                    class="circle-btn"
+                    title="واتساب">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </button>
+
+                <button
+                    onclick="logout()"
+                    class="circle-btn"
+                    title="خروج">
+
+                    <i class="fas fa-power-off"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="glass-card hero-card">
+
+                <div class="text-5xl gold mb-4">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+
+                <h2>
+                    دار الشفاء
+                </h2>
+
+                <p>
+                    بوابتكم للتعريف بخدمات الرقية الشرعية
+                    والأعشاب الطبيعية والزيوت والعسل والحجامة
+                    والاستشارات.
+                </p>
+
+                <div class="mt-5 flex flex-wrap justify-center gap-3">
+
+                    <button
+                        onclick="scrollToSection('categoriesSection')"
+                        class="btn btn-gold px-6 py-3">
+
+                        <i class="fas fa-compass ml-2"></i>
+                        استكشف الأقسام
+
+                    </button>
+
+                    <button
+                        onclick="openWhatsAppDirect('السلام عليكم، أريد طلب استشارة من دار الشفاء')"
+                        class="btn btn-green px-6 py-3">
+
+                        <i class="fab fa-whatsapp ml-2"></i>
+                        استشارة عبر واتساب
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- رسالة ترحيبية -->
+
+        <section>
+
+            <div class="glass-card info-card text-center">
+
+                <div class="info-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <h3>
+                    مِنْ مِشْكَاةِ الْيَقِينِ
+                </h3>
+
+                <p class="text-lg">
+                    "وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ"
+                </p>
+
+                <p class="text-sm text-gray-400 mt-2">
+                    نسأل الله لكم العافية والطمأنينة والشفاء.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- الخدمات -->
+
+        <div class="section-title">
+
+            <h2>
+                خدمات دار الشفاء
+            </h2>
+
+            <p>
+                خدمات متنوعة في مكان واحد
+            </p>
+
+        </div>
+
+
+        <section class="services">
+
+            <div class="glass-card service">
+
+                <i class="fas fa-book-quran"></i>
+
+                <h3>الرقية الشرعية</h3>
+
+                <p>
+                    خدمات الرقية الشرعية والتحصين وفق المنهج الشرعي.
+                </p>
+
+            </div>
+
+
+            <div class="glass-card service">
+
+                <i class="fas fa-leaf"></i>
+
+                <h3>الأعشاب الطبيعية</h3>
+
+                <p>
+                    مجموعة من الأعشاب والمنتجات الطبيعية المتوفرة.
+                </p>
+
+            </div>
+
+
+            <div class="glass-card service">
+
+                <i class="fas fa-heart-pulse"></i>
+
+                <h3>الحجامة</h3>
+
+                <p>
+                    حجز والاستفسار عن جلسات الحجامة المتوفرة.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- الأقسام -->
+
+        <section id="categoriesSection">
+
+            <div class="section-title">
+
+                <h2>
+                    أقسام دار الشفاء
+                </h2>
+
+                <p>
+                    اختر القسم الذي ترغب في استكشافه
+                </p>
+
+            </div>
+
+
+            <div class="categories">
+
+                <button
+                    onclick="renderCategory('رقية')"
+                    class="glass-card category gold-icon">
+
+                    <i class="fas fa-book-quran"></i>
+                    <span>الرُّقْيَةُ</span>
+
+                </button>
+
+
+                <button
+                    onclick="renderCategory('اعشاب')"
+                    class="glass-card category green-icon">
+
+                    <i class="fas fa-leaf"></i>
+                    <span>الأَعْشَابُ</span>
+
+                </button>
+
+
+                <button
+                    onclick="renderCategory('زيوت')"
+                    class="glass-card category blue-icon">
+
+                    <i class="fas fa-flask"></i>
+                    <span>الزُّيُوتُ</span>
+
+                </button>
+
+
+                <button
+                    onclick="renderCategory('عسل')"
+                    class="glass-card category gold-icon">
+
+                    <i class="fas fa-jar"></i>
+                    <span>العَسَلُ</span>
+
+                </button>
+
+
+                <button
+                    onclick="renderCategory('بخور')"
+                    class="glass-card category gold-icon">
+
+                    <i class="fas fa-fire"></i>
+                    <span>البُخُورُ</span>
+
+                </button>
+
+
+                <button
+                    onclick="renderCategory('حجامة')"
+                    class="glass-card category red-icon">
+
+                    <i class="fas fa-heart-pulse"></i>
+                    <span>الحِجَامَةُ</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- المنتجات -->
+
+        <section id="productDisplay" class="hidden-section">
+
+            <div class="glass-card p-5">
+
+                <div class="category-header">
+
+                    <h2 id="catTitle" class="text-2xl font-bold">
+                    </h2>
+
+                    <button
+                        onclick="closeCategory()"
+                        class="close-category">
+
+                        <i class="fas fa-times"></i>
+                        إغلاق
+
+                    </button>
+
+                </div>
+
+                <div
+                    id="itemsGrid"
+                    class="items-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- الدفع -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    بيانات التحويل
+                </h2>
+
+                <p>
+                    بيانات الحسابات المعتمدة للطلبات
+                </p>
+
+            </div>
+
+
+            <div class="payment-grid">
+
+                <div class="glass-card payment-card">
+
+                    <h3>
+                        <i class="fas fa-mobile-screen-button"></i>
+                        بنكك
+                    </h3>
+
+                    <p class="text-gray-400">
+                        رقم الحساب
+                    </p>
+
+                    <span class="account-number">
+                        2985827
+                    </span>
+
+                    <br>
+
+                    <button
+                        onclick="copyText('2985827')"
+                        class="copy-btn">
+
+                        <i class="fas fa-copy"></i>
+                        نسخ الرقم
+
+                    </button>
+
+                    <p class="text-gray-300 mt-3">
+                        باسم:
+                        <strong>
+                            عبدالصمد عبدالواحد محمد الطاهر
+                        </strong>
+                    </p>
+
+                </div>
+
+
+                <div class="glass-card payment-card">
+
+                    <h3>
+                        <i class="fas fa-money-bill-transfer"></i>
+                        فوري
+                    </h3>
+
+                    <p class="text-gray-400">
+                        رقم الحساب
+                    </p>
+
+                    <span class="account-number">
+                        51170108
+                    </span>
+
+                    <br>
+
+                    <button
+                        onclick="copyText('51170108')"
+                        class="copy-btn">
+
+                        <i class="fas fa-copy"></i>
+                        نسخ الرقم
+
+                    </button>
+
+                    <p class="text-gray-300 mt-3">
+                        باسم:
+                        <strong>
+                            عبدالصمد عبدالواحد محمد الطاهر
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- التواصل -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    تواصل معنا
+                </h2>
+
+                <p>
+                    اختر وسيلة التواصل المناسبة لك
+                </p>
+
+            </div>
+
+
+            <div class="glass-card contact-box">
+
+                <div class="contact-buttons">
+
+                    <a
+                        href="https://wa.me/249121494942"
+                        target="_blank"
+                        class="contact-btn whatsapp">
+
+                        <i class="fab fa-whatsapp ml-1"></i>
+                        واتساب
+
+                    </a>
+
+
+                    <a
+                        href="https://m.me/abdalsamad.abdo1"
+                        target="_blank"
+                        class="contact-btn messenger">
+
+                        <i class="fab fa-facebook-messenger ml-1"></i>
+                        Messenger
+
+                    </a>
+
+
+                    <a
+                        href="https://www.facebook.com/abdalsamad.abdo1"
+                        target="_blank"
+                        class="contact-btn facebook">
+
+                        <i class="fab fa-facebook ml-1"></i>
+                        فيسبوك
+
+                    </a>
+
+                </div>
+
+                <p class="text-gray-400 mt-5">
+                    واتساب:
+                    <span dir="ltr">
+                        +249 121 494 942
+                    </span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-brand">
+                دار الشفاء
+            </div>
+
+            <p class="footer-text">
+                بإشراف الشيخ عبدالصمد عبدالواحد
+            </p>
+
+            <p class="footer-text text-sm">
+                الرقية الشرعية • الأعشاب الطبيعية • الزيوت • العسل • الحجامة
+            </p>
+
+            <div class="flex justify-center gap-4 mt-5">
+
+                <a
+                    href="https://m.me/abdalsamad.abdo1"
+                    target="_blank"
+                    class="text-blue-400 text-2xl">
+
+                    <i class="fab fa-facebook-messenger"></i>
+
+                </a>
+
+                <a
+                    href="https://www.facebook.com/abdalsamad.abdo1"
+                    target="_blank"
+                    class="text-blue-500 text-2xl">
+
+                    <i class="fab fa-facebook"></i>
+
+                </a>
+
+                <a
+                    href="https://wa.me/249121494942"
+                    target="_blank"
+                    class="text-green-400 text-2xl">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </a>
+
+            </div>
+
+            <p class="text-gray-600 text-xs mt-6">
+                © 2026 دار الشفاء - جميع الحقوق محفوظة
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</section>
+
+
+<!-- ================= نافذة الطلب ================= -->
+
+<div
+    id="orderModal"
+    class="modal hidden-section">
+
+    <div class="glass-card modal-card">
+
+        <div class="modal-head">
+
+            <h2 id="modalProduct">
+                طلب المنتج
+            </h2>
+
+            <button
+                onclick="closeOrder()"
+                class="close">
+
+                &times;
+
             </button>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="mt-4 p-4 rounded-xl bg-green-950/40 border border-green-900">
 
+            <p class="text-green-400 font-bold">
+                بيانات التحويل
+            </p>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>من نحن</h2>
-    <p>دار الشفاء للعلاج الطبيعي</p>
-</div>
-
-<div class="about">
-
-    <div class="glass card about-box">
-
-        <h3>
-            <i class="fas fa-hospital-user"></i>
-            دار الشفاء
-        </h3>
-
-        <p>
-            نقدم مجموعة من الخدمات والمنتجات الطبيعية التي تهدف إلى
-            مساعدة الزائر في الوصول إلى خيارات مناسبة للعناية بالصحة
-            والعافية، مع الاهتمام بالرقية الشرعية والحجامة والأعشاب
-            والزيوت الطبيعية.
-        </p>
-
-        <div class="quote">
-            <i class="fas fa-quote-right gold"></i>
-            <br>
-            نسعى لأن تكون دار الشفاء وجهة موثوقة لخدمات ومنتجات
-            العناية الطبيعية والاستشارات.
-        </div>
-
-    </div>
-
-    <div class="glass card about-box">
-
-        <h3>
-            <i class="fas fa-star"></i>
-            رسالتنا
-        </h3>
-
-        <p>
-            تقديم خدماتنا بطريقة منظمة وسهلة، وتمكين العملاء من
-            التعرف على الخدمات والمنتجات والتواصل معنا مباشرة عبر
-            واتساب.
-        </p>
-
-        <div class="grid grid-cols-2 gap-3 mt-5">
-
-            <div class="glass p-4 rounded-xl text-center">
-                <i class="fas fa-leaf gold text-2xl"></i>
-                <p class="text-sm mt-2">منتجات طبيعية</p>
-            </div>
-
-            <div class="glass p-4 rounded-xl text-center">
-                <i class="fas fa-heart gold text-2xl"></i>
-                <p class="text-sm mt-2">اهتمام بالعميل</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-<section id="services" class="section">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>خدمات دار الشفاء</h2>
-    <p>مجموعة من الخدمات المتنوعة في مكان واحد</p>
-</div>
-
-<div class="services">
-
-    <div class="glass card service">
-        <div class="service-icon">
-            <i class="fas fa-book-quran"></i>
-        </div>
-        <h3>الرقية الشرعية</h3>
-        <p>
-            خدمة الرقية الشرعية والاستشارات المتعلقة بالتحصين
-            والأذكار وفق المنهج الشرعي.
-        </p>
-        <button onclick="openConsultation('الرقية الشرعية')" class="btn btn-green">
-            استفسار
-        </button>
-    </div>
-
-
-    <div class="glass card service">
-        <div class="service-icon">
-            <i class="fas fa-leaf"></i>
-        </div>
-        <h3>الأعشاب الطبيعية</h3>
-        <p>
-            مجموعة من الأعشاب والمواد الطبيعية المتوفرة لدى دار الشفاء.
-        </p>
-        <button onclick="showProducts('اعشاب')" class="btn btn-green">
-            عرض الأعشاب
-        </button>
-    </div>
-
-
-    <div class="glass card service">
-        <div class="service-icon">
-            <i class="fas fa-flask"></i>
-        </div>
-        <h3>الزيوت المستخلصة</h3>
-        <p>
-            زيوت طبيعية ومستحضرات معدة للاستخدام الخارجي حسب المنتج.
-        </p>
-        <button onclick="showProducts('زيوت')" class="btn btn-green">
-            عرض الزيوت
-        </button>
-    </div>
-
-
-    <div class="glass card service">
-        <div class="service-icon">
-            <i class="fas fa-jar"></i>
-        </div>
-        <h3>عسل النحل</h3>
-        <p>
-            عسل النحل والخلطات المتوفرة لدى دار الشفاء.
-        </p>
-        <button onclick="showProducts('عسل')" class="btn btn-green">
-            عرض العسل
-        </button>
-    </div>
-
-
-    <div class="glass card service">
-        <div class="service-icon">
-            <i class="fas fa-fire"></i>
-        </div>
-        <h3>البخور</h3>
-        <p>
-            مجموعة من منتجات البخور والروائح الطبيعية.
-        </p>
-        <button onclick="showProducts('بخور')" class="btn btn-green">
-            عرض البخور
-        </button>
-    </div>
-
-
-    <div class="glass card service">
-        <div class="service-icon">
-            <i class="fas fa-heart-pulse"></i>
-        </div>
-        <h3>الحجامة</h3>
-        <p>
-            خدمات الحجامة والاستفسار عن المواعيد والتفاصيل عبر واتساب.
-        </p>
-        <button onclick="openConsultation('الحجامة')" class="btn btn-green">
-            احجز استشارة
-        </button>
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-<section id="products" class="section">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>منتجات دار الشفاء</h2>
-    <p>اختر القسم الذي تريد الاطلاع عليه</p>
-</div>
-
-<div class="categories mb-8">
-
-    <div onclick="showProducts('رقية')" class="glass card category">
-        <i class="fas fa-book-quran"></i>
-        <h3>الرقية الشرعية</h3>
-    </div>
-
-    <div onclick="showProducts('اعشاب')" class="glass card category">
-        <i class="fas fa-leaf"></i>
-        <h3>الأعشاب</h3>
-    </div>
-
-    <div onclick="showProducts('زيوت')" class="glass card category">
-        <i class="fas fa-flask"></i>
-        <h3>الزيوت</h3>
-    </div>
-
-    <div onclick="showProducts('عسل')" class="glass card category">
-        <i class="fas fa-jar"></i>
-        <h3>العسل</h3>
-    </div>
-
-    <div onclick="showProducts('بخور')" class="glass card category">
-        <i class="fas fa-fire"></i>
-        <h3>البخور</h3>
-    </div>
-
-    <div onclick="showProducts('حجامة')" class="glass card category">
-        <i class="fas fa-heart-pulse"></i>
-        <h3>الحجامة</h3>
-    </div>
-
-</div>
-
-<div id="productArea" class="products"></div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>تواصل معنا</h2>
-    <p>نحن هنا للرد على استفساراتكم وطلباتكم</p>
-</div>
-
-<div class="contact-grid">
-
-    <div class="glass card contact-box">
-
-        <h3 class="text-2xl font-bold gold mb-5">
-            <i class="fas fa-comments"></i>
-            التواصل
-        </h3>
-
-        <div class="contact-item">
-            <i class="fab fa-whatsapp text-2xl"></i>
-            <div>
-                <div class="text-sm text-gray-400">واتساب</div>
-                <div class="font-bold">249121494942</div>
-            </div>
-        </div>
-
-        <button onclick="openConsultation()" class="btn btn-green w-full mt-5">
-            <i class="fab fa-whatsapp"></i>
-            تواصل عبر واتساب
-        </button>
-
-    </div>
-
-
-    <div class="glass card contact-box">
-
-        <h3 class="text-2xl font-bold gold mb-5">
-            <i class="fas fa-money-bill-transfer"></i>
-            بيانات التحويل
-        </h3>
-
-        <div class="transfer">
-
-            <p>
-                <strong>بنكك:</strong>
-                <span>2985827</span>
+            <p class="mt-2">
+                بنكك:
+                <strong dir="ltr">
+                    2985827
+                </strong>
             </p>
 
             <p>
-                <strong>فوري:</strong>
-                <span>51170108</span>
+                فوري:
+                <strong dir="ltr">
+                    51170108
+                </strong>
             </p>
 
-            <p class="text-sm text-gray-300 mt-4">
-                باسم:
-                عبدالصمد عبدالواحد محمد الطاهر
+            <p class="text-sm text-gray-400 mt-2">
+                باسم: عبدالصمد عبدالواحد محمد الطاهر
             </p>
 
         </div>
 
-    </div>
 
-</div>
-
-</div>
-
-</section>
+        <textarea
+            id="orderNotes"
+            class="mt-4"
+            placeholder="اكتب ملاحظاتك أو عنوان التوصيل هنا..."></textarea>
 
 
-<!-- FOOTER -->
-<footer class="footer">
+        <button
+            onclick="sendOrder()"
+            class="btn btn-green w-full py-4 mt-4 text-lg">
 
-    <img src="logo.png" class="small-logo mb-3" alt="دار الشفاء">
+            <i class="fab fa-whatsapp ml-2"></i>
+            إرسال الطلب عبر واتساب
 
-    <h2 class="text-2xl font-bold text-green-400">
-        دار الشفاء للعلاج الطبيعي
-    </h2>
-
-    <p class="text-gray-400 mt-2">
-        رقية شرعية • أعشاب طبيعية • زيوت مستخلصة
-        • عسل النحل • حجامة نبوية • استشارات
-    </p>
-
-    <div class="mt-6 text-yellow-500 text-sm">
-        © <span id="year"></span> دار الشفاء - جميع الحقوق محفوظة
-    </div>
-
-</footer>
-
-
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/249121494942"
-   target="_blank"
-   class="whatsapp"
-   aria-label="واتساب">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-
-<!-- BOTTOM BAR -->
-<div class="bottom-bar">
-    <div class="marquee">
-        🌿 أهلاً وسهلاً بكم في دار الشفاء للعلاج الطبيعي
-        • رقية شرعية • أعشاب طبيعية • زيوت مستخلصة
-        • عسل النحل • حجامة نبوية • استشارات
-        • واتساب: 249121494942
-    </div>
-</div>
-
-
-<!-- CONSULTATION MODAL -->
-<div id="consultModal" class="modal">
-
-    <div class="glass modal-box">
-
-        <div class="flex justify-between items-center mb-5">
-
-            <h2 class="text-xl font-bold gold">
-                <i class="fab fa-whatsapp"></i>
-                التواصل مع دار الشفاء
-            </h2>
-
-            <button class="close" onclick="closeModal()">&times;</button>
-
-        </div>
-
-        <p class="text-gray-300 text-sm mb-5">
-            اكتب بياناتك أو استفسارك وسيتم تحويلك مباشرة إلى واتساب.
-        </p>
-
-        <input id="clientName"
-               class="input"
-               placeholder="الاسم">
-
-        <input id="clientPhone"
-               class="input"
-               placeholder="رقم الهاتف">
-
-        <textarea id="clientMessage"
-                  rows="5"
-                  placeholder="اكتب طلبك أو استفسارك هنا..."></textarea>
-
-        <button onclick="sendWhatsApp()" class="btn btn-green w-full">
-            <i class="fab fa-whatsapp"></i>
-            إرسال عبر واتساب
         </button>
+
+
+        <button
+            onclick="sendMessenger()"
+            class="btn w-full py-3 mt-2 rounded-xl bg-blue-600">
+
+            <i class="fab fa-facebook-messenger ml-2"></i>
+            التواصل عبر Messenger
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- الشريط السفلي -->
+
+<div class="marquee-footer">
+
+    <div class="marquee-content">
+
+        🌿 أهلاً بكم في دار الشفاء
+        • بإشراف الشيخ عبدالصمد عبدالواحد
+        • الرقية الشرعية
+        • الأعشاب الطبيعية
+        • الزيوت
+        • العسل
+        • الحجامة
+        • واتساب:
+        +249121494942
+        • بنكك: 2985827
+        • فوري: 51170108
+        🌿
 
     </div>
 
@@ -990,13 +1456,10 @@ textarea:focus{
 
 <script>
 
-/* =========================
-   PARTICLES
-========================= */
-
-if(window.particlesJS){
+/* ================= PARTICLES ================= */
 
 particlesJS("particles-js",{
+
     particles:{
         number:{
             value:45,
@@ -1005,299 +1468,415 @@ particlesJS("particles-js",{
                 value_area:900
             }
         },
+
         color:{
             value:"#d4af37"
         },
+
         opacity:{
             value:.25
         },
+
         size:{
             value:2
         },
-        line_linked:{
-            enable:true,
-            distance:130,
-            color:"#1b7a3b",
-            opacity:.18,
-            width:1
-        },
+
         move:{
             enable:true,
-            speed:.7
+            speed:.7,
+            direction:"none",
+            random:true
         }
     },
+
     interactivity:{
-        detect_on:"canvas",
         events:{
             onhover:{
-                enable:true,
-                mode:"grab"
-            },
-            onclick:{
-                enable:true,
-                mode:"push"
-            }
-        },
-        modes:{
-            grab:{
-                distance:140,
-                line_linked:{
-                    opacity:.3
-                }
-            },
-            push:{
-                particles_nb:2
+                enable:false
             }
         }
     },
+
     retina_detect:true
+
 });
 
-}
 
+/* ================= البيانات ================= */
 
-/* =========================
-   YEAR
-========================= */
+const menu = {
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+    "رقية":[
+        "الرُّقْيَةُ الشَّرْعِيَّةُ",
+        "الرُّقْيَةُ الشَّامِلَةُ",
+        "رُقْيَةُ العَيْنِ وَالحَسَدِ",
+        "التحصين والأذكار",
+        "تحصين المنزل",
+        "الاستشارة في الرقية الشرعية"
+    ],
 
+    "اعشاب":[
+        "الْعَرَيْدِيبُ",
+        "اللَّالُوبُ",
+        "الْقُسْطُ الْهِنْدِيُّ",
+        "السَّنَامَكِي",
+        "الصَّمْغُ الْعَرَبِيُّ",
+        "التَّبَلْدِيُّ",
+        "الْكَرْكَدِيهُ",
+        "الْقَرَضُ",
+        "الْمَحْرِيبُ",
+        "عِرْقُ النَّارِ",
+        "الْحَنْظَلُ",
+        "السِّدْرُ",
+        "الْحَرْجَلُ",
+        "عِرْقُ السُّوسِ",
+        "الْمِرَايَةُ",
+        "الْغُبَيْشُ",
+        "الدَّايُوتُ",
+        "الْحَرَّازُ"
+    ],
 
-/* =========================
-   PRODUCTS
-========================= */
+    "زيوت":[
+        "زَيْتُ الْمُعْجِزَةِ الْمُسْتَخْلَصُ",
+        "زَيْتُ السِّدْرِ",
+        "زَيْتُ الزَّيْتُونِ",
+        "زَيْتُ السِّمْسِمِ",
+        "زَيْتُ الْحَبَّةِ السَّوْدَاءِ",
+        "زَيْتُ النِّيمِ"
+    ],
 
-const products = {
+    "عسل":[
+        "عَسَلُ السِّدْرِ",
+        "عَسَلُ النَّحْلِ",
+        "خَلْطَةُ الْمَنَاعَةِ",
+        "عَسَلُ الشِّفَاءِ"
+    ],
 
-"رقية":[
-    "السِّحْرُ الْمَأْكُولُ",
-    "السِّحْرُ الْمَشْرُوبُ",
-    "السِّحْرُ الْأَسْوَدُ",
-    "السِّحْرُ الْأَحْمَرُ",
-    "السِّحْرُ الْمَدْفُونُ",
-    "السِّحْرُ الْمَرْشُوشُ",
-    "سِحْرُ الْفِرَاقِ",
-    "الرِّيحُ الْأَحْمَرُ",
-    "الْعَيْنُ وَالْحَسَدُ",
-    "الْمَسُّ الشَّيْطَانِيُّ",
-    "الْقَرِينُ",
-    "سِحْرُ التَّبْوِيرِ",
-    "الْجِنُّ الطَّيَّارُ",
-    "سِحْرُ الْأَرْحَامِ",
-    "عِلاجُ التَّوَابِعِ",
-    "الرُّقْيَةُ الشَّامِلَةُ",
-    "تَحْصِينُ الْمَنَازِلِ",
-    "فَكُّ الرَّبْطِ"
-],
+    "بخور":[
+        "اللُّبَانُ الْمُجَهَّزُ",
+        "مِسْكُ السَّكِينَةِ",
+        "الفَاسُوخُ",
+        "الصَّنْدَلُ"
+    ],
 
-"اعشاب":[
-    "الْعَرَيْدِيبُ",
-    "اللَّالُوبُ",
-    "الْقُسْطُ الْهِنْدِيُّ",
-    "السَّنَامَكِي",
-    "الصَّمْغُ الْعَرَبِيُّ",
-    "التَّبَلْدِيُّ",
-    "الْكَرْكَدِيهُ",
-    "الْقَرَضُ",
-    "الْمَحْرِيبُ",
-    "عِرْقُ النَّارِ",
-    "الْحَنْظَلُ",
-    "السِّدْرُ",
-    "الْحَرْجَلُ",
-    "عِرْقُ السُّوسِ",
-    "الْمِرَايَةُ",
-    "الْغُبْيِشُ",
-    "الدَّايُوتُ",
-    "الْحَرَّازُ"
-],
-
-"زيوت":[
-    "زَيْتُ الْمُعْجِزَةِ الْمُسْتَخْلَصُ",
-    "زَيْتُ السِّدْرِ الْمَرْقِيُّ",
-    "زَيْتُ الزَّيْتُونِ",
-    "زَيْتُ السِّمْسِمِ",
-    "زَيْتُ الْحَبَّةِ السَّوْدَاءِ",
-    "زَيْتُ النِّيمِ"
-],
-
-"عسل":[
-    "عَسَلُ السِّدْرِ الْمَرْقِيُّ",
-    "خَلْطَةُ الْمَنَاعَةِ",
-    "عَسَلُ الشِّفَاءِ"
-],
-
-"بخور":[
-    "اللُّبَانُ الْمُجَهَّزُ",
-    "مِسْكُ السَّكِينَةِ",
-    "الْفَاسُوخُ"
-],
-
-"حجامة":[
-    "حِجَامَةٌ سُنِّيَّةٌ",
-    "حِجَامَةٌ طِبِّيَّةٌ"
-]
+    "حجامة":[
+        "حِجَامَةٌ سُنِّيَّةٌ",
+        "حِجَامَةٌ شَامِلَةٌ",
+        "حجز جلسة حجامة"
+    ]
 
 };
 
 
-/* =========================
-   SHOW PRODUCTS
-========================= */
+/* ================= الدخول ================= */
 
-function showProducts(category){
+function enterSite(){
 
-    const area =
-        document.getElementById("productArea");
+    const name =
+        document.getElementById("userName").value.trim();
 
-    area.innerHTML = "";
+    if(!name){
 
-    const list = products[category] || [];
+        alert("من فضلك اكتب اسمك أولاً");
 
-    list.forEach(function(name){
+        return;
+    }
 
-        const item =
+    localStorage.setItem("darAlshifaName",name);
+
+    document
+        .getElementById("loginPage")
+        .classList.add("hidden-section");
+
+    document
+        .getElementById("mainDashboard")
+        .classList.remove("hidden-section");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ================= الخروج ================= */
+
+function logout(){
+
+    document
+        .getElementById("mainDashboard")
+        .classList.add("hidden-section");
+
+    document
+        .getElementById("loginPage")
+        .classList.remove("hidden-section");
+
+    document
+        .getElementById("userName")
+        .value="";
+
+    closeCategory();
+
+}
+
+
+/* ================= عرض الأقسام ================= */
+
+function renderCategory(category){
+
+    const display =
+        document.getElementById("productDisplay");
+
+    const grid =
+        document.getElementById("itemsGrid");
+
+    const title =
+        document.getElementById("catTitle");
+
+    title.innerText =
+        "قسم " + category;
+
+    grid.innerHTML="";
+
+    menu[category].forEach(function(item){
+
+        const card =
         document.createElement("div");
 
-        item.className =
-            "glass card product";
+        card.className =
+            "glass-card product";
 
-        item.innerHTML = `
+        card.innerHTML = `
 
-            <h3>
-                <i class="fas fa-leaf gold ml-2"></i>
-                ${name}
-            </h3>
+            <div class="product-name">
 
-            <div class="product-desc">
-                للاستفسار عن المنتج والتوفر وطريقة الطلب
-                تواصل معنا مباشرة عبر واتساب.
+                ${item}
+
             </div>
 
             <div class="product-footer">
 
                 <span class="price">
-                    متاح للاستفسار
+                    للاستفسار عن السعر
                 </span>
 
                 <button
-                    class="btn btn-green text-xs"
-                    onclick="openConsultation('${name.replace(/'/g,"")}')">
-                    طلب / استفسار
+                    class="btn btn-green order-btn"
+                    onclick="openOrder('${escapeQuotes(item)}')">
+
+                    <i class="fab fa-whatsapp"></i>
+                    طلب
+
                 </button>
 
             </div>
+
         `;
 
-        area.appendChild(item);
+        grid.appendChild(card);
 
     });
 
-    document.getElementById("products")
-        .scrollIntoView({
-            behavior:"smooth"
+    display.classList.remove("hidden-section");
+
+    setTimeout(function(){
+
+        display.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
         });
+
+    },100);
+
 }
 
 
-/* =========================
-   MODAL
-========================= */
+/* ================= إغلاق القسم ================= */
 
-function openConsultation(service=""){
+function closeCategory(){
 
     document
-        .getElementById("consultModal")
-        .classList.add("active");
-
-    if(service){
-
-        document
-            .getElementById("clientMessage")
-            .value =
-            "السلام عليكم، أريد الاستفسار عن: " + service;
-
-    }
+        .getElementById("productDisplay")
+        .classList.add("hidden-section");
 
 }
 
-function closeModal(){
+
+/* ================= الطلب ================= */
+
+let selectedProduct="";
+
+
+function openOrder(product){
+
+    selectedProduct=product;
 
     document
-        .getElementById("consultModal")
-        .classList.remove("active");
+        .getElementById("modalProduct")
+        .innerText="طلب: "+product;
+
+    document
+        .getElementById("orderNotes")
+        .value="";
+
+    document
+        .getElementById("orderModal")
+        .classList.remove("hidden-section");
 
 }
 
 
-/* =========================
-   WHATSAPP
-========================= */
+function closeOrder(){
 
-function sendWhatsApp(){
+    document
+        .getElementById("orderModal")
+        .classList.add("hidden-section");
+
+}
+
+
+/* ================= واتساب ================= */
+
+function openWhatsAppDirect(message){
+
+    const url =
+        "https://wa.me/249121494942?text="+
+        encodeURIComponent(message);
+
+    window.open(url,"_blank");
+
+}
+
+
+function sendOrder(){
 
     const name =
-        document.getElementById("clientName").value.trim();
+        localStorage.getItem("darAlshifaName") ||
+        document.getElementById("userName").value ||
+        "زائر الموقع";
 
-    const phone =
-        document.getElementById("clientPhone").value.trim();
+    const notes =
+        document
+        .getElementById("orderNotes")
+        .value
+        .trim();
 
     const message =
-        document.getElementById("clientMessage").value.trim();
 
-    if(!name){
-
-        alert("يرجى كتابة الاسم");
-
-        return;
-    }
-
-    const finalMessage =
 `السلام عليكم ورحمة الله وبركاته
 
-من موقع دار الشفاء للعلاج الطبيعي
+أرغب في الطلب من دار الشفاء.
 
-الاسم: ${name}
-رقم الهاتف: ${phone || "لم يتم إدخاله"}
+المنتج / الخدمة:
+${selectedProduct}
 
-الطلب / الاستفسار:
-${message || "أرغب في الاستفسار عن خدمات دار الشفاء."}`;
+الاسم:
+${name}
+
+الملاحظات:
+${notes || "لا توجد ملاحظات"}
+
+بيانات التحويل:
+بنكك: 2985827
+فوري: 51170108
+
+باسم:
+عبدالصمد عبدالواحد محمد الطاهر`;
+
+    openWhatsAppDirect(message);
+
+}
+
+
+/* ================= Messenger ================= */
+
+function sendMessenger(){
 
     window.open(
-        "https://wa.me/249121494942?text=" +
-        encodeURIComponent(finalMessage),
+        "https://m.me/abdalsamad.abdo1",
         "_blank"
     );
 
 }
 
 
-/* =========================
-   CLOSE MODAL OUTSIDE
-========================= */
+/* ================= نسخ ================= */
+
+function copyText(text){
+
+    navigator.clipboard.writeText(text)
+    .then(function(){
+
+        alert("تم نسخ الرقم: "+text);
+
+    })
+    .catch(function(){
+
+        alert("الرقم: "+text);
+
+    });
+
+}
+
+
+/* ================= تنقل ================= */
+
+function scrollToSection(id){
+
+    const element =
+        document.getElementById(id);
+
+    if(element){
+
+        element.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+
+/* ================= حماية بسيطة للنص ================= */
+
+function escapeQuotes(text){
+
+    return text
+        .replace(/\\/g,"\\\\")
+        .replace(/'/g,"\\'")
+        .replace(/"/g,'&quot;');
+
+}
+
+
+/* ================= Enter ================= */
 
 document
-    .getElementById("consultModal")
-    .addEventListener("click",function(e){
+    .getElementById("userName")
+    .addEventListener("keydown",function(e){
 
-        if(e.target === this){
+        if(e.key==="Enter"){
 
-            closeModal();
+            enterSite();
 
         }
 
     });
 
 
-/* =========================
-   ESCAPE
-========================= */
+/* ================= استعادة الاسم ================= */
 
-document.addEventListener("keydown",function(e){
+window.addEventListener("load",function(){
 
-    if(e.key === "Escape"){
+    const saved =
+        localStorage.getItem("darAlshifaName");
 
-        closeModal();
+    if(saved){
+
+        document
+            .getElementById("userName")
+            .value=saved;
 
     }
 
@@ -1306,4 +1885,4 @@ document.addEventListener("keydown",function(e){
 </script>
 
 </body>
-        </html>
+    </html>
