@@ -6,9 +6,32 @@
 
 <title>دار الشفاء | الشيخ عبدالصمد عبدالواحد</title>
 
-<meta name="description" content="دار الشفاء للعلاج الطبيعي والرقية الشرعية والأعشاب والزيوت وعسل النحل والحجامة والأدعية والأذكار والاستشارات والتوعية الصحية.">
+<meta name="description"
+content="موقع دار الشفاء بإشراف الشيخ عبدالصمد عبدالواحد. الرقية الشرعية، الأعشاب الطبيعية، الزيوت المستخلصة، عسل النحل، الحجامة النبوية، الأدعية والأذكار والاستشارات.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
+
+:root{
+    --dark:#011b0b;
+    --dark2:#022b12;
+    --green:#20c96b;
+    --green2:#0d8d43;
+    --gold:#d4af37;
+    --gold2:#f2cd5c;
+    --white:#f4faf5;
+    --muted:#b8cbbd;
+    --border:rgba(212,175,55,.35);
+}
+
 *{
     box-sizing:border-box;
 }
@@ -20,543 +43,475 @@ html{
 body{
     margin:0;
     background:
-        radial-gradient(circle at 50% 15%,rgba(22,125,55,.30),transparent 32%),
-        radial-gradient(circle at 20% 80%,rgba(0,80,35,.25),transparent 30%),
-        #001d0b;
-    color:#eef8f0;
-    font-family:Tahoma,"Arial",sans-serif;
+    radial-gradient(circle at top,#063d1b 0%,#011b0b 45%,#000d05 100%);
+    color:var(--white);
+    font-family:"Cairo",sans-serif;
     overflow-x:hidden;
 }
 
-/* خلفية زخرفية */
 body:before{
     content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
-    opacity:.12;
-    background-image:
-        linear-gradient(30deg,#2ecc71 1px,transparent 1px),
-        linear-gradient(150deg,#d4af37 1px,transparent 1px);
-    background-size:90px 90px;
-    z-index:-2;
-}
-
-/* نجوم خلفية */
-.bg-dots{
-    position:fixed;
-    inset:0;
     z-index:-1;
-    overflow:hidden;
-    pointer-events:none;
-}
 
-.bg-dots span{
-    position:absolute;
-    width:4px;
-    height:4px;
-    background:#40d878;
-    border-radius:50%;
-    box-shadow:0 0 12px #40d878;
-    animation:floatDot 7s infinite ease-in-out;
-}
+    background-image:
+    linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
 
-.bg-dots span:nth-child(1){top:12%;left:8%}
-.bg-dots span:nth-child(2){top:27%;left:85%;animation-delay:1s}
-.bg-dots span:nth-child(3){top:52%;left:18%;animation-delay:2s}
-.bg-dots span:nth-child(4){top:72%;left:78%;animation-delay:3s}
-.bg-dots span:nth-child(5){top:88%;left:35%;animation-delay:4s}
-.bg-dots span:nth-child(6){top:42%;left:55%;animation-delay:2s}
-.bg-dots span:nth-child(7){top:18%;left:62%;animation-delay:4s}
-
-@keyframes floatDot{
-    0%,100%{transform:translateY(0);opacity:.3}
-    50%{transform:translateY(-18px);opacity:1}
-}
-
-/* عام */
-.hidden{
-    display:none!important;
+    background-size:40px 40px;
 }
 
 .container{
-    width:min(1050px,94%);
+    width:min(1100px,92%);
     margin:auto;
 }
 
-.card{
-    background:rgba(0,35,15,.78);
-    border:1px solid rgba(46,204,113,.45);
-    border-radius:25px;
-    box-shadow:0 10px 35px rgba(0,0,0,.35);
-    backdrop-filter:blur(8px);
+button,
+input,
+textarea{
+    font-family:inherit;
 }
 
-.gold{
-    color:#e5bd35;
+button{
+    cursor:pointer;
 }
 
-.green{
-    color:#39dc72;
+a{
+    text-decoration:none;
 }
 
-/* صفحة الدخول */
-#loginPage{
-    min-height:100vh;
+/* الشريط العلوي */
+
+.topbar{
+    background:rgba(0,0,0,.8);
+    border-bottom:2px solid var(--gold);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:7px 0;
+    color:var(--gold2);
+}
+
+.ticker{
+    display:inline-block;
+    animation:ticker 35s linear infinite;
+    font-size:.9rem;
+    font-weight:bold;
+}
+
+@keyframes ticker{
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform:translateX(100%);
+    }
+}
+
+/* الصفحة الرئيسية */
+
+.hero{
+    min-height:720px;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:30px 15px 100px;
-}
-
-.login-box{
-    width:min(650px,100%);
     text-align:center;
+    padding:50px 0 80px;
 }
 
-.logo-main{
-    width:250px;
-    height:250px;
-    max-width:70vw;
-    object-fit:contain;
+.hero-inner{
+    max-width:850px;
+}
+
+.logo{
+    width:205px;
+    height:205px;
     border-radius:50%;
-    border:5px solid #d4af37;
+    object-fit:cover;
+    border:4px solid var(--gold);
+
     box-shadow:
-        0 0 15px #d4af37,
-        0 0 45px rgba(46,204,113,.65);
-    animation:logoPulse 4s infinite ease-in-out;
+    0 0 0 8px rgba(212,175,55,.08),
+    0 0 45px rgba(32,201,107,.35);
+
+    animation:pulse 4s infinite ease-in-out;
 }
 
-@keyframes logoPulse{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.035)}
+@keyframes pulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.04);
+    }
+
 }
 
-.site-name{
-    margin:25px 0 5px;
-    font-size:clamp(40px,10vw,72px);
-    font-weight:900;
-    color:#39d968;
-    text-shadow:0 0 18px rgba(46,204,113,.25);
+.brand{
+    color:var(--green);
+    font-size:clamp(3rem,9vw,5.5rem);
+    line-height:1;
+    margin:25px 0 10px;
+    font-weight:800;
 }
 
-.site-subtitle{
-    font-size:clamp(22px,5vw,36px);
+.eyebrow{
+    color:var(--gold2);
+    font-family:"Amiri",serif;
+    font-size:1.25rem;
     font-weight:bold;
-    color:#46df78;
-    line-height:1.7;
 }
 
-.site-services{
-    margin:12px auto 35px;
-    color:#d8eadc;
-    font-size:clamp(17px,4vw,25px);
-    line-height:2;
-}
-
-.login-card{
-    padding:30px;
-    margin-top:20px;
-}
-
-.login-card h2{
-    font-size:30px;
-    margin:5px 0 25px;
-}
-
-input,textarea{
-    width:100%;
-    background:rgba(0,15,7,.8);
-    border:1px solid rgba(46,204,113,.45);
+.subtitle{
     color:#fff;
-    border-radius:17px;
-    padding:18px;
-    font-size:20px;
-    font-family:inherit;
-    outline:none;
+    font-size:clamp(1.2rem,4vw,1.9rem);
+    font-weight:800;
 }
 
-input:focus,textarea:focus{
-    border-color:#39dc72;
-    box-shadow:0 0 15px rgba(46,204,113,.15);
+.services{
+    color:var(--muted);
+    line-height:2;
+    margin:20px auto 30px;
+    font-size:1rem;
+}
+
+.actions{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
 .btn{
     border:0;
-    border-radius:17px;
-    padding:16px 22px;
-    font-size:20px;
-    font-weight:bold;
-    font-family:inherit;
-    cursor:pointer;
-    transition:.25s;
+    border-radius:15px;
+    padding:14px 25px;
+    font-size:1rem;
+    font-weight:800;
+    transition:.2s;
 }
 
 .btn:hover{
     transform:translateY(-2px);
-    filter:brightness(1.08);
 }
 
 .btn-green{
-    background:linear-gradient(135deg,#29d66c,#149447);
-    color:#fff;
+    background:linear-gradient(135deg,#29d970,#108c43);
+    color:white;
 }
 
 .btn-gold{
-    background:linear-gradient(135deg,#e6c44a,#ae7d0a);
-    color:#101010;
+    background:linear-gradient(135deg,#f0cf61,#a97c17);
+    color:#111;
 }
 
 .btn-dark{
-    background:#14241b;
-    color:#fff;
-    border:1px solid #31553e;
-}
-
-/* الأزرار الاجتماعية */
-.socials{
-    position:fixed;
-    left:15px;
-    bottom:105px;
-    z-index:2000;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-.social-btn{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:#fff;
-    font-size:24px;
-    font-weight:bold;
-    box-shadow:0 5px 18px rgba(0,0,0,.35);
-}
-
-.whatsapp{background:#25D366}
-.messenger{background:#168AFF}
-.facebook{background:#1877F2}
-
-/* لوحة الموقع */
-#mainSite{
-    min-height:100vh;
-    padding-bottom:90px;
-}
-
-.top-bar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(0,18,8,.94);
-    border-bottom:1px solid #d4af37;
-    backdrop-filter:blur(10px);
-}
-
-.top-bar-inner{
-    min-height:65px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:bold;
-    color:#40db73;
-}
-
-.brand img{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    border:2px solid #d4af37;
-}
-
-.top-actions{
-    display:flex;
-    gap:8px;
-}
-
-.small-btn{
-    border:1px solid #355e43;
-    background:#092316;
-    color:#fff;
-    border-radius:10px;
-    padding:9px 13px;
-    cursor:pointer;
-    font-family:inherit;
-}
-
-/* الترحيب */
-.hero{
-    text-align:center;
-    padding:35px 0 20px;
-}
-
-.hero h1{
-    color:#e5bd35;
-    font-size:clamp(28px,6vw,48px);
-    margin:10px 0;
-}
-
-.hero p{
-    color:#d5e8d9;
-    font-size:20px;
-    line-height:1.9;
-}
-
-/* شريط الساعة */
-.astro{
-    text-align:center;
-    color:#e5bd35;
-    background:rgba(0,0,0,.5);
-    border-bottom:1px solid rgba(212,175,55,.5);
-    padding:9px;
-    font-size:15px;
+    background:#061d0e;
+    color:white;
+    border:1px solid #28643e;
 }
 
 /* البطاقات */
-.quote{
-    padding:25px;
+
+.card{
+    background:rgba(1,35,14,.82);
+    border:1px solid var(--border);
+    border-radius:25px;
+    box-shadow:0 15px 45px rgba(0,0,0,.3);
+    backdrop-filter:blur(10px);
+}
+
+/* الترحيب */
+
+.welcome{
+    margin-top:-50px;
+    position:relative;
+    z-index:5;
     text-align:center;
-    margin:15px 0;
-    border-color:#80671c;
+    padding:30px;
 }
 
-.quote h2{
-    color:#e5bd35;
-    margin-top:0;
+.welcome-icon{
+    color:var(--gold2);
+    font-size:2.4rem;
 }
 
-.quote p{
-    font-size:22px;
+.welcome h2{
+    font-family:"Amiri",serif;
+    font-size:2rem;
+    margin:10px 0;
+}
+
+.welcome p{
+    color:var(--muted);
     line-height:2;
-    color:#d9f0dc;
+    margin:5px 0;
 }
 
-/* التشخيص */
-.diagnosis{
-    padding:25px;
-    margin:25px 0;
-}
-
-.diagnosis h2{
-    color:#43dc74;
-}
-
-.question{
-    font-size:21px;
-    line-height:1.8;
-    margin:20px 0;
-}
-
-.answer-buttons{
-    display:flex;
-    gap:12px;
-}
-
-.answer-buttons .btn{
-    flex:1;
-}
-
-.result{
-    margin-top:15px;
-    padding:20px;
-    border:1px solid #d4af37;
-    border-radius:15px;
-    background:rgba(0,55,20,.7);
-    color:#f1cf54;
-    line-height:1.9;
+.quran-note{
+    color:#f0df9c !important;
 }
 
 /* الأقسام */
+
+.section{
+    padding:55px 0;
+}
+
 .section-title{
     text-align:center;
-    margin:35px 0 20px;
+    margin-bottom:30px;
 }
 
 .section-title h2{
-    color:#e5bd35;
-    font-size:30px;
+    color:var(--green);
+    font-size:2rem;
+    margin:0;
 }
 
-.categories{
+.section-title p{
+    color:var(--muted);
+}
+
+/* الخبرة */
+
+.experience{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-.category{
-    min-height:135px;
-    padding:20px 10px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.experience-box{
+    padding:25px;
     text-align:center;
-    cursor:pointer;
-    color:#fff;
 }
 
-.category-icon{
-    font-size:40px;
+.experience-box i{
+    color:var(--gold2);
+    font-size:2.2rem;
     margin-bottom:10px;
 }
 
-.category-title{
-    font-size:18px;
-    font-weight:bold;
+.experience-box h3{
+    margin:5px 0 10px;
+}
+
+.experience-box p{
+    color:var(--muted);
+    line-height:1.9;
+    margin:0;
+}
+
+/* الأقسام */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.category{
+    background:rgba(1,35,14,.75);
+    color:white;
+    border:1px solid rgba(32,201,107,.3);
+    border-top:2px solid rgba(212,175,55,.45);
+    border-radius:22px;
+    padding:25px 12px;
+    transition:.2s;
+}
+
+.category:hover{
+    transform:translateY(-4px);
+    border-color:var(--green);
+}
+
+.category i{
+    font-size:2.5rem;
+    color:var(--green);
+    margin-bottom:12px;
+}
+
+.category h3{
+    margin:0;
+}
+
+.category small{
+    color:var(--muted);
 }
 
 /* المنتجات */
+
 .products{
-    margin-top:35px;
-}
-
-.products-header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    margin-bottom:20px;
-}
-
-.products-header h2{
-    color:#43dc74;
-    border-right:4px solid #43dc74;
-    padding-right:12px;
-}
-
-.items{
     display:grid;
-    grid-template-columns:repeat(1,1fr);
-    gap:14px;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
 }
 
 .product{
+    background:rgba(1,35,14,.78);
+    border:1px solid rgba(32,201,107,.25);
+    border-radius:20px;
     padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
 }
 
 .product h3{
-    margin-top:0;
-    color:#fff;
-    font-size:19px;
+    margin:0 0 7px;
+    font-size:1.05rem;
 }
 
-.product-description{
-    color:#c7ddcb;
+.product p{
+    margin:0 0 8px;
+    color:var(--muted);
     line-height:1.8;
-    font-size:15px;
-    margin:10px 0 16px;
+    font-size:.88rem;
 }
 
-.product-note{
-    font-size:13px;
-    color:#e5bd35;
-    margin-bottom:15px;
+.price{
+    color:var(--gold2);
+    font-weight:bold;
 }
 
-.product button{
-    width:100%;
+.product .btn{
+    padding:10px 14px;
+    font-size:.82rem;
+    white-space:nowrap;
 }
 
-/* الأدعية والأذكار */
-.text-section{
-    margin-top:35px;
-}
+/* الأدعية */
 
-.dua-grid{
+.duas{
     display:grid;
-    grid-template-columns:1fr;
-    gap:14px;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
 }
 
 .dua{
-    padding:22px;
+    padding:24px;
+    border-right:4px solid var(--gold);
 }
 
 .dua h3{
-    color:#e5bd35;
+    color:var(--gold2);
 }
 
 .dua p{
-    line-height:2.1;
-    font-size:19px;
-    color:#e1eee3;
-}
-
-/* الدفع */
-.payment{
-    margin-top:35px;
-    padding:25px;
-    border-color:#d4af37;
-}
-
-.payment h2{
-    color:#e5bd35;
-}
-
-.payment-row{
-    background:rgba(0,0,0,.25);
-    border-radius:12px;
-    padding:14px;
-    margin:10px 0;
-    line-height:1.8;
-}
-
-.copy-btn{
-    margin-top:5px;
-    padding:6px 10px;
-    font-size:13px;
-}
-
-/* التوعية */
-.health{
-    padding:25px;
-    margin-top:35px;
-}
-
-.health li{
-    margin:12px 0;
-    line-height:1.8;
+    font-family:"Amiri",serif;
+    font-size:1.3rem;
+    line-height:2;
 }
 
 /* الاستشارة */
-.contact{
+
+.consult{
+    padding:35px;
     text-align:center;
-    padding:30px;
-    margin-top:35px;
 }
 
-.contact-buttons{
+.consult h2{
+    color:var(--gold2);
+}
+
+.consult p{
+    color:var(--muted);
+    line-height:2;
+}
+
+/* التحويل */
+
+.payment{
     display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    margin-top:20px;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
 }
 
-/* المودال */
+.payment-box{
+    padding:25px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:rgba(0,0,0,.2);
+}
+
+.payment-box h3{
+    color:var(--gold2);
+    margin-top:0;
+}
+
+.account-number{
+    font-size:1.5rem;
+    font-weight:bold;
+    direction:ltr;
+    display:inline-block;
+}
+
+.account-name{
+    color:var(--muted);
+}
+
+/* أزرار التواصل */
+
+.floating{
+    position:fixed;
+    left:15px;
+    bottom:85px;
+    z-index:900;
+
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.float{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    color:white;
+    font-size:1.4rem;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+.whatsapp{
+    background:#20c968;
+}
+
+.messenger{
+    background:#1687f8;
+}
+
+.facebook{
+    background:#1877f2;
+}
+
+/* النافذة */
+
 .modal{
     position:fixed;
     inset:0;
     background:rgba(0,0,0,.88);
     z-index:3000;
-    display:flex;
+
+    display:none;
     align-items:center;
     justify-content:center;
-    padding:15px;
+
+    padding:18px;
+}
+
+.modal.active{
+    display:flex;
 }
 
 .modal-box{
-    width:min(600px,100%);
+    width:min(620px,100%);
     max-height:90vh;
     overflow:auto;
     padding:25px;
@@ -566,1317 +521,1534 @@ input:focus,textarea:focus{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:10px;
+}
+
+.modal-head h2{
+    color:var(--gold2);
 }
 
 .close{
     background:none;
-    color:#fff;
     border:0;
-    font-size:35px;
-    cursor:pointer;
+    color:white;
+    font-size:2rem;
 }
 
-/* الشريط السفلي */
-.footer-marquee{
-    position:fixed;
-    bottom:0;
-    right:0;
-    left:0;
-    z-index:1500;
-    background:rgba(0,17,7,.96);
-    border-top:2px solid #d4af37;
-    overflow:hidden;
-    white-space:nowrap;
+.modal-description{
+    color:var(--muted);
+    line-height:2;
 }
 
-.marquee{
-    display:inline-block;
-    padding:11px 0;
-    color:#fff;
-    font-size:16px;
-    animation:marquee 35s linear infinite;
+.modal input,
+.modal textarea{
+    width:100%;
+    background:#02180a;
+    color:white;
+    border:1px solid #28643e;
+    border-radius:14px;
+    padding:14px;
+    margin-top:10px;
+    outline:none;
 }
 
-@keyframes marquee{
-    from{transform:translateX(100%)}
-    to{transform:translateX(-100%)}
+.modal textarea{
+    min-height:120px;
+    resize:vertical;
 }
 
-/* تنبيه طبي */
-.disclaimer{
-    color:#b9cabe;
-    font-size:13px;
-    line-height:1.8;
-    margin-top:20px;
-    padding:12px;
-    border-right:3px solid #d4af37;
+.modal-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:15px;
 }
 
-/* الهاتف */
-@media(min-width:700px){
-    .categories{
-        grid-template-columns:repeat(3,1fr);
+/* الفوتر */
+
+footer{
+    margin-top:40px;
+    border-top:2px solid var(--gold);
+    background:rgba(0,12,5,.95);
+    text-align:center;
+    padding:25px 0 100px;
+}
+
+footer strong{
+    color:var(--green);
+    font-size:1.4rem;
+}
+
+footer p{
+    color:var(--muted);
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:15px;
+}
+
+.social a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#092617;
+    border:1px solid #28643e;
+    display:grid;
+    place-items:center;
+    color:white;
+}
+
+/* الموبايل */
+
+@media(max-width:800px){
+
+    .experience{
+        grid-template-columns:1fr;
     }
 
-    .items{
+    .categories{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .dua-grid{
-        grid-template-columns:repeat(2,1fr);
+    .products,
+    .duas,
+    .payment{
+        grid-template-columns:1fr;
     }
 
-    .contact-buttons{
-        grid-template-columns:repeat(3,1fr);
-    }
 }
 
-@media(min-width:1000px){
-    .categories{
-        grid-template-columns:repeat(4,1fr);
+@media(max-width:520px){
+
+    .hero{
+        min-height:680px;
     }
 
-    .items{
-        grid-template-columns:repeat(3,1fr);
+    .logo{
+        width:175px;
+        height:175px;
     }
+
+    .welcome{
+        padding:22px;
+    }
+
+    .product{
+        align-items:flex-start;
+    }
+
 }
 
-@media(max-width:500px){
-    .logo-main{
-        width:210px;
-        height:210px;
-    }
-
-    .login-card{
-        padding:20px;
-    }
-
-    .socials{
-        left:10px;
-    }
-
-    .social-btn{
-        width:54px;
-        height:54px;
-    }
-
-    .answer-buttons{
-        flex-direction:column;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<div class="bg-dots">
-    <span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span>
+<!-- الشريط العلوي -->
+
+<div class="topbar">
+
+<div class="ticker">
+
+🌿 مرحباً بكم في موقع دار الشفاء • الرقية الشرعية • الأعشاب الطبيعية • الزيوت المستخلصة • عسل النحل • الحجامة النبوية • الأدعية والأذكار • واتساب: 249121494942
+
 </div>
 
-<!-- ================= صفحة الدخول ================= -->
+</div>
 
-<section id="loginPage">
 
-    <div class="login-box">
+<!-- الواجهة الرئيسية -->
 
-        <img src="logo.png"
-             class="logo-main"
-             alt="شعار دار الشفاء"
-             onerror="this.style.display='none';">
+<header class="hero">
 
-        <div class="site-name">دار الشفاء</div>
+<div class="container hero-inner">
 
-        <div class="site-subtitle">
-            للعلاج الطبيعي والرقية الشرعية
-        </div>
+<img
+src="logo.png"
+class="logo"
+alt="شعار دار الشفاء"
+onerror="this.style.display='none'"
+>
 
-        <div class="site-services">
-            الأعشاب الطبيعية • الزيوت • عسل النحل • الحجامة<br>
-            الرقية الشرعية • الأدعية والأذكار • الاستشارات<br>
-            والتوعية الصحية
-        </div>
+<div class="eyebrow">
 
-        <div class="card login-card">
+بإشراف الشيخ عبدالصمد عبدالواحد
 
-            <div style="font-size:48px;color:#e5bd35;">♥</div>
+</div>
 
-            <h2>مرحباً بك في دار الشفاء</h2>
+<h1 class="brand">
 
-            <input
-                type="text"
-                id="userName"
-                placeholder="اكتب اسمك للدخول..."
-                autocomplete="name">
+دار الشفاء
 
-            <br><br>
+</h1>
 
-            <button
-                type="button"
-                class="btn btn-green"
-                style="width:100%;"
-                id="enterButton">
-                🚪 الدخول إلى الموقع
-            </button>
+<div class="subtitle">
 
-            <div class="disclaimer">
-                هذا الموقع للتعريف بالخدمات والمنتجات والمحتوى التثقيفي.
-                المعلومات الصحية العامة لا تغني عن مراجعة الطبيب أو المختص عند الحاجة.
-            </div>
+للعلاج الطبيعي والرقية الشرعية
 
-        </div>
+</div>
 
-    </div>
+<div class="services">
+
+الأعشاب الطبيعية • الزيوت المستخلصة • عسل النحل • الحجامة النبوية
+• الرقية الشرعية • الأدعية والأذكار • الاستشارات والتوعية الصحية
+
+</div>
+
+<div class="actions">
+
+<a href="#sections" class="btn btn-green">
+
+<i class="fa-solid fa-door-open"></i>
+
+دخول إلى الموقع
+
+</a>
+
+<button class="btn btn-gold" onclick="openConsultation()">
+
+<i class="fa-solid fa-comments"></i>
+
+استشارة الشيخ
+
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- الترحيب -->
+
+<div class="container">
+
+<section class="card welcome">
+
+<div class="welcome-icon">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+</div>
+
+<h2>
+
+مرحباً بك في دار الشفاء
+
+</h2>
+
+<p>
+
+بإشراف الشيخ عبدالصمد عبدالواحد، مع خبرة تمتد لأكثر من عشر سنوات
+في الرقية الشرعية والأعشاب الطبيعية والحجامة النبوية واستخلاص الزيوت
+وإعداد خلطات عسل النحل.
+
+</p>
+
+<p class="quran-note">
+
+نؤمن بأن القرآن الكريم شفاء ورحمة، وأن الرقية الشرعية من كتاب الله
+وسنة رسوله ﷺ، مع الأخذ بالأسباب النافعة والاستشارة المناسبة.
+
+</p>
+
+</section>
+
+</div>
+
+
+<!-- الخبرة -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+خبرة دار الشفاء
+
+</h2>
+
+<p>
+
+خبرة عملية وعناية فردية بكل حالة
+
+</p>
+
+</div>
+
+
+<div class="experience">
+
+<div class="card experience-box">
+
+<i class="fa-solid fa-book-quran"></i>
+
+<h3>
+
+الرقية الشرعية
+
+</h3>
+
+<p>
+
+الرقية بالقرآن الكريم والأدعية المأثورة والتحصين والذكر،
+مع التوجيه المناسب لكل حالة.
+
+</p>
+
+</div>
+
+
+<div class="card experience-box">
+
+<i class="fa-solid fa-leaf"></i>
+
+<h3>
+
+الأعشاب الطبيعية
+
+</h3>
+
+<p>
+
+خبرة في الأعشاب الطبيعية وطرق تجهيزها واستخداماتها التقليدية
+والغذائية وفق طبيعة المنتج.
+
+</p>
+
+</div>
+
+
+<div class="card experience-box">
+
+<i class="fa-solid fa-flask"></i>
+
+<h3>
+
+الزيوت والخلطات
+
+</h3>
+
+<p>
+
+خبرة في استخلاص الزيوت وتحضير الخلطات الطبيعية ومنتجات عسل النحل.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= الموقع ================= -->
+<!-- الأقسام -->
 
-<section id="mainSite" class="hidden">
+<section class="section" id="sections">
 
-    <div class="top-bar">
+<div class="container">
 
-        <div class="container top-bar-inner">
+<div class="section-title">
 
-            <div class="brand">
-                <img src="logo.png" alt="دار الشفاء">
-                <span>دار الشفاء</span>
-            </div>
+<h2>
 
-            <div class="top-actions">
-                <button class="small-btn" onclick="showHome()">الرئيسية</button>
-                <button class="small-btn" onclick="logout()">خروج</button>
-            </div>
+أقسام دار الشفاء
 
-        </div>
+</h2>
 
-    </div>
+<p>
 
+اختر القسم الذي تريد الاطلاع عليه
 
-    <div class="astro" id="astro">
-        🌿 أهلاً بكم في دار الشفاء
-    </div>
+</p>
 
+</div>
 
-    <main class="container">
 
-        <!-- المقدمة -->
+<div class="categories">
 
-        <section class="hero">
 
-            <h1>مرحباً بك في دار الشفاء</h1>
+<button class="category" onclick="showCategory('رقية')">
 
-            <p>
-                بوابتك للتعريف بالرقية الشرعية والأعشاب والزيوت الطبيعية
-                وعسل النحل والحجامة والأدعية والأذكار والاستشارات والتوعية الصحية.
-            </p>
+<i class="fa-solid fa-book-quran"></i>
 
-        </section>
+<h3>الرقية الشرعية</h3>
 
+<small>خدمات وبرامج الرقية</small>
 
-        <!-- مشكاة اليقين -->
+</button>
 
-        <section class="card quote">
 
-            <h2>مِنْ مِشْكَاةِ الْيَقِينِ</h2>
+<button class="category" onclick="showCategory('اعشاب')">
 
-            <p>
-                ﴿وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ﴾
-            </p>
+<i class="fa-solid fa-leaf"></i>
 
-            <p style="font-size:17px;">
-                نسأل الله لكم العافية والشفاء، ونسعى لتقديم محتوى
-                نافع يجمع بين الإرشاد الشرعي والتوعية الصحية.
-            </p>
+<h3>الأعشاب</h3>
 
-        </section>
+<small>الأعشاب الطبيعية</small>
 
+</button>
 
-        <!-- التشخيص -->
 
-        <section class="card diagnosis">
+<button class="category" onclick="showCategory('زيوت')">
 
-            <h2>🔎 الاستبيان الصحي التثقيفي</h2>
+<i class="fa-solid fa-flask"></i>
 
-            <p style="color:#c7ddcb;">
-                هذا الاستبيان ليس تشخيصاً طبياً، وإنما يساعد على توجيهك
-                إلى نوع المعلومات أو الاستشارة المناسبة.
-            </p>
+<h3>الزيوت</h3>
 
-            <div id="questionArea">
+<small>الزيوت المستخلصة</small>
 
-                <div class="question" id="question">
-                    هل تعاني من أعراض متكررة تؤثر في حياتك اليومية؟
-                </div>
+</button>
 
-                <div class="answer-buttons">
 
-                    <button
-                        class="btn btn-green"
-                        onclick="answer(true)">
-                        نعم
-                    </button>
+<button class="category" onclick="showCategory('عسل')">
 
-                    <button
-                        class="btn btn-dark"
-                        onclick="answer(false)">
-                        لا
-                    </button>
+<i class="fa-solid fa-jar"></i>
 
-                </div>
+<h3>عسل النحل</h3>
 
-            </div>
+<small>العسل والخلطات</small>
 
-            <div id="quizResult" class="result hidden"></div>
+</button>
 
-        </section>
 
+<button class="category" onclick="showCategory('بخور')">
 
-        <!-- الأقسام -->
+<i class="fa-solid fa-fire"></i>
 
-        <div class="section-title">
-            <h2>أقسام دار الشفاء</h2>
-        </div>
+<h3>البخور</h3>
 
-        <section class="categories">
+<small>البخور والمواد العطرية</small>
 
-            <button class="card category" onclick="renderCategory('رقية')">
-                <div class="category-icon">📖</div>
-                <div class="category-title">الرقية الشرعية</div>
-            </button>
+</button>
 
-            <button class="card category" onclick="renderCategory('اعشاب')">
-                <div class="category-icon">🌿</div>
-                <div class="category-title">الأعشاب الطبيعية</div>
-            </button>
 
-            <button class="card category" onclick="renderCategory('زيوت')">
-                <div class="category-icon">🧴</div>
-                <div class="category-title">الزيوت</div>
-            </button>
+<button class="category" onclick="showCategory('حجامة')">
 
-            <button class="card category" onclick="renderCategory('عسل')">
-                <div class="category-icon">🍯</div>
-                <div class="category-title">عسل النحل</div>
-            </button>
+<i class="fa-solid fa-heart-pulse"></i>
 
-            <button class="card category" onclick="renderCategory('بخور')">
-                <div class="category-icon">🌿</div>
-                <div class="category-title">البخور والروائح</div>
-            </button>
+<h3>الحجامة</h3>
 
-            <button class="card category" onclick="renderCategory('حجامة')">
-                <div class="category-icon">❤️</div>
-                <div class="category-title">الحجامة</div>
-            </button>
+<small>الحجامة النبوية</small>
 
-            <button class="card category" onclick="showDuas()">
-                <div class="category-icon">🤲</div>
-                <div class="category-title">الأدعية</div>
-            </button>
+</button>
 
-            <button class="card category" onclick="showAzkar()">
-                <div class="category-icon">📿</div>
-                <div class="category-title">الأذكار</div>
-            </button>
 
-            <button class="card category" onclick="showHealth()">
-                <div class="category-icon">🩺</div>
-                <div class="category-title">التوعية الصحية</div>
-            </button>
+<button class="category" onclick="showCategory('ادعية')">
 
-            <button class="card category" onclick="showContact()">
-                <div class="category-icon">💬</div>
-                <div class="category-title">الاستشارات</div>
-            </button>
+<i class="fa-solid fa-hands-praying"></i>
 
-        </section>
+<h3>الأدعية</h3>
 
+<small>أدعية مختارة</small>
 
-        <!-- المنتجات -->
+</button>
 
-        <section id="productsSection" class="products hidden">
 
-            <div class="products-header">
+<button class="category" onclick="showCategory('اذكار')">
 
-                <h2 id="categoryTitle"></h2>
+<i class="fa-solid fa-moon"></i>
 
-                <button
-                    class="small-btn"
-                    onclick="closeProducts()">
-                    إغلاق
-                </button>
+<h3>الأذكار</h3>
 
-            </div>
+<small>أذكار الصباح والمساء</small>
 
-            <div id="items" class="items"></div>
+</button>
 
-        </section>
 
+<button class="category" onclick="openConsultation()">
 
-        <!-- الأدعية -->
+<i class="fa-solid fa-comments"></i>
 
-        <section id="duasSection" class="text-section hidden">
+<h3>الاستشارات</h3>
 
-            <div class="section-title">
-                <h2>🤲 أدعية الشفاء</h2>
-            </div>
+<small>التواصل مع الشيخ</small>
 
-            <div class="dua-grid">
+</button>
 
-                <article class="card dua">
-                    <h3>دعاء الشفاء</h3>
-                    <p>
-                        اللهم رب الناس، أذهب البأس، اشف أنت الشافي،
-                        لا شفاء إلا شفاؤك، شفاءً لا يغادر سقماً.
-                    </p>
-                </article>
 
-                <article class="card dua">
-                    <h3>دعاء العافية</h3>
-                    <p>
-                        اللهم إني أسألك العفو والعافية في الدنيا والآخرة.
-                    </p>
-                </article>
+</div>
 
-                <article class="card dua">
-                    <h3>دعاء الكرب</h3>
-                    <p>
-                        لا إله إلا الله العظيم الحليم،
-                        لا إله إلا الله رب العرش العظيم.
-                    </p>
-                </article>
-
-                <article class="card dua">
-                    <h3>دعاء للمريض</h3>
-                    <p>
-                        أسأل الله العظيم رب العرش العظيم أن يشفيك.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- الأذكار -->
-
-        <section id="azkarSection" class="text-section hidden">
-
-            <div class="section-title">
-                <h2>📿 الأذكار والتحصين</h2>
-            </div>
-
-            <div class="dua-grid">
-
-                <article class="card dua">
-                    <h3>أذكار الصباح والمساء</h3>
-                    <p>
-                        المحافظة على أذكار الصباح والمساء من الأعمال
-                        العظيمة التي تجمع بين الذكر والدعاء والاستعانة بالله.
-                    </p>
-                </article>
-
-                <article class="card dua">
-                    <h3>الاستعاذة</h3>
-                    <p>
-                        أعوذ بكلمات الله التامات من شر ما خلق.
-                    </p>
-                </article>
-
-                <article class="card dua">
-                    <h3>سورة الإخلاص</h3>
-                    <p>
-                        ﴿قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝
-                        لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ﴾
-                    </p>
-                </article>
-
-                <article class="card dua">
-                    <h3>المعوذات</h3>
-                    <p>
-                        يُستحب قراءة سور الإخلاص والفلق والناس
-                        ضمن الأذكار والتحصين المشروع.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- التوعية الصحية -->
-
-        <section id="healthSection" class="health card hidden">
-
-            <h2 class="gold">🩺 التوعية الصحية</h2>
-
-            <ul>
-
-                <li>
-                    الغذاء المتوازن والنوم الكافي والنشاط البدني
-                    من أساسيات المحافظة على الصحة.
-                </li>
-
-                <li>
-                    الأعشاب مواد طبيعية لكنها قد تتداخل مع بعض
-                    الأدوية أو لا تناسب بعض الحالات، لذلك يجب
-                    استشارة المختص عند وجود مرض مزمن أو استخدام أدوية.
-                </li>
-
-                <li>
-                    لا ينبغي الاعتماد على الأعشاب أو الرقية وحدها
-                    في الحالات الطبية الطارئة أو الأمراض الخطيرة.
-                </li>
-
-                <li>
-                    الحجامة إجراء له مخاطر وموانع محتملة، ويجب أن
-                    تُجرى بطريقة آمنة وعلى يد ممارس مؤهل.
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- الاستشارات -->
-
-        <section id="contactSection" class="contact card hidden">
-
-            <h2 class="gold">💬 الاستشارات والتواصل</h2>
-
-            <p>
-                للتواصل والاستفسار عن الخدمات أو المنتجات،
-                يمكنكم استخدام إحدى وسائل التواصل التالية.
-            </p>
-
-            <div class="contact-buttons">
-
-                <a
-                    class="btn btn-green"
-                    href="https://wa.me/249121494942"
-                    target="_blank">
-                    واتساب
-                </a>
-
-                <a
-                    class="btn btn-green"
-                    href="https://m.me/abdalsamad.abdo1"
-                    target="_blank">
-                    Messenger
-                </a>
-
-                <a
-                    class="btn btn-dark"
-                    href="https://www.facebook.com/abdalsamad.abdo1?mibextid=ZbWKwL"
-                    target="_blank">
-                    Facebook
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- بيانات التحويل -->
-
-        <section class="payment card">
-
-            <h2>💳 بيانات التحويل</h2>
-
-            <div class="payment-row">
-                <strong>بنكك:</strong>
-                <span id="bankakNumber">2985827</span>
-                <br>
-                باسم:
-                <strong>عبدالصمد عبدالواحد محمد الطاهر</strong>
-                <br>
-                <button class="small-btn copy-btn"
-                        onclick="copyNumber('2985827')">
-                    نسخ رقم بنكك
-                </button>
-            </div>
-
-            <div class="payment-row">
-                <strong>فوري:</strong>
-                <span id="fawryNumber">51170108</span>
-                <br>
-                باسم:
-                <strong>عبدالصمد عبدالواحد محمد الطاهر</strong>
-                <br>
-                <button class="small-btn copy-btn"
-                        onclick="copyNumber('51170108')">
-                    نسخ رقم فوري
-                </button>
-            </div>
-
-            <p class="disclaimer">
-                يرجى التأكد من بيانات التحويل قبل إرسال المبلغ،
-                ثم إرسال صورة أو بيانات التحويل عبر واتساب عند طلب المنتج أو الخدمة.
-            </p>
-
-        </section>
-
-    </main>
+</div>
 
 </section>
 
 
-<!-- ================= أزرار التواصل ================= -->
+<!-- المنتجات -->
 
-<div class="socials">
+<section class="section" id="catalog">
 
-    <a
-        class="social-btn whatsapp"
-        href="https://wa.me/249121494942"
-        target="_blank"
-        aria-label="واتساب">
-        ☎
-    </a>
+<div class="container">
 
-    <a
-        class="social-btn messenger"
-        href="https://m.me/abdalsamad.abdo1"
-        target="_blank"
-        aria-label="Messenger">
-        M
-    </a>
+<div class="section-title">
 
-    <a
-        class="social-btn facebook"
-        href="https://www.facebook.com/abdalsamad.abdo1?mibextid=ZbWKwL"
-        target="_blank"
-        aria-label="Facebook">
-        f
-    </a>
+<h2 id="catalogTitle">
+
+المنتجات والخدمات
+
+</h2>
+
+<p id="catalogHint">
+
+اختر أحد الأقسام لعرض المنتجات والأسعار والتعريفات
+
+</p>
 
 </div>
 
 
-<!-- ================= نافذة الطلب ================= -->
+<div id="productsGrid" class="products"></div>
 
-<div id="orderModal" class="modal hidden">
+</div>
 
-    <div class="card modal-box">
+</section>
 
-        <div class="modal-head">
 
-            <h2 id="modalProduct" class="gold">
-                طلب المنتج
-            </h2>
+<!-- الأدعية والأذكار -->
 
-            <button
-                class="close"
-                onclick="closeModal()">
-                ×
-            </button>
+<section class="section">
 
-        </div>
+<div class="container">
 
-        <hr style="border-color:#21452d;">
+<div class="section-title">
 
-        <p>
-            الاسم:
-            <strong id="customerName"></strong>
-        </p>
+<h2>
 
-        <textarea
-            id="orderNotes"
-            rows="5"
-            placeholder="اكتب العنوان أو ملاحظات الطلب هنا..."></textarea>
+الأدعية والأذكار
 
-        <br><br>
+</h2>
 
-        <button
-            class="btn btn-green"
-            style="width:100%;"
-            onclick="sendOrder()">
-            إرسال الطلب عبر واتساب
-        </button>
+<p>
 
-    </div>
+القرآن الكريم والذكر والدعاء باب من أبواب الطمأنينة
+
+</p>
 
 </div>
 
 
-<!-- ================= الشريط السفلي ================= -->
+<div class="duas">
 
-<div class="footer-marquee">
 
-    <div class="marquee">
-        🌿 دار الشفاء • الرقية الشرعية • الأعشاب الطبيعية • الزيوت • عسل النحل • الحجامة • الأدعية والأذكار • الاستشارات • واتساب: 249121494942 🌿
-    </div>
+<div class="card dua">
+
+<h3>
+
+دعاء الشفاء
+
+</h3>
+
+<p>
+
+اللهم رب الناس، أذهب الباس، اشف أنت الشافي،
+لا شفاء إلا شفاؤك، شفاءً لا يغادر سقماً.
+
+</p>
 
 </div>
+
+
+<div class="card dua">
+
+<h3>
+
+دعاء التحصين
+
+</h3>
+
+<p>
+
+أعوذ بكلمات الله التامات من شر ما خلق.
+
+</p>
+
+</div>
+
+
+<div class="card dua">
+
+<h3>
+
+آية الشفاء
+
+</h3>
+
+<p>
+
+وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ
+وَرَحْمَةٌ لِّلْمُؤْمِنِينَ.
+
+</p>
+
+</div>
+
+
+<div class="card dua">
+
+<h3>
+
+ذكر الطمأنينة
+
+</h3>
+
+<p>
+
+ألا بذكر الله تطمئن القلوب.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- الاستشارة -->
+
+<section class="section" id="consultation">
+
+<div class="container">
+
+<div class="card consult">
+
+<h2>
+
+<i class="fa-solid fa-comments"></i>
+
+استشارة الشيخ عبدالصمد
+
+</h2>
+
+<p>
+
+لديك حالة أو تريد الاستفسار عن منتج أو برنامج للرقية؟
+اكتب استشارتك وسيتم تجهيز رسالة باسمك لإرسالها مباشرة.
+
+</p>
+
+<button class="btn btn-green" onclick="openConsultation()">
+
+بدء الاستشارة
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- بيانات التحويل -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+بيانات التحويل
+
+</h2>
+
+<p>
+
+بيانات الدفع المعتمدة في دار الشفاء
+
+</p>
+
+</div>
+
+
+<div class="payment">
+
+
+<div class="card payment-box">
+
+<h3>
+
+بنكك
+
+</h3>
+
+<div class="account-number">
+
+2985827
+
+</div>
+
+<br>
+
+<span class="account-name">
+
+عبدالصمد عبدالواحد محمد الطاهر
+
+</span>
+
+</div>
+
+
+<div class="card payment-box">
+
+<h3>
+
+فوري
+
+</h3>
+
+<div class="account-number">
+
+51170108
+
+</div>
+
+<br>
+
+<span class="account-name">
+
+عبدالصمد عبدالواحد محمد الطاهر
+
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- أزرار التواصل -->
+
+<div class="floating">
+
+<a
+href="https://wa.me/249121494942"
+target="_blank"
+class="float whatsapp"
+title="واتساب">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<a
+href="https://m.me/abdalsamad.abdo1"
+target="_blank"
+class="float messenger"
+title="ماسنجر">
+
+<i class="fa-brands fa-facebook-messenger"></i>
+
+</a>
+
+
+<a
+href="https://www.facebook.com/abdalsamad.abdo1?mibextid=ZbWKwL"
+target="_blank"
+class="float facebook"
+title="فيسبوك">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+</div>
+
+
+<!-- نافذة الطلب والاستشارة -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box card">
+
+<div class="modal-head">
+
+<h2 id="modalTitle">
+
+طلب المنتج
+
+</h2>
+
+<button class="close" onclick="closeModal()">
+
+&times;
+
+</button>
+
+</div>
+
+
+<div
+id="modalDescription"
+class="modal-description">
+</div>
+
+
+<div
+id="modalPrice"
+style="color:#f2cd5c;font-weight:bold;margin-top:10px">
+</div>
+
+
+<input
+type="text"
+id="customerName"
+placeholder="اكتب اسمك">
+
+
+<textarea
+id="customerMessage"
+placeholder="اكتب ملاحظاتك أو تفاصيل الحالة أو عنوان الاستلام">
+</textarea>
+
+
+<div style="color:#aebfb2;font-size:.8rem;line-height:1.8;margin-top:8px">
+
+سيتم تجهيز رسالة تحتوي على اسم المنتج والسعر واسمك وملاحظاتك.
+
+</div>
+
+
+<div class="modal-actions">
+
+<button
+class="btn btn-green"
+onclick="sendWhatsApp()">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+إرسال عبر واتساب
+
+</button>
+
+
+<button
+class="btn btn-dark"
+onclick="sendMessenger()">
+
+<i class="fa-brands fa-facebook-messenger"></i>
+
+إرسال عبر ماسنجر
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- الفوتر -->
+
+<footer>
+
+<div class="container">
+
+<strong>
+
+دار الشفاء
+
+</strong>
+
+<p>
+
+للعلاج الطبيعي والرقية الشرعية
+
+</p>
+
+<p>
+
+بإشراف الشيخ عبدالصمد عبدالواحد
+
+</p>
+
+
+<div class="social">
+
+<a
+href="https://wa.me/249121494942"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<a
+href="https://m.me/abdalsamad.abdo1"
+target="_blank">
+
+<i class="fa-brands fa-facebook-messenger"></i>
+
+</a>
+
+
+<a
+href="https://www.facebook.com/abdalsamad.abdo1?mibextid=ZbWKwL"
+target="_blank">
+
+<i class="fa-brands fa-facebook"></i>
+
+</a>
+
+</div>
+
+
+<p>
+
+واتساب: 249121494942
+
+</p>
+
+<p>
+
+© <span id="year"></span> دار الشفاء
+
+</p>
+
+</div>
+
+</footer>
 
 
 <script>
 
-/* =========================================================
-   بيانات الموقع
-========================================================= */
+/* بيانات التواصل */
 
 const WHATSAPP = "249121494942";
 
-const menu = {
-
-    "رقية": [
-
-        {
-            n:"الرقية الشرعية العامة",
-            d:"قراءة آيات القرآن والأدعية المأثورة بقصد الرقية والاستشفاء المشروع.",
-            note:"الرقية الشرعية ممارسة دينية، ولا تُعد بديلاً عن التشخيص الطبي."
-        },
-
-        {
-            n:"آيات التحصين",
-            d:"مجموعة من الآيات والأذكار التي يمكن قراءتها ضمن برنامج التحصين والذكر.",
-            note:"يمكن الجمع بين الرقية الشرعية والرعاية الطبية المناسبة."
-        },
-
-        {
-            n:"تحصين المنزل",
-            d:"إرشادات عامة للمحافظة على الأذكار والذكر وقراءة القرآن في المنزل.",
-            note:"لا توجد طريقة علمية لإثبات تشخيص السحر أو العين من خلال أعراض جسدية منفردة."
-        },
-
-        {
-            n:"الرُّقية الشاملة",
-            d:"برنامج إرشادي يجمع القراءة الشرعية والأذكار والدعاء.",
-            note:"عند وجود أعراض مرضية مستمرة يجب مراجعة الطبيب."
-        }
-
-    ],
+const MESSENGER =
+"https://m.me/abdalsamad.abdo1";
 
 
-    "اعشاب": [
+/* المنتجات */
 
-        {
-            n:"العَرَدِيب",
-            d:"ثمار شجرة التمر الهندي، وتُستخدم غذائياً في مشروبات ومأكولات مختلفة.",
-            note:"الاستخدام الغذائي لا يعني أنها تعالج مرضاً محدداً."
-        },
+const products = {
 
-        {
-            n:"اللَّالُوب",
-            d:"ثمرة شجرة الهجليج/اللالوب المعروفة في مناطق من السودان، وتستخدم تقليدياً كغذاء.",
-            note:"الاستخدام الطبي يحتاج إلى تقييم الجرعة والسلامة."
-        },
+"رقية":[
 
-        {
-            n:"القِسْط الهندي",
-            d:"جذر نبات عطري استخدم في الطب التقليدي، ويجب التعامل معه بحذر لعدم توفر دليل كافٍ لعلاج الأمراض المختلفة.",
-            note:"لا يُستعمل بديلاً للعلاج الطبي."
-        },
+{
+n:"الرقية الشرعية الشاملة",
+p:100000,
+d:"خدمة رقية شرعية قائمة على القرآن الكريم والأدعية المأثورة، مع التوجيه إلى الأذكار والتحصين."
+},
 
-        {
-            n:"السَّنامكي",
-            d:"نبات يحتوي على مركبات ملينة، ويُستخدم طبياً لعلاج الإمساك لفترات قصيرة.",
-            note:"الإفراط فيه قد يسبب اضطراب الأملاح والإسهال."
-        },
+{
+n:"رقية العين والحسد",
+p:100000,
+d:"برنامج رقية شرعية وتحصين لمن يطلب الرقية الشرعية، مع الاستماع إلى الحالة وتوجيه المستفيد."
+},
 
-        {
-            n:"الكركديه",
-            d:"نبات غني بمركبات نباتية ومضادات أكسدة، ويُستخدم عادة كمشروب.",
-            note:"قد يؤثر في ضغط الدم لدى بعض الأشخاص."
-        },
+{
+n:"الرقية الشرعية للحالة الخاصة",
+p:100000,
+d:"جلسة يتم فيها الاستماع إلى الحالة وتحديد البرنامج الشرعي المناسب لها."
+},
 
-        {
-            n:"الصمغ العربي",
-            d:"ألياف غذائية قابلة للذوبان مستخرجة من بعض أنواع الأكاسيا، وتستخدم غذائياً.",
-            note:"تختلف الفوائد الصحية حسب الكمية والحالة الصحية."
-        },
+{
+n:"تحصين المنزل",
+p:100000,
+d:"إرشادات شرعية للتحصين وقراءة القرآن والأذكار داخل المنزل."
+},
 
-        {
-            n:"السِّدْر",
-            d:"أوراق شجرة النبق وتُستخدم تقليدياً في الاستعمالات الشعبية والعناية الشخصية.",
-            note:"لا توجد أدلة كافية لاعتباره علاجاً بديلاً للأمراض."
-        },
+{
+n:"استشارة في الرقية الشرعية",
+p:50000,
+d:"تواصل مباشر مع الشيخ للاستفسار عن الحالة والبرنامج الشرعي المناسب."
+}
 
-        {
-            n:"التبلدي",
-            d:"ثمرة شجرة الباوباب، وتحتوي على ألياف وبعض الفيتامينات والمعادن.",
-            note:"تُستخدم أساساً كغذاء ومشروب."
-        },
-
-        {
-            n:"عرق السوس",
-            d:"جذر نبات يحتوي على مركبات فعالة، ويستخدم تقليدياً وفي بعض المنتجات الغذائية.",
-            note:"الاستخدام بكميات كبيرة قد يرفع ضغط الدم ويخفض البوتاسيوم."
-        },
-
-        {
-            n:"الحَرَجَل",
-            d:"نبات يستخدم في بعض الممارسات الشعبية، إلا أن سلامته وجرعاته تحتاج إلى حذر.",
-            note:"لا يُنصح باستخدام النباتات غير المعروفة الجرعة دون استشارة مختص."
-        }
-
-    ],
+],
 
 
-    "زيوت": [
+"اعشاب":[
 
-        {
-            n:"زيت الزيتون",
-            d:"زيت نباتي غني بالأحماض الدهنية الأحادية غير المشبعة ومركبات نباتية، ويُستخدم غذائياً.",
-            note:"الفوائد الغذائية لا تعني علاج مرض محدد."
-        },
+{
+n:"العرديب",
+p:10000,
+d:"ثمار التمر الهندي المعروفة في السودان، وتستخدم غذائياً لتحضير المشروبات."
+},
 
-        {
-            n:"زيت السمسم",
-            d:"زيت نباتي يحتوي على دهون غير مشبعة ومركبات مثل السيسامين.",
-            note:"يُستخدم غذائياً وفي بعض تطبيقات العناية بالبشرة."
-        },
+{
+n:"اللّالوب",
+p:7000,
+d:"ثمار نباتية معروفة محلياً وتستخدم تقليدياً في بعض المشروبات والوصفات الشعبية."
+},
 
-        {
-            n:"زيت الحبة السوداء",
-            d:"زيت مستخلص من حبة البركة ويحتوي على مركبات نباتية أهمها الثيموكينون.",
-            note:"الأدلة على استخدامه لعلاج الأمراض ما زالت محدودة."
-        },
+{
+n:"القسط الهندي",
+p:50000,
+d:"نبات عطري معروف في الاستخدامات التقليدية، وتختلف طريقة استعماله بحسب الوصفة."
+},
 
-        {
-            n:"زيت النيم",
-            d:"زيت نباتي مستخرج من بذور شجرة النيم ويستخدم تقليدياً في العناية بالبشرة.",
-            note:"لا يُبتلع إلا إذا كان المنتج مخصصاً لذلك ومثبت السلامة."
-        },
+{
+n:"السنامكي",
+p:50000,
+d:"نبات معروف بتأثيره الملين، لذلك ينبغي عدم الإفراط في استخدامه."
+},
 
-        {
-            n:"زيت السدر المرقى",
-            d:"زيت للاستخدام الخارجي مع القراءة الشرعية، ويُنظر إليه ضمن الممارسات الروحية وليس علاجاً طبياً مثبتاً.",
-            note:"تجنب وضع الزيوت على الجروح أو الجلد المتحسس."
-        },
+{
+n:"الصمغ العربي",
+p:20000,
+d:"مادة نباتية غنية بالألياف الذائبة وتستخدم غذائياً في المشروبات والوصفات."
+},
 
-        {
-            n:"الزيت المستخلص",
-            d:"خليط زيتي مخصص للاستخدام الخارجي حسب إرشادات المركز.",
-            note:"يجب اختبار أي زيت على مساحة صغيرة من الجلد أولاً عند وجود حساسية."
-        }
+{
+n:"التبلدي",
+p:10000,
+d:"ثمار الباوباب المعروفة في السودان، وتستخدم في تحضير مشروب التبلدي."
+},
 
-    ],
+{
+n:"الكركديه",
+p:7000,
+d:"أزهار مجففة تستخدم لتحضير مشروب الكركديه."
+},
 
+{
+n:"السدر",
+p:15000,
+d:"أوراق نباتية تستخدم تقليدياً في العناية بالشعر والجسم وبعض الوصفات الشعبية."
+},
 
-    "عسل": [
+{
+n:"الحرجل",
+p:10000,
+d:"نبات معروف في الاستخدام الشعبي، وتحدد طريقة الاستعمال بحسب الوصفة."
+},
 
-        {
-            n:"عسل النحل",
-            d:"غذاء طبيعي تنتجه النحل من رحيق الأزهار، ويحتوي على سكريات ومركبات نباتية مختلفة.",
-            note:"العسل لا يُعطى للأطفال دون عمر سنة."
-        },
+{
+n:"الحَنظل",
+p:10000,
+d:"نبات شديد المرارة معروف في الطب الشعبي، ويحتاج إلى حذر شديد في الاستخدام."
+}
 
-        {
-            n:"عسل السدر",
-            d:"عسل ينتج من رحيق أزهار السدر، وتختلف خصائصه حسب مصدره وجودته.",
-            note:"يظل العسل غذاءً وليس بديلاً عن العلاج الطبي."
-        },
-
-        {
-            n:"خلطة العسل",
-            d:"خليط غذائي من العسل ومكونات طبيعية أخرى وفق تركيبة المنتج.",
-            note:"يجب الانتباه للسكري والحساسيات والتداخلات المحتملة مع المكونات."
-        }
-
-    ],
-
-
-    "بخور": [
-
-        {
-            n:"اللبان",
-            d:"راتنج عطري طبيعي يستخرج من أشجار البوسويليا ويستخدم في البخور والعطور.",
-            note:"يجب توفير تهوية جيدة عند استخدام البخور."
-        },
-
-        {
-            n:"المسك",
-            d:"مادة عطرية تستخدم في العطور والروائح.",
-            note:"الاستخدام الخارجي فقط وفق طبيعة المنتج."
-        },
-
-        {
-            n:"الفاسوخ",
-            d:"مادة تستخدم تقليدياً في بعض البيئات السودانية ضمن ممارسات شعبية.",
-            note:"لا توجد أدلة علمية تثبت استخدامه لعلاج الأمراض."
-        }
-
-    ],
+],
 
 
-    "حجامة": [
+"زيوت":[
 
-        {
-            n:"الحجامة",
-            d:"إجراء تقليدي يعتمد على وضع كؤوس على الجلد، وقد تكون جافة أو تتضمن تشريطاً سطحياً في الحجامة الرطبة.",
-            note:"يجب الالتزام بالتعقيم والأدوات الآمنة وتجنبها عند وجود موانع صحية."
-        },
+{
+n:"زيت المعجزة المستخلص",
+p:50000,
+d:"زيت مستخلص ومحضر ضمن منتجات دار الشفاء، وتوضح مكوناته وطريقة استخدامه عند الطلب."
+},
 
-        {
-            n:"الحجامة الاستشارية",
-            d:"استشارة أولية لتقييم ملاءمة الحجامة للشخص ومناقشة المخاطر والاحتياطات.",
-            note:"الحجامة لا تحل محل العلاج الطبي للأمراض."
-        }
+{
+n:"زيت الزيتون المَرقي",
+p:20000,
+d:"زيت زيتون يستخدم غذائياً، ويمكن إدخاله ضمن برنامج الرقية بحسب توجيه الشيخ."
+},
 
-    ]
+{
+n:"زيت السمسم",
+p:17000,
+d:"زيت نباتي مستخلص من السمسم ويستخدم غذائياً وفي العناية التقليدية."
+},
+
+{
+n:"زيت الحبة السوداء",
+p:15000,
+d:"زيت مستخلص من حبة البركة ويستخدم تقليدياً في الغذاء والعناية."
+},
+
+{
+n:"زيت النيم",
+p:10000,
+d:"زيت نباتي يستخدم تقليدياً في العناية الخارجية."
+},
+
+{
+n:"زيت السدر المَرقي",
+p:15000,
+d:"زيت محضر للاستخدام الخارجي ضمن برنامج الرقية بحسب توجيه الشيخ."
+}
+
+],
+
+
+"عسل":[
+
+{
+n:"عسل النحل الأصلي",
+p:15000,
+d:"عسل نحل غذائي تختلف خصائصه بحسب المصدر والمرعى والموسم."
+},
+
+{
+n:"خلطة عسل المناعة",
+p:150000,
+d:"خلطة غذائية من عسل النحل ومكونات طبيعية مختارة وفق وصفة دار الشفاء."
+},
+
+{
+n:"خلطة عسل النشاط",
+p:150000,
+d:"خلطة غذائية قائمة على عسل النحل ومكونات طبيعية مختارة."
+},
+
+{
+n:"خلطة عسل للمعدة",
+p:150000,
+d:"خلطة غذائية من العسل ومكونات طبيعية بحسب وصفة دار الشفاء."
+},
+
+{
+n:"خلطة عسل خاصة",
+p:250000,
+d:"خلطة عسل محضرة وفق وصفة دار الشفاء، وتحدد المكونات وطريقة الاستخدام عند الطلب."
+}
+
+],
+
+
+"بخور":[
+
+{
+n:"اللبان المجهز",
+p:50000,
+d:"لبان عطري يستخدم للبخور والرائحة ويجهز ضمن منتجات دار الشفاء."
+},
+
+{
+n:"المسك",
+p:50000,
+d:"مادة عطرية تستخدم للتطييب والعناية الشخصية بحسب نوع المنتج."
+},
+
+{
+n:"الفاسوخ الأسود",
+p:50000,
+d:"منتج بخور شعبي يستخدم للرائحة، مع مراعاة التهوية عند استخدام البخور."
+},
+
+{
+n:"الصندل الأحمر",
+p:50000,
+d:"مادة خشبية عطرية تستخدم في البخور والعطور."
+}
+
+],
+
+
+"حجامة":[
+
+{
+n:"جلسة حجامة نبوية",
+p:20000,
+d:"جلسة حجامة يتم فيها تقييم ملاءمة الحالة للإجراء والالتزام بالممارسات الصحية المناسبة."
+},
+
+{
+n:"جلسة حجامة شاملة",
+p:30000,
+d:"جلسة تشمل نقاطاً متعددة بحسب تقييم الحالة وما يراه الممارس مناسباً."
+}
+
+]
 
 };
 
 
-/* =========================================================
-   الدخول
-========================================================= */
+/* الأدعية والأذكار */
 
-const enterButton = document.getElementById("enterButton");
+const spiritual = {
 
-enterButton.addEventListener("click", enterSite);
+"ادعية":[
 
-document.getElementById("userName").addEventListener("keydown", function(e){
+{
+n:"دعاء الشفاء",
+p:0,
+d:"اللهم رب الناس، أذهب الباس، اشف أنت الشافي، لا شفاء إلا شفاؤك، شفاءً لا يغادر سقماً."
+},
 
-    if(e.key === "Enter"){
-        enterSite();
-    }
+{
+n:"دعاء التحصين",
+p:0,
+d:"أعوذ بكلمات الله التامات من شر ما خلق."
+},
+
+{
+n:"دعاء الكرب",
+p:0,
+d:"لا إله إلا الله العظيم الحليم، لا إله إلا الله رب العرش العظيم."
+}
+
+],
+
+
+"اذكار":[
+
+{
+n:"أذكار الصباح",
+p:0,
+d:"مجموعة من أذكار الصباح المأثورة من القرآن والسنة."
+},
+
+{
+n:"أذكار المساء",
+p:0,
+d:"مجموعة من أذكار المساء المأثورة من القرآن والسنة."
+},
+
+{
+n:"أذكار النوم",
+p:0,
+d:"أذكار وأدعية النوم المأثورة."
+}
+
+]
+
+};
+
+
+let selectedProduct = null;
+
+
+/* تنسيق السعر */
+
+function price(value){
+
+if(!value){
+
+return "مجاني";
+
+}
+
+return value.toLocaleString("ar-EG")
++" جنيه سوداني";
+
+}
+
+
+/* عرض القسم */
+
+function showCategory(category){
+
+const grid =
+document.getElementById("productsGrid");
+
+const title =
+document.getElementById("catalogTitle");
+
+const hint =
+document.getElementById("catalogHint");
+
+
+const list =
+products[category] ||
+spiritual[category] ||
+[];
+
+
+title.textContent =
+"قسم "+category;
+
+
+hint.textContent =
+category==="ادعية" ||
+category==="اذكار"
+
+?
+
+"محتوى مجاني للقراءة والذكر."
+
+:
+
+"اضغط على المنتج لعرض التعريف وتجهيز رسالة الطلب.";
+
+
+grid.innerHTML = "";
+
+
+list.forEach((item,index)=>{
+
+const article =
+document.createElement("article");
+
+article.className="product";
+
+
+article.innerHTML=`
+
+<div>
+
+<h3>${item.n}</h3>
+
+<p>${item.d}</p>
+
+<span class="price">
+
+${price(item.p)}
+
+</span>
+
+</div>
+
+<button
+class="btn btn-green"
+onclick="openProduct('${category}',${index})">
+
+${item.p ? "طلب المنتج":"عرض"}
+
+</button>
+
+`;
+
+
+grid.appendChild(article);
 
 });
 
 
-function enterSite(){
-
-    const name = document.getElementById("userName").value.trim();
-
-    if(!name){
-
-        alert("من فضلك اكتب اسمك أولاً.");
-
-        document.getElementById("userName").focus();
-
-        return;
-    }
-
-    localStorage.setItem("darAlshifaName",name);
-
-    document.getElementById("loginPage").classList.add("hidden");
-
-    document.getElementById("mainSite").classList.remove("hidden");
-
-    document.getElementById("customerName").innerText = name;
-
-    updateAstro();
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-}
-
-
-/* =========================================================
-   الخروج
-========================================================= */
-
-function logout(){
-
-    localStorage.removeItem("darAlshifaName");
-
-    document.getElementById("mainSite").classList.add("hidden");
-
-    document.getElementById("loginPage").classList.remove("hidden");
-
-    document.getElementById("userName").value="";
-
-    window.scrollTo(0,0);
-}
-
-
-/* =========================================================
-   استعادة الاسم
-========================================================= */
-
-window.addEventListener("load",function(){
-
-    const savedName = localStorage.getItem("darAlshifaName");
-
-    if(savedName){
-
-        document.getElementById("userName").value=savedName;
-
-    }
-
-    updateAstro();
-
+document
+.getElementById("catalog")
+.scrollIntoView({
+behavior:"smooth"
 });
 
-
-/* =========================================================
-   الساعة
-========================================================= */
-
-function updateAstro(){
-
-    const now = new Date();
-
-    const hour = now.getHours();
-
-    let message="";
-
-    if(hour >= 5 && hour < 12){
-
-        message="🌅 صباح الخير — نسأل الله لكم العافية والبركة";
-
-    }else if(hour >= 12 && hour < 18){
-
-        message="☀️ أهلاً بكم في دار الشفاء — حفظكم الله";
-
-    }else{
-
-        message="🌙 مساء الخير — نسأل الله لكم السكينة والعافية";
-
-    }
-
-    document.getElementById("astro").innerText=message;
 }
 
 
-/* =========================================================
-   الاستبيان
-========================================================= */
+/* فتح المنتج */
 
-let quizStep=0;
-let quizScore=0;
+function openProduct(category,index){
 
-const questions=[
+const list =
+products[category] ||
+spiritual[category];
 
-    "هل تعاني من أعراض متكررة تؤثر في حياتك اليومية؟",
+const item=list[index];
 
-    "هل تؤثر هذه الأعراض على النوم أو النشاط اليومي؟",
-
-    "هل استمرت الأعراض لفترة طويلة دون تحسن؟"
-
-];
+selectedProduct=item;
 
 
-function answer(value){
+document.getElementById("modalTitle")
+.textContent=item.n;
 
-    if(value){
 
-        quizScore++;
+document.getElementById("modalDescription")
+.textContent=item.d;
 
-    }
 
-    quizStep++;
+document.getElementById("modalPrice")
+.textContent=
+item.p
+?
+"السعر: "+price(item.p)
+:
+"محتوى مجاني";
 
-    if(quizStep < questions.length){
 
-        document.getElementById("question").innerText=questions[quizStep];
+document.getElementById("customerMessage")
+.value="";
 
-    }else{
 
-        document.getElementById("questionArea").classList.add("hidden");
-
-        const result=document.getElementById("quizResult");
-
-        result.classList.remove("hidden");
-
-        if(quizScore >= 2){
-
-            result.innerText=
-            "يُنصح بالحصول على استشارة مناسبة، وإذا كانت الأعراض مستمرة أو شديدة فالأفضل مراجعة طبيب أو مختص صحي. ويمكنك أيضاً الاطلاع على قسم التوعية الصحية.";
-
-        }else{
-
-            result.innerText=
-            "يمكنك المحافظة على نمط حياة صحي والأذكار المشروعة، ومراجعة الطبيب إذا ظهرت أعراض جديدة أو مستمرة.";
-
-        }
-
-    }
+document.getElementById("modal")
+.classList.add("active");
 
 }
 
 
-/* =========================================================
-   عرض الأقسام
-========================================================= */
+/* الاستشارة */
 
-function hideExtraSections(){
+function openConsultation(){
 
-    document.getElementById("duasSection").classList.add("hidden");
+selectedProduct={
 
-    document.getElementById("azkarSection").classList.add("hidden");
+n:"استشارة الشيخ عبدالصمد",
+p:0,
+d:"تواصل مباشر مع الشيخ عبدالصمد للاستفسار عن الحالة أو المنتجات أو برامج الرقية الشرعية."
 
-    document.getElementById("healthSection").classList.add("hidden");
-
-    document.getElementById("contactSection").classList.add("hidden");
-
-}
+};
 
 
-function renderCategory(category){
+document.getElementById("modalTitle")
+.textContent="استشارة الشيخ عبدالصمد";
 
-    hideExtraSections();
 
-    const section=document.getElementById("productsSection");
+document.getElementById("modalDescription")
+.textContent=selectedProduct.d;
 
-    const items=document.getElementById("items");
 
-    const title=document.getElementById("categoryTitle");
+document.getElementById("modalPrice")
+.textContent="التواصل المباشر";
 
-    title.innerText="قسم: "+category;
 
-    items.innerHTML="";
+document.getElementById("customerMessage")
+.value=
+"السلام عليكم ورحمة الله وبركاته، أرغب في استشارة الشيخ عبدالصمد عبدالواحد بخصوص: ";
 
-    menu[category].forEach(function(item){
 
-        const article=document.createElement("article");
-
-        article.className="card product";
-
-        article.innerHTML=`
-
-            <h3>${item.n}</h3>
-
-            <div class="product-description">
-                ${item.d}
-            </div>
-
-            <div class="product-note">
-                ⚠️ ${item.note}
-            </div>
-
-            <button class="btn btn-green"
-                onclick="openOrder('${escapeQuotes(item.n)}')">
-                طلب / استفسار
-            </button>
-
-        `;
-
-        items.appendChild(article);
-
-    });
-
-    section.classList.remove("hidden");
-
-    section.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-    });
+document.getElementById("modal")
+.classList.add("active");
 
 }
 
 
-function escapeQuotes(text){
-
-    return text
-        .replace(/\\/g,"\\\\")
-        .replace(/'/g,"\\'")
-        .replace(/"/g,'&quot;');
-
-}
-
-
-function closeProducts(){
-
-    document.getElementById("productsSection").classList.add("hidden");
-
-}
-
-
-/* =========================================================
-   الأدعية والأذكار والتوعية
-========================================================= */
-
-function showDuas(){
-
-    closeProducts();
-
-    hideExtraSections();
-
-    document.getElementById("duasSection").classList.remove("hidden");
-
-    document.getElementById("duasSection").scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-function showAzkar(){
-
-    closeProducts();
-
-    hideExtraSections();
-
-    document.getElementById("azkarSection").classList.remove("hidden");
-
-    document.getElementById("azkarSection").scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-function showHealth(){
-
-    closeProducts();
-
-    hideExtraSections();
-
-    document.getElementById("healthSection").classList.remove("hidden");
-
-    document.getElementById("healthSection").scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-function showContact(){
-
-    closeProducts();
-
-    hideExtraSections();
-
-    document.getElementById("contactSection").classList.remove("hidden");
-
-    document.getElementById("contactSection").scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-function showHome(){
-
-    closeProducts();
-
-    hideExtraSections();
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =========================================================
-   الطلب عبر واتساب
-========================================================= */
-
-let selectedProduct="";
-
-
-function openOrder(product){
-
-    selectedProduct=product;
-
-    document.getElementById("modalProduct").innerText=product;
-
-    document.getElementById("orderNotes").value="";
-
-    const name=localStorage.getItem("darAlshifaName") || "";
-
-    document.getElementById("customerName").innerText=name;
-
-    document.getElementById("orderModal").classList.remove("hidden");
-
-}
-
+/* إغلاق */
 
 function closeModal(){
 
-    document.getElementById("orderModal").classList.add("hidden");
+document
+.getElementById("modal")
+.classList.remove("active");
 
 }
 
 
-function sendOrder(){
+/* تجهيز الرسالة */
 
-    const name=
-        localStorage.getItem("darAlshifaName") ||
-        document.getElementById("userName").value ||
-        "غير محدد";
+function createMessage(){
 
-    const notes=
-        document.getElementById("orderNotes").value.trim() ||
-        "لا توجد ملاحظات";
-
-    const message=
-        "السلام عليكم، أرغب في الاستفسار/طلب:\n\n"+
-        "المنتج أو الخدمة: "+selectedProduct+"\n"+
-        "الاسم: "+name+"\n"+
-        "الملاحظات: "+notes+"\n\n"+
-        "بيانات التحويل عند الحاجة:\n"+
-        "بنكك: 2985827\n"+
-        "فوري: 51170108\n"+
-        "باسم: عبدالصمد عبدالواحد محمد الطاهر";
-
-    const url=
-        "https://wa.me/"+WHATSAPP+
-        "?text="+encodeURIComponent(message);
-
-    window.open(url,"_blank");
-
-}
+const name =
+document.getElementById("customerName")
+.value.trim()
+||"غير مذكور";
 
 
-/* =========================================================
-   نسخ أرقام التحويل
-========================================================= */
+const notes =
+document.getElementById("customerMessage")
+.value.trim()
+||"لا توجد ملاحظات";
 
-function copyNumber(number){
 
-    if(navigator.clipboard){
+const selectedPrice =
+selectedProduct.p
+?
+price(selectedProduct.p)
+:
+"غير محدد";
 
-        navigator.clipboard.writeText(number)
-        .then(function(){
 
-            alert("تم نسخ الرقم: "+number);
+return `السلام عليكم ورحمة الله وبركاته
 
-        })
-        .catch(function(){
+من موقع دار الشفاء
 
-            prompt("انسخ الرقم:",number);
+الطلب / الخدمة:
+${selectedProduct.n}
 
-        });
+السعر:
+${selectedPrice}
 
-    }else{
+الاسم:
+${name}
 
-        prompt("انسخ الرقم:",number);
+الملاحظات:
+${notes}
 
-    }
+أرجو إفادتي بالتفاصيل وطريقة الاستلام أو الموعد.
+
+وشكراً لكم.`;
 
 }
 
 
-/* =========================================================
-   زر واتساب مباشر
-========================================================= */
+/* واتساب */
 
-function openWhatsApp(message){
+function sendWhatsApp(){
 
-    const url=
-        "https://wa.me/"+WHATSAPP+
-        "?text="+encodeURIComponent(message);
+const message =
+createMessage();
 
-    window.open(url,"_blank");
+
+window.open(
+
+"https://wa.me/"
++WHATSAPP
++"?text="
++encodeURIComponent(message),
+
+"_blank"
+
+);
 
 }
 
 
-/* =========================================================
-   إغلاق النافذة عند الضغط خارجها
-========================================================= */
+/* ماسنجر */
 
-document.getElementById("orderModal").addEventListener("click",function(e){
+async function sendMessenger(){
 
-    if(e.target === this){
+const message =
+createMessage();
 
-        closeModal();
 
-    }
+try{
+
+await navigator.clipboard
+.writeText(message);
+
+alert(
+"تم نسخ رسالة الطلب. سيفتح ماسنجر الآن، ألصق الرسالة ثم أرسلها."
+);
+
+}
+
+catch(error){
+
+alert(
+"سيفتح ماسنجر الآن. يمكنك كتابة تفاصيل الطلب في المحادثة."
+);
+
+}
+
+
+window.open(
+MESSENGER,
+"_blank"
+);
+
+}
+
+
+/* إغلاق النافذة عند الضغط خارجها */
+
+document
+.getElementById("modal")
+.addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeModal();
+
+}
 
 });
 
+
+/* السنة */
+
+document
+.getElementById("year")
+.textContent=
+new Date().getFullYear();
 
 </script>
 
