@@ -4,12 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#062b12">
-
-<meta name="description" content="دار الشفاء - الرقية الشرعية، الأعشاب الطبيعية، الزيوت المستخلصة، عسل النحل، البخور، الحجامة والأذكار.">
-<meta name="keywords" content="دار الشفاء, الرقية الشرعية, الأعشاب الطبيعية, الزيوت, عسل النحل, البخور, الحجامة, الأذكار, السودان">
-<meta name="author" content="الشيخ عبدالصمد عبدالواحد">
-
-<title>دار الشفاء | الشيخ عبدالصمد عبدالواحد</title>
+<title>دار الشفاء | الرقية الشرعية والأعشاب الطبيعية والحجامة</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,762 +13,252 @@
 
 <style>
 :root{
-  --bg:#03190a;
-  --bg2:#062b12;
-  --card:rgba(3,42,16,.82);
-  --green:#21c66a;
-  --green2:#0c8f43;
-  --gold:#d9ad32;
-  --gold2:#f0cf67;
-  --text:#f7fff8;
-  --muted:#b8d1bd;
-  --border:rgba(33,198,106,.28);
-  --shadow:0 18px 55px rgba(0,0,0,.35);
-  --radius:24px;
+--bg:#03190a;--bg2:#062b12;--card:rgba(3,42,16,.78);
+--green:#21c66a;--green2:#0c8f43;--gold:#d9ad32;--gold2:#f0cf67;
+--text:#f7fff8;--muted:#b8d1bd;--shadow:0 18px 55px rgba(0,0,0,.35);
+--radius:24px
 }
-
-*{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;scroll-behavior:smooth}
 body{
-  margin:0;
-  background:
-    radial-gradient(circle at 20% 10%,rgba(33,198,106,.10),transparent 28%),
-    radial-gradient(circle at 80% 30%,rgba(217,173,50,.08),transparent 25%),
-    linear-gradient(145deg,var(--bg),#001108 70%);
-  color:var(--text);
-  font-family:Cairo,Arial,sans-serif;
-  min-height:100vh;
-  overflow-x:hidden;
-  padding-bottom:72px;
+margin:0;background:
+radial-gradient(circle at 20% 10%,rgba(33,198,106,.10),transparent 28%),
+radial-gradient(circle at 80% 30%,rgba(217,173,50,.08),transparent 25%),
+linear-gradient(145deg,var(--bg),#001108 70%);
+color:var(--text);font-family:Cairo,Arial,sans-serif;min-height:100vh;
+overflow-x:hidden;padding-bottom:72px
 }
-
 body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.10;
-  z-index:-1;
-  background-image:
-    linear-gradient(30deg,transparent 48%,#3acb78 49%,transparent 50%),
-    linear-gradient(150deg,transparent 48%,#3acb78 49%,transparent 50%);
-  background-size:260px 260px;
+content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;z-index:-1;
+background-image:linear-gradient(30deg,transparent 48%,#3acb78 49%,transparent 50%),
+linear-gradient(150deg,transparent 48%,#3acb78 49%,transparent 50%);
+background-size:260px 260px
 }
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button,input,textarea{
-  font:inherit;
-}
-
-.container{
-  width:min(1150px,92%);
-  margin:auto;
-}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
 
 .topbar{
-  background:#010b05;
-  border-bottom:1px solid rgba(217,173,50,.55);
-  color:var(--gold2);
-  height:38px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  white-space:nowrap;
+background:#010b05;border-bottom:1px solid rgba(217,173,50,.55);
+color:var(--gold2);height:38px;display:flex;align-items:center;
+overflow:hidden;white-space:nowrap
 }
-
-.ticker{
-  animation:ticker 28s linear infinite;
-  padding-right:100%;
-  font-weight:700;
-}
-
-@keyframes ticker{
-  to{transform:translateX(-100%)}
-}
+.ticker{animation:ticker 24s linear infinite;padding-right:100%;font-weight:700}
+@keyframes ticker{to{transform:translateX(-100%)}}
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(1,22,8,.93);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(33,198,106,.20);
+position:sticky;top:0;z-index:1000;background:rgba(1,22,8,.90);
+backdrop-filter:blur(16px);border-bottom:1px solid rgba(33,198,106,.20)
 }
-
-.nav{
-  min-height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:800;
-}
-
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}
 .brand img{
-  width:54px;
-  height:54px;
-  object-fit:cover;
-  border-radius:50%;
-  border:2px solid var(--gold);
-  box-shadow:0 0 20px rgba(33,198,106,.25);
+width:54px;height:54px;object-fit:cover;border-radius:50%;
+border:2px solid var(--gold);box-shadow:0 0 20px rgba(33,198,106,.25)
 }
-
-.brand strong{
-  color:var(--green);
-  font-size:1.45rem;
+.brand strong{color:var(--green);font-size:1.45rem}
+.brand small{display:block;color:var(--gold2);font-size:.72rem}
+.navlinks{display:flex;gap:8px;align-items:center}
+.navlinks a{padding:10px 12px;border-radius:12px;color:#d7eadb;font-size:.9rem}
+.navlinks a:hover{background:rgba(33,198,106,.12);color:#fff}
+.navbtn{
+border:1px solid rgba(217,173,50,.5);background:transparent;
+color:var(--gold2);padding:10px 14px;border-radius:12px;cursor:pointer
 }
+.menu-btn{display:none;background:none;border:1px solid #245c37;color:#fff;border-radius:12px;padding:10px 13px}
 
-.brand small{
-  display:block;
-  color:var(--gold2);
-  font-size:.72rem;
-}
-
-.navlinks{
-  display:flex;
-  gap:7px;
-  align-items:center;
-}
-
-.navlinks a{
-  padding:10px 12px;
-  border-radius:12px;
-  color:#d7eadb;
-  font-size:.9rem;
-}
-
-.navlinks a:hover{
-  background:rgba(33,198,106,.12);
-  color:#fff;
-}
-
-.navbtn,
-.menu-btn{
-  border:1px solid rgba(217,173,50,.5);
-  background:transparent;
-  color:var(--gold2);
-  padding:10px 14px;
-  border-radius:12px;
-  cursor:pointer;
-}
-
-.menu-btn{
-  display:none;
-}
-
-.hero{
-  padding:65px 0 35px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:35px;
-  align-items:center;
-}
-
+.hero{padding:65px 0 35px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center}
 .eyebrow{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  color:var(--gold2);
-  border:1px solid rgba(217,173,50,.4);
-  background:rgba(217,173,50,.06);
-  padding:8px 14px;
-  border-radius:50px;
+display:inline-flex;gap:8px;align-items:center;color:var(--gold2);
+border:1px solid rgba(217,173,50,.4);background:rgba(217,173,50,.06);
+padding:8px 14px;border-radius:50px
 }
-
-h1{
-  font-family:Amiri,serif;
-  font-size:clamp(3rem,7vw,5.4rem);
-  line-height:1.05;
-  margin:18px 0 10px;
-  color:var(--green);
-}
-
-.hero h2{
-  font-family:Amiri,serif;
-  color:var(--gold2);
-  font-size:clamp(1.3rem,3vw,2rem);
-  margin:0 0 18px;
-}
-
-.hero p{
-  color:var(--muted);
-  line-height:2;
-  font-size:1.05rem;
-  max-width:680px;
-}
-
-.actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:25px;
-}
-
+h1{font-family:Amiri,serif;font-size:clamp(3rem,7vw,5.4rem);line-height:1.05;margin:18px 0 10px;color:var(--green)}
+.hero h2{font-family:Amiri,serif;color:var(--gold2);font-size:clamp(1.3rem,3vw,2rem);margin:0 0 18px}
+.hero p{color:var(--muted);line-height:2;font-size:1.05rem;max-width:680px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
 .btn{
-  border:0;
-  border-radius:14px;
-  padding:13px 20px;
-  font-weight:800;
-  cursor:pointer;
-  transition:.2s;
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  justify-content:center;
+border:0;border-radius:14px;padding:13px 20px;font-weight:800;cursor:pointer;
+transition:.2s;display:inline-flex;align-items:center;gap:9px;justify-content:center
 }
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,#28d473,#0c9145);color:#001108;box-shadow:0 10px 28px rgba(33,198,106,.2)}
+.btn-gold{background:linear-gradient(135deg,#f0cf67,#bd8d18);color:#1b1300}
+.btn-dark{background:#10251a;border:1px solid #285c39;color:#fff}
+.btn-facebook{background:#1877f2;color:#fff}
+.btn-messenger{background:#0084ff;color:#fff}
 
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,#28d473,#0c9145);
-  color:#001108;
-  box-shadow:0 10px 28px rgba(33,198,106,.2);
-}
-
-.btn-gold{
-  background:linear-gradient(135deg,#f0cf67,#bd8d18);
-  color:#1b1300;
-}
-
-.btn-dark{
-  background:#10251a;
-  border:1px solid #285c39;
-  color:#fff;
-}
-
-.hero-logo{
-  display:flex;
-  justify-content:center;
-}
-
+.hero-logo{display:flex;justify-content:center}
 .logo-ring{
-  width:min(360px,78vw);
-  aspect-ratio:1;
-  border-radius:50%;
-  padding:12px;
-  border:2px solid var(--gold);
-  box-shadow:
-    0 0 70px rgba(33,198,106,.22),
-    inset 0 0 45px rgba(217,173,50,.08);
+width:min(360px,78vw);aspect-ratio:1;border-radius:50%;padding:12px;
+border:2px solid var(--gold);box-shadow:0 0 70px rgba(33,198,106,.22),inset 0 0 45px rgba(217,173,50,.08)
 }
+.logo-ring img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 
-.logo-ring img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:50%;
-}
+section{padding:55px 0}
+.section-head{text-align:center;margin-bottom:28px}
+.section-head h2{font-family:Amiri,serif;color:var(--gold2);font-size:2.25rem;margin:0 0 8px}
+.section-head p{color:var(--muted);margin:0}
 
-section{
-  padding:55px 0;
-}
-
-.section-head{
-  text-align:center;
-  margin-bottom:28px;
-}
-
-.section-head h2{
-  font-family:Amiri,serif;
-  color:var(--gold2);
-  font-size:2.25rem;
-  margin:0 0 8px;
-}
-
-.section-head p{
-  color:var(--muted);
-  margin:0;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .card{
-  background:linear-gradient(145deg,var(--card),rgba(0,22,9,.75));
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:24px;
-  box-shadow:var(--shadow);
+background:linear-gradient(145deg,var(--card),rgba(0,22,9,.75));
+border:1px solid rgba(33,198,106,.28);border-radius:var(--radius);
+padding:24px;box-shadow:var(--shadow)
 }
+.card:hover{border-color:rgba(217,173,50,.65)}
+.service i{font-size:2rem;color:var(--green);margin-bottom:15px}
+.service h3{margin:0 0 8px;color:#fff}
+.service p{color:var(--muted);line-height:1.9;font-size:.92rem}
 
-.card:hover{
-  border-color:rgba(217,173,50,.65);
-}
+.quote{border-right:4px solid var(--gold);background:rgba(217,173,50,.05)}
+.quote p{font-family:Amiri,serif;font-size:1.35rem;line-height:1.9;margin:0}
 
-.service i{
-  font-size:2rem;
-  color:var(--green);
-  margin-bottom:15px;
-}
-
-.service h3{
-  margin:0 0 8px;
-  color:#fff;
-}
-
-.service p{
-  color:var(--muted);
-  line-height:1.9;
-  font-size:.92rem;
-}
-
-.quote{
-  border-right:4px solid var(--gold);
-  background:rgba(217,173,50,.05);
-}
-
-.quote p{
-  font-family:Amiri,serif;
-  font-size:1.35rem;
-  line-height:1.9;
-  margin:0;
-}
-
-.categories{
-  display:grid;
-  grid-template-columns:repeat(8,1fr);
-  gap:10px;
-}
-
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
 .cat{
-  border:1px solid rgba(33,198,106,.3);
-  background:rgba(2,35,13,.8);
-  border-radius:20px;
-  padding:18px 8px;
-  text-align:center;
-  color:#d9eadc;
-  cursor:pointer;
-  transition:.2s;
+border:1px solid rgba(33,198,106,.3);background:rgba(2,35,13,.8);
+border-radius:20px;padding:22px 10px;text-align:center;color:#d9eadc;
+cursor:pointer;transition:.2s
+}
+.cat i{display:block;font-size:1.9rem;color:var(--green);margin-bottom:10px}
+.cat:hover,.cat.active{
+transform:translateY(-3px);border-color:var(--gold);
+box-shadow:0 10px 30px rgba(217,173,50,.08)
 }
 
-.cat i{
-  display:block;
-  font-size:1.7rem;
-  color:var(--green);
-  margin-bottom:8px;
-}
-
-.cat:hover,
-.cat.active{
-  transform:translateY(-3px);
-  border-color:var(--gold);
-  box-shadow:0 10px 30px rgba(217,173,50,.08);
-}
-
-.shop-tools{
-  display:flex;
-  gap:10px;
-  margin:20px 0;
-}
-
+.shop-tools{display:flex;gap:10px;margin-bottom:20px}
 .search{
-  flex:1;
-  background:#041d0b;
-  border:1px solid #245c37;
-  color:#fff;
-  padding:14px 16px;
-  border-radius:14px;
-  outline:none;
+flex:1;background:#041d0b;border:1px solid #245c37;color:#fff;
+padding:14px 16px;border-radius:14px;outline:none
 }
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.product{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product{display:flex;flex-direction:column;gap:14px}
 .product .icon{
-  height:130px;
-  border-radius:18px;
-  background:
-    radial-gradient(circle at 50% 40%,rgba(217,173,50,.20),transparent 40%),
-    #05240f;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:3.6rem;
-  color:var(--gold);
+height:145px;border-radius:18px;
+background:radial-gradient(circle at 50% 40%,rgba(217,173,50,.20),transparent 40%),#05240f;
+display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--gold)
 }
+.product h3{margin:0;font-size:1.05rem}
+.product p{color:var(--muted);font-size:.86rem;line-height:1.7;margin:0}
+.price{color:var(--gold2);font-size:1.05rem;font-weight:800}
+.free{color:var(--green);font-weight:800}
+.product-actions{display:flex;gap:8px;margin-top:auto}
+.product-actions .btn{flex:1;padding:11px 8px;font-size:.85rem}
+.notice{font-size:.8rem;color:#b7cabb;margin-top:15px;text-align:center}
 
-.product h3{
-  margin:0;
-  font-size:1.08rem;
-  line-height:1.6;
-}
+.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feature{display:flex;gap:15px;align-items:flex-start}
+.feature i{color:var(--gold);font-size:1.4rem;margin-top:4px}
+.feature h3{margin:0 0 4px}
+.feature p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.8}
 
-.product p{
-  color:var(--muted);
-  font-size:.87rem;
-  line-height:1.8;
-  margin:0;
-}
-
-.price{
-  color:var(--gold2);
-  font-size:1.08rem;
-  font-weight:800;
-}
-
-.free{
-  color:var(--green);
-}
-
-.product-actions{
-  display:flex;
-  gap:8px;
-  margin-top:auto;
-}
-
-.product-actions .btn{
-  flex:1;
-  padding:11px 8px;
-  font-size:.85rem;
-}
-
-.notice{
-  font-size:.8rem;
-  color:#b7cabb;
-  margin-top:18px;
-  text-align:center;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.feature{
-  display:flex;
-  gap:15px;
-  align-items:flex-start;
-}
-
-.feature i{
-  color:var(--gold);
-  font-size:1.4rem;
-  margin-top:4px;
-}
-
-.feature h3{
-  margin:0 0 4px;
-}
-
-.feature p{
-  margin:0;
-  color:var(--muted);
-  font-size:.9rem;
-  line-height:1.8;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.contact-list{
-  display:grid;
-  gap:12px;
-}
-
+.contact-list{display:grid;gap:12px}
 .contact-item{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  padding:15px;
-  border:1px solid #205b35;
-  border-radius:15px;
-  background:#041f0c;
+display:flex;gap:12px;align-items:center;padding:15px;
+border:1px solid #205b35;border-radius:15px;background:#041f0c
 }
-
-.contact-item i{
-  width:38px;
-  text-align:center;
-  color:var(--green);
-  font-size:1.2rem;
-}
-
-textarea{
-  min-height:120px;
-  resize:vertical;
-}
-
+.contact-item i{width:38px;text-align:center;color:var(--green);font-size:1.2rem}
+textarea{min-height:120px;resize:vertical}
 .field{
-  width:100%;
-  background:#031a09;
-  border:1px solid #245c37;
-  color:#fff;
-  padding:13px;
-  border-radius:12px;
-  outline:none;
-  margin-bottom:10px;
+width:100%;background:#031a09;border:1px solid #245c37;color:#fff;
+padding:13px;border-radius:12px;outline:none;margin-bottom:10px
 }
+
+.social-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.social-actions .btn{flex:1;min-width:145px}
 
 footer{
-  background:#010b05;
-  border-top:1px solid rgba(217,173,50,.55);
-  padding:30px 0;
-  color:var(--muted);
+background:#010b05;border-top:1px solid rgba(217,173,50,.55);
+padding:30px 0;color:var(--muted)
 }
-
-.footer-grid{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-}
+.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 .floating{
-  position:fixed;
-  left:18px;
-  bottom:88px;
-  z-index:1200;
-  width:56px;
-  height:56px;
-  border-radius:50%;
-  background:#20c765;
-  color:#001108;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.7rem;
-  box-shadow:0 10px 30px rgba(32,199,101,.35);
+position:fixed;left:18px;bottom:88px;z-index:1200;width:56px;height:56px;
+border-radius:50%;background:#20c765;color:#001108;display:flex;
+align-items:center;justify-content:center;font-size:1.7rem;
+box-shadow:0 10px 30px rgba(32,199,101,.35)
 }
+.bottomnav{display:none}
 
-.bottomnav{
-  display:none;
+.modal,.guest-modal{
+position:fixed;inset:0;background:rgba(0,0,0,.78);
+backdrop-filter:blur(7px);display:none;align-items:center;
+justify-content:center;z-index:3500;padding:18px
 }
+.modal.show,.guest-modal.show{display:flex}
+.modal-box,.guest-box{
+width:min(560px,100%);background:#062610;
+border:1px solid rgba(217,173,50,.5);border-radius:25px;
+padding:25px;box-shadow:0 25px 80px #000
+}
+.modal-head{display:flex;justify-content:space-between;align-items:center}
+.detail-label{color:var(--gold2);font-weight:800;margin-top:14px;margin-bottom:5px}
+.detail-text{color:var(--muted);line-height:1.9;margin:0}
+.close{background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
 
-.modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.76);
-  backdrop-filter:blur(7px);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:2000;
-  padding:18px;
-}
+.guest-box{text-align:center;background:linear-gradient(145deg,#073018,#03190a)}
+.guest-icon{font-size:3.5rem;color:var(--gold2);margin-bottom:10px}
+.guest-box h2{font-family:Amiri,serif;color:var(--gold2);margin:0 0 10px;font-size:2rem}
+.guest-box p{color:var(--muted);line-height:1.9;margin:0 0 20px}
+.guest-buttons{display:grid;gap:10px}
 
-.modal.show{
-  display:flex;
+.visitor-gate{
+position:fixed;inset:0;background:rgba(0,8,3,.86);
+backdrop-filter:blur(10px);display:flex;align-items:center;
+justify-content:center;z-index:5000;padding:18px
 }
-
-.modal-box{
-  width:min(650px,100%);
-  max-height:90vh;
-  overflow-y:auto;
-  background:#062610;
-  border:1px solid rgba(217,173,50,.5);
-  border-radius:25px;
-  padding:25px;
-  box-shadow:0 25px 80px #000;
+.visitor-gate.hidden{display:none}
+.visitor-box{
+width:min(520px,100%);text-align:center;
+background:linear-gradient(145deg,#062610,#03170a);
+border:1px solid rgba(217,173,50,.55);border-radius:28px;
+padding:30px;box-shadow:0 25px 90px #000
 }
-
-.modal-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
+.gate-icon{
+width:76px;height:76px;margin:0 auto 15px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+border:2px solid var(--gold);color:var(--gold2);font-size:2rem
 }
-
-.close{
-  background:none;
-  border:0;
-  color:#fff;
-  font-size:1.8rem;
-  cursor:pointer;
-}
-
-.detail-section{
-  margin-top:18px;
-  padding:15px;
-  background:rgba(255,255,255,.025);
-  border-radius:15px;
-  border:1px solid rgba(33,198,106,.12);
-}
-
-.detail-title{
-  color:var(--gold2);
-  font-weight:800;
-  margin-bottom:7px;
-}
-
-.detail-text{
-  color:var(--muted);
-  line-height:2;
-  margin:0;
-}
-
-.dua-box{
-  background:rgba(217,173,50,.06);
-  border-right:4px solid var(--gold);
-  padding:18px;
-  border-radius:12px;
-  font-family:Amiri,serif;
-  font-size:1.3rem;
-  line-height:2;
-  color:#fff;
-}
+.visitor-box h2{font-family:Amiri,serif;color:var(--gold2);margin:8px 0;font-size:2rem}
+.visitor-box p{color:var(--muted);line-height:1.9;margin:0 0 20px}
 
 .toast{
-  position:fixed;
-  right:18px;
-  bottom:90px;
-  background:#0c3219;
-  border:1px solid #2b8b4f;
-  color:#fff;
-  padding:13px 17px;
-  border-radius:13px;
-  display:none;
-  z-index:3000;
+position:fixed;right:18px;bottom:90px;background:#0c3219;
+border:1px solid #2b8b4f;color:#fff;padding:13px 17px;
+border-radius:13px;display:none;z-index:6000
 }
-
-.toast.show{
-  display:block;
-}
-
-@media(max-width:1000px){
-  .categories{
-    grid-template-columns:repeat(4,1fr);
-  }
-}
+.toast.show{display:block}
 
 @media(max-width:900px){
-  .hero-grid,
-  .about-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .cards,
-  .products{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .navlinks{
-    display:none;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .navlinks.open{
-    position:absolute;
-    top:78px;
-    right:0;
-    left:0;
-    background:#03170a;
-    border-bottom:1px solid #245c37;
-    display:grid;
-    padding:12px;
-  }
+.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr 1fr}
+.products{grid-template-columns:1fr 1fr}
+.categories{grid-template-columns:repeat(3,1fr)}
+.navlinks{display:none}.menu-btn{display:block}
+.navlinks.open{
+position:absolute;top:78px;right:0;left:0;background:#03170a;
+border-bottom:1px solid #245c37;display:grid;padding:12px
 }
-
+}
 @media(max-width:600px){
-  body{
-    padding-bottom:68px;
-  }
-
-  .hero{
-    padding-top:38px;
-  }
-
-  .cards,
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .categories{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .hero-logo{
-    order:-1;
-  }
-
-  .logo-ring{
-    width:250px;
-  }
-
-  .brand strong{
-    font-size:1.15rem;
-  }
-
-  .brand small{
-    font-size:.62rem;
-  }
-
-  .bottomnav{
-    position:fixed;
-    display:flex;
-    bottom:0;
-    right:0;
-    left:0;
-    height:64px;
-    background:rgba(1,13,6,.97);
-    border-top:1px solid #245c37;
-    z-index:1100;
-    justify-content:space-around;
-  }
-
-  .bottomnav a{
-    font-size:.72rem;
-    color:#c7dacb;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:4px;
-  }
-
-  .bottomnav i{
-    font-size:1.1rem;
-    color:var(--green);
-  }
-
-  .floating{
-    bottom:78px;
-    left:14px;
-  }
-
-  .topbar{
-    font-size:.8rem;
-  }
-
-  .shop-tools{
-    flex-direction:column;
-  }
+body{padding-bottom:68px}.hero{padding-top:38px}
+.cards,.products{grid-template-columns:1fr}
+.categories{grid-template-columns:repeat(2,1fr)}
+.hero-logo{order:-1}.logo-ring{width:250px}
+.brand strong{font-size:1.15rem}.brand small{font-size:.62rem}
+.bottomnav{
+position:fixed;display:flex;bottom:0;right:0;left:0;height:64px;
+background:rgba(1,13,6,.96);border-top:1px solid #245c37;
+z-index:1100;justify-content:space-around
+}
+.bottomnav a{
+font-size:.72rem;color:#c7dacb;display:flex;
+flex-direction:column;align-items:center;justify-content:center;gap:4px
+}
+.bottomnav i{font-size:1.1rem;color:var(--green)}
+.floating{bottom:78px;left:14px}
+.topbar{font-size:.8rem}
 }
 </style>
 </head>
@@ -781,272 +266,129 @@ footer{
 <body>
 
 <div class="topbar">
-  <div class="ticker">
-    🌿 أهلاً وسهلاً بكم في دار الشفاء — الرقية الشرعية • الأعشاب الطبيعية • الزيوت المستخلصة • عسل النحل • البخور • الحجامة • الأدعية والأذكار
-  </div>
+<div class="ticker">🌿 أهلاً وسهلاً بكم في موقع دار الشفاء — الرقية الشرعية • الأعشاب الطبيعية • الزيوت المستخلصة • عسل النحل • الحجامة • الاستشارات</div>
 </div>
 
 <header>
-  <div class="container nav">
+<div class="container nav">
 
-    <a href="#home" class="brand">
-      <img src="logo.png" alt="شعار دار الشفاء">
-      <div>
-        <strong>دار الشفاء</strong>
-        <small>الشيخ عبدالصمد عبدالواحد</small>
-      </div>
-    </a>
+<a href="#home" class="brand">
+<img src="logo.png" alt="شعار دار الشفاء">
+<div>
+<strong>دار الشفاء</strong>
+<small>بوابة الشفاء الإلكترونية</small>
+</div>
+</a>
 
-    <nav id="navlinks" class="navlinks">
-      <a href="#home">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#shop">المنتجات</a>
-      <a href="#duas">الأدعية والأذكار</a>
-      <a href="#about">عن دار الشفاء</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
+<nav id="navlinks" class="navlinks">
+<a href="#home">الرئيسية</a>
+<a href="#services">خدماتنا</a>
+<a href="#shop">المنتجات</a>
+<a href="#about">عن دار الشفاء</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
 
-    <div style="display:flex;gap:8px">
-      <button class="navbtn"
-        onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات ومنتجات دار الشفاء')">
-        <i class="fab fa-whatsapp"></i>
-      </button>
+<div style="display:flex;gap:8px">
+<button class="navbtn" onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات دار الشفاء')"><i class="fab fa-whatsapp"></i></button>
+<button class="navbtn" onclick="openFacebook()" title="فيسبوك"><i class="fab fa-facebook-f"></i></button>
+<button class="navbtn" onclick="openMessenger()" title="ماسنجر"><i class="fab fa-facebook-messenger"></i></button>
+<button class="navbtn" onclick="enterAsGuest()" title="الدخول كزائر"><i class="fas fa-user-check"></i></button>
+<button class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+</div>
 
-      <button class="menu-btn" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-
-  </div>
+</div>
 </header>
 
 <main id="home">
 
 <section class="hero">
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div>
-      <span class="eyebrow">
-        <i class="fas fa-leaf"></i>
-        أهلاً بكم في دار الشفاء
-      </span>
+<div>
+<span class="eyebrow"><i class="fas fa-leaf"></i> أهلاً بكم في دار الشفاء</span>
+<h1>دار الشفاء</h1>
+<h2>للرقية الشرعية والأعشاب الطبيعية والحجامة</h2>
+<p>
+نقدم خدمات ومنتجات مختارة في مجال الرقية الشرعية، الأعشاب الطبيعية،
+الزيوت المستخلصة، عسل النحل، الحجامة والاستشارات.
+</p>
 
-      <h1>دار الشفاء</h1>
+<div class="actions">
+<a class="btn btn-primary" href="#shop"><i class="fas fa-store"></i> تصفح المنتجات</a>
+<button class="btn btn-gold" onclick="openWhatsApp('السلام عليكم، أريد حجز موعد أو استشارة في دار الشفاء')"><i class="fab fa-whatsapp"></i> احجز عبر واتساب</button>
+<button class="btn btn-dark" onclick="enterAsGuest()"><i class="fas fa-user-check"></i> الدخول كزائر</button>
+</div>
+</div>
 
-      <h2>
-        للرقية الشرعية والأعشاب الطبيعية والحجامة
-      </h2>
+<div class="hero-logo">
+<div class="logo-ring"><img src="logo.png" alt="شعار دار الشفاء"></div>
+</div>
 
-      <p>
-        بإشراف الشيخ عبدالصمد عبدالواحد، نقدم خدمات الرقية الشرعية،
-        والأعشاب الطبيعية، والزيوت المستخلصة، وعسل النحل وخلطاته،
-        والبخور والمواد العطرية، والحجامة، بالإضافة إلى الأدعية والأذكار.
-      </p>
-
-      <div class="actions">
-
-        <a class="btn btn-primary" href="#shop">
-          <i class="fas fa-store"></i>
-          تصفح المنتجات
-        </a>
-
-        <button class="btn btn-gold"
-          onclick="openWhatsApp('السلام عليكم، أريد حجز موعد أو استشارة في دار الشفاء')">
-          <i class="fab fa-whatsapp"></i>
-          احجز عبر واتساب
-        </button>
-
-      </div>
-    </div>
-
-    <div class="hero-logo">
-      <div class="logo-ring">
-        <img src="logo.png" alt="شعار دار الشفاء">
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
-
 
 <section id="services">
 <div class="container">
-
 <div class="section-head">
-  <h2>أقسام دار الشفاء</h2>
-  <p>اختر القسم للوصول إلى المنتجات والخدمات</p>
+<h2>خدمات دار الشفاء</h2>
+<p>أقسام واضحة وسهلة الوصول</p>
 </div>
 
 <div class="cards">
-
-<div class="card service">
-<i class="fas fa-book-quran"></i>
-<h3>الرقية الشرعية</h3>
-<p>
-رقية شرعية متنوعة بحسب نوع الحالة، وتشمل الرقية العامة ورقية السحر والعين والحسد وغيرها.
-</p>
-</div>
-
-<div class="card service">
-<i class="fas fa-leaf"></i>
-<h3>الأعشاب الطبيعية</h3>
-<p>
-مجموعة من الأعشاب والمواد الطبيعية المستخدمة في برامج دار الشفاء بحسب تقييم الحالة.
-</p>
-</div>
-
-<div class="card service">
-<i class="fas fa-bottle-droplet"></i>
-<h3>الزيوت المستخلصة</h3>
-<p>
-زيوت وتركيبات خاصة تستخدم بالطريقة والكمية التي يحددها الشيخ وفق الحالة.
-</p>
-</div>
-
-<div class="card service">
-<i class="fas fa-jar"></i>
-<h3>عسل النحل والخلطات</h3>
-<p>
-عسل النحل المرقي ومجموعة من الخلطات الخاصة التي أعدها المركز.
-</p>
-</div>
-
-<div class="card service">
-<i class="fas fa-fire-flame-simple"></i>
-<h3>البخور والمواد العطرية</h3>
-<p>
-بخور وصموغ ومواد عطرية تستخدم ضمن برامج دار الشفاء بحسب الحالة.
-</p>
-</div>
-
-<div class="card service">
-<i class="fas fa-hand-holding-medical"></i>
-<h3>الحجامة النبوية</h3>
-<p>
-جلسات حجامة متنوعة بحسب الموضع والحالة والتقييم.
-</p>
-</div>
-
+<div class="card service"><i class="fas fa-book-quran"></i><h3>الرقية الشرعية</h3><p>خدمات الرقية الشرعية والاستشارات المرتبطة بها.</p></div>
+<div class="card service"><i class="fas fa-leaf"></i><h3>الأعشاب الطبيعية</h3><p>الأعشاب والمواد الطبيعية المختارة لدى المركز.</p></div>
+<div class="card service"><i class="fas fa-bottle-droplet"></i><h3>الزيوت المستخلصة</h3><p>زيوت طبيعية وتركيبات خاصة بالمركز.</p></div>
+<div class="card service"><i class="fas fa-jar"></i><h3>عسل النحل</h3><p>عسل النحل والخلطات الخاصة.</p></div>
+<div class="card service"><i class="fas fa-fire-flame-simple"></i><h3>البخور والمواد العطرية</h3><p>البخور والصموغ والمواد العطرية.</p></div>
+<div class="card service"><i class="fas fa-hand-holding-medical"></i><h3>الحجامة</h3><p>جلسات الحجامة والحجز بالمواعيد.</p></div>
 </div>
 </div>
 </section>
-
 
 <section>
 <div class="container">
-
 <div class="cards">
-
-<div class="card quote">
-<p>﴿ وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ ﴾</p>
-<small style="color:var(--muted)">سورة الشعراء</small>
-</div>
-
-<div class="card quote">
-<p>«اللهم رب الناس، أذهب البأس، اشفِ أنت الشافي»</p>
-<small style="color:var(--muted)">دعاء الشفاء</small>
-</div>
-
-<div class="card quote">
-<p>نسأل الله لكم العافية والسكينة والشفاء.</p>
-<small style="color:var(--muted)">دار الشفاء</small>
-</div>
-
+<div class="card quote"><p>﴿ وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ ﴾</p><small style="color:var(--muted)">سورة الشعراء</small></div>
+<div class="card quote"><p>«اللهم رب الناس، أذهب البأس، اشفِ أنت الشافي»</p><small style="color:var(--muted)">دعاء الشفاء</small></div>
+<div class="card quote"><p>نسأل الله لكم العافية والسكينة والشفاء.</p><small style="color:var(--muted)">دار الشفاء</small></div>
 </div>
 </div>
 </section>
-
 
 <section id="shop">
 <div class="container">
 
 <div class="section-head">
-<h2>متجر دار الشفاء</h2>
-<p>اختر القسم ثم ابحث عن المنتج واضغط التفاصيل لمعرفة المعلومات كاملة</p>
+<h2>المتجر</h2>
+<p>اختر القسم ثم ابحث عن المنتج</p>
 </div>
 
 <div class="categories">
-
-<button class="cat active" onclick="filterCat('all',this)">
-<i class="fas fa-border-all"></i>
-الكل
-</button>
-
-<button class="cat" onclick="filterCat('اعشاب',this)">
-<i class="fas fa-leaf"></i>
-الأعشاب
-</button>
-
-<button class="cat" onclick="filterCat('زيوت',this)">
-<i class="fas fa-bottle-droplet"></i>
-الزيوت
-</button>
-
-<button class="cat" onclick="filterCat('عسل',this)">
-<i class="fas fa-jar"></i>
-العسل
-</button>
-
-<button class="cat" onclick="filterCat('بخور',this)">
-<i class="fas fa-fire-flame-simple"></i>
-البخور
-</button>
-
-<button class="cat" onclick="filterCat('حجامة',this)">
-<i class="fas fa-hand-holding-medical"></i>
-الحجامة
-</button>
-
-<button class="cat" onclick="filterCat('رقية',this)">
-<i class="fas fa-book-quran"></i>
-الرقية
-</button>
-
-<button class="cat" onclick="filterCat('ادعية',this)">
-<i class="fas fa-hands-praying"></i>
-الأدعية
-</button>
-
+<button class="cat active" data-cat="all" onclick="filterCat('all',this)"><i class="fas fa-border-all"></i>الكل</button>
+<button class="cat" data-cat="رقية" onclick="filterCat('رقية',this)"><i class="fas fa-book-quran"></i>الرقية</button>
+<button class="cat" data-cat="اعشاب" onclick="filterCat('اعشاب',this)"><i class="fas fa-leaf"></i>الأعشاب</button>
+<button class="cat" data-cat="زيوت" onclick="filterCat('زيوت',this)"><i class="fas fa-bottle-droplet"></i>الزيوت</button>
+<button class="cat" data-cat="عسل" onclick="filterCat('عسل',this)"><i class="fas fa-jar"></i>العسل</button>
+<button class="cat" data-cat="بخور" onclick="filterCat('بخور',this)"><i class="fas fa-fire-flame-simple"></i>البخور</button>
+<button class="cat" data-cat="حجامة" onclick="filterCat('حجامة',this)"><i class="fas fa-hand-holding-medical"></i>الحجامة</button>
+<button class="cat" data-cat="اذكار" onclick="filterCat('اذكار',this)"><i class="fas fa-hands-praying"></i>الأدعية والأذكار</button>
 </div>
 
-<div class="shop-tools">
-
-<input
-id="search"
-class="search"
-oninput="renderProducts()"
-placeholder="🔎 ابحث عن منتج أو خدمة..."
->
-
-<button class="btn btn-dark" onclick="clearSearch()">
-مسح
-</button>
-
+<div class="shop-tools" style="margin-top:18px">
+<input id="search" class="search" oninput="renderProducts()" placeholder="🔎 ابحث عن منتج...">
+<button class="btn btn-dark" onclick="clearSearch()">مسح</button>
 </div>
 
 <div id="products" class="products"></div>
 
 <div class="notice">
-الأسعار المعروضة بالجنيه السوداني.
+الأعشاب والزيوت والعسل والبخور والحجامة: 50,000 جنيه سوداني.
+الرقية الشرعية: 100,000 جنيه سوداني.
+الأدعية والأذكار بدون سعر.
 </div>
 
 </div>
 </section>
-
-
-<section id="duas">
-<div class="container">
-
-<div class="section-head">
-<h2>الأدعية والأذكار</h2>
-<p>أدعية وأذكار بدون سعر</p>
-</div>
-
-<div id="duasList" class="products"></div>
-
-</div>
-</section>
-
 
 <section id="about">
 <div class="container">
@@ -1059,61 +401,24 @@ placeholder="🔎 ابحث عن منتج أو خدمة..."
 <div class="about-grid">
 
 <div class="card">
-
-<div class="feature">
-<i class="fas fa-circle-check"></i>
-<div>
-<h3>الرقية الشرعية</h3>
-<p>
-خدمات الرقية الشرعية بحسب نوع الحالة وتقييم الشيخ عبدالصمد عبدالواحد.
-</p>
-</div>
-</div>
-
+<div class="feature"><i class="fas fa-circle-check"></i><div><h3>واجهة بسيطة</h3><p>مصممة لتكون سهلة الاستخدام على الهاتف والكمبيوتر.</p></div></div>
 <hr style="border-color:#194b2b;margin:18px 0">
-
-<div class="feature">
-<i class="fas fa-circle-check"></i>
-<div>
-<h3>الأعشاب والمنتجات الطبيعية</h3>
-<p>
-مجموعة متنوعة من الأعشاب والزيوت والعسل والبخور والمواد الطبيعية.
-</p>
-</div>
-</div>
-
+<div class="feature"><i class="fas fa-circle-check"></i><div><h3>طلب سريع</h3><p>يمكن إرسال تفاصيل المنتج مباشرة عبر واتساب.</p></div></div>
 <hr style="border-color:#194b2b;margin:18px 0">
-
-<div class="feature">
-<i class="fas fa-circle-check"></i>
-<div>
-<h3>الطلب والحجز</h3>
-<p>
-يمكن إرسال طلب المنتج أو الاستفسار والحجز مباشرة عبر واتساب.
-</p>
-</div>
-</div>
-
+<div class="feature"><i class="fas fa-circle-check"></i><div><h3>الدخول كزائر</h3><p>يمكن تصفح الموقع دون إنشاء حساب.</p></div></div>
 </div>
 
 <div class="card">
-
-<h3 style="color:var(--gold2);font-family:Amiri;font-size:1.7rem">
-تنبيه
-</h3>
-
+<h3 style="color:var(--gold2);font-family:Amiri;font-size:1.7rem">دار الشفاء</h3>
 <p style="color:var(--muted);line-height:2">
-يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة بحسب طبيعة الأعراض
-ووضع الشخص الصحي. ويتم التواصل المباشر مع دار الشفاء لتأكيد الطلب
-والتفاصيل الخاصة بالخدمة أو المنتج.
+الرقية الشرعية، الأعشاب الطبيعية، الزيوت المستخلصة،
+عسل النحل، البخور، الحجامة والاستشارات.
 </p>
-
 </div>
 
 </div>
 </div>
 </section>
-
 
 <section id="contact">
 <div class="container">
@@ -1126,1659 +431,473 @@ placeholder="🔎 ابحث عن منتج أو خدمة..."
 <div class="contact-grid">
 
 <div class="card">
-
 <div class="contact-list">
 
 <div class="contact-item">
 <i class="fab fa-whatsapp"></i>
-<div>
-<b>واتساب</b><br>
-<span style="color:var(--muted)">+249 121 494 942</span>
-</div>
+<div><b>واتساب</b><br><span style="color:var(--muted)">+249 121 494 942</span></div>
 </div>
 
 <div class="contact-item">
 <i class="fas fa-store"></i>
-<div>
-<b>دار الشفاء</b><br>
-<span style="color:var(--muted)">
-الرقية • الأعشاب • الزيوت • العسل • البخور • الحجامة
-</span>
-</div>
+<div><b>دار الشفاء</b><br><span style="color:var(--muted)">الرقية • الأعشاب • الزيوت • العسل • الحجامة</span></div>
 </div>
 
-<div class="contact-item">
-<i class="fas fa-clock"></i>
-<div>
-<b>المواعيد</b><br>
-<span style="color:var(--muted)">
-يتم تأكيد الموعد عبر التواصل المباشر
-</span>
-</div>
+<div class="social-actions">
+<button class="btn btn-messenger" onclick="openMessenger()"><i class="fab fa-facebook-messenger"></i> ماسنجر</button>
+<button class="btn btn-facebook" onclick="openFacebook()"><i class="fab fa-facebook"></i> فيسبوك</button>
 </div>
 
 </div>
 </div>
 
 <div class="card">
-
-<h3 style="margin-top:0;color:var(--gold2)">
-أرسل استفسارك
-</h3>
-
+<h3 style="margin-top:0;color:var(--gold2)">أرسل استفسارك</h3>
 <input id="contactName" class="field" placeholder="الاسم">
+<textarea id="contactMsg" class="field" placeholder="اكتب استفسارك هنا..."></textarea>
 
-<textarea
-id="contactMsg"
-class="field"
-placeholder="اكتب استفسارك هنا..."
-></textarea>
-
-<button
-class="btn btn-primary"
-style="width:100%"
-onclick="sendContact()"
->
-<i class="fab fa-whatsapp"></i>
-إرسال عبر واتساب
+<button class="btn btn-primary" style="width:100%" onclick="sendContact()">
+<i class="fab fa-whatsapp"></i> إرسال عبر واتساب
 </button>
 
+<div class="social-actions">
+<button class="btn btn-messenger" onclick="openMessenger()"><i class="fab fa-facebook-messenger"></i> ماسنجر</button>
+<button class="btn btn-facebook" onclick="openFacebook()"><i class="fab fa-facebook-f"></i> صفحة فيسبوك</button>
 </div>
 
+</div>
 </div>
 </div>
 </section>
 
 </main>
 
-
 <footer>
 <div class="container footer-grid">
-
-<div>
-<b style="color:var(--green)">دار الشفاء</b>
-<br>
-<small>الشيخ عبدالصمد عبدالواحد</small>
-</div>
-
-<div>
-© <span id="year"></span> دار الشفاء — جميع الحقوق محفوظة
-</div>
-
+<div><b style="color:var(--green)">دار الشفاء</b><br><small>بوابة الشفاء الإلكترونية</small></div>
+<div>© <span id="year"></span> دار الشفاء — جميع الحقوق محفوظة</div>
 </div>
 </footer>
 
-
-<a
-class="floating"
-href="https://wa.me/249121494942"
-target="_blank"
-aria-label="واتساب"
->
+<a class="floating" href="https://wa.me/249121494942" target="_blank" aria-label="واتساب">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-
 <nav class="bottomnav">
-
-<a href="#home">
-<i class="fas fa-home"></i>
-الرئيسية
-</a>
-
-<a href="#services">
-<i class="fas fa-hand-holding-heart"></i>
-الخدمات
-</a>
-
-<a href="#shop">
-<i class="fas fa-store"></i>
-المتجر
-</a>
-
-<a href="#duas">
-<i class="fas fa-hands-praying"></i>
-الأدعية
-</a>
-
-<a href="#contact">
-<i class="fas fa-phone"></i>
-تواصل
-</a>
-
+<a href="#home"><i class="fas fa-home"></i>الرئيسية</a>
+<a href="#services"><i class="fas fa-hand-holding-heart"></i>الخدمات</a>
+<a href="#shop"><i class="fas fa-store"></i>المتجر</a>
+<a href="#contact"><i class="fas fa-phone"></i>تواصل</a>
 </nav>
 
+<div id="guestModal" class="guest-modal" onclick="if(event.target===this)closeGuestLogin()">
+<div class="guest-box">
+<div class="guest-icon"><i class="fas fa-user-check"></i></div>
+<h2>مرحباً بك في دار الشفاء</h2>
+<p>يمكنك تصفح الموقع والمنتجات والخدمات مباشرة دون إنشاء حساب.</p>
+
+<div class="guest-buttons">
+<button class="btn btn-primary" onclick="loginAsGuest()">
+<i class="fas fa-user"></i> الدخول كزائر
+</button>
+<button class="btn btn-messenger" onclick="openMessenger()">
+<i class="fab fa-facebook-messenger"></i> التواصل عبر ماسنجر
+</button>
+<button class="btn btn-facebook" onclick="openFacebook()">
+<i class="fab fa-facebook"></i> الصفحة الرئيسية لفيسبوك
+</button>
+</div>
+
+<button class="close" style="margin-top:14px" onclick="closeGuestLogin()">إغلاق</button>
+</div>
+</div>
 
 <div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
-
 <div class="modal-box">
 
 <div class="modal-head">
-
-<h3 id="modalTitle"
-style="margin:0;color:var(--gold2)">
-</h3>
-
+<h3 id="modalTitle" style="margin:0;color:var(--gold2)"></h3>
 <button class="close" onclick="closeModal()">×</button>
-
 </div>
 
-<div id="modalContent"></div>
+<div id="modalBody"></div>
+<div id="modalPrice" class="price"></div>
 
-<div id="modalPrice" class="price" style="margin-top:18px"></div>
-
-<button
-id="modalOrder"
-class="btn btn-primary"
-style="width:100%;margin-top:18px"
->
-<i class="fab fa-whatsapp"></i>
-طلب عبر واتساب
+<button id="modalOrder" class="btn btn-primary" style="width:100%;margin-top:18px">
+<i class="fab fa-whatsapp"></i> طلب عبر واتساب
 </button>
 
 </div>
 </div>
 
+<div id="visitorGate" class="visitor-gate">
+<div class="visitor-box">
+
+<div class="gate-icon"><i class="fas fa-user-check"></i></div>
+<h2>مرحباً بكم في دار الشفاء</h2>
+<p>يمكنك تصفح الموقع والاطلاع على الخدمات والمنتجات مباشرة دون إنشاء حساب.</p>
+
+<button class="btn btn-primary" style="width:100%" onclick="enterAsGuest()">
+<i class="fas fa-door-open"></i> الدخول كزائر
+</button>
+
+<div class="social-actions">
+<button class="btn btn-messenger" onclick="openMessenger()">
+<i class="fab fa-facebook-messenger"></i> ماسنجر
+</button>
+<button class="btn btn-facebook" onclick="openFacebook()">
+<i class="fab fa-facebook-f"></i> فيسبوك
+</button>
+</div>
+
+</div>
+</div>
 
 <div id="toast" class="toast"></div>
 
-
 <script>
-
-const WHATSAPP = "249121494942";
-
-const products = [
-
-/* =========================
-   الأعشاب الطبيعية
-========================= */
-
-{
-cat:"اعشاب",
-name:"العرديب",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم العرديب في مركز دار الشفاء ضمن وصفات دعم الجهاز الهضمي وتخفيف حموضة المعدة، ويُعتقد أن له دوراً في ترطيب الجسم وتخفيف العطش الشديد وخفض حرارة الجسم بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"اللَّالوب",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم اللَّالوب ضمن برامج دار الشفاء للعناية بالكبد والجسم، ويُعتمد عليه في المساعدة على تجديد خلايا الكبد وتنقية الجسم وطرد السموم، كما يدخل ضمن برامج العناية بالحالات المرتبطة بالملاريا واليرقان وأبو صفير بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"القسط الهندي",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُعتمد على القسط الهندي في مركز دار الشفاء لدعم المناعة والتقوية العامة، ويُستخدم ضمن برامج الرقية الشرعية والعناية بالجهاز التنفسي وتخفيف الالتهابات واضطرابات الحلق بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"السنا مكي",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستعمل السنا مكي في مركز دار الشفاء كمنظف طبيعي للجهاز الهضمي والمساعدة على التخلص من الفضلات المتراكمة والسموم، ويُدخل بحذر في برامج التطهير المعوي بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الصمغ العربي",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُعد الصمغ العربي من الأساسيات في مركز دار الشفاء لدعم وظائف الكلى والجهاز الهضمي، ويُستخدم كمصدر غني بالألياف الطبيعية للمساعدة في خفض معدلات السكر والكوليسترول وتنظيم عمل الأمعاء بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"التبلدي",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم التبلدي (ثمار التبدي أو القمردين السوداني) في مركز دار الشفاء لرفع طاقة الجسم ومقاومة الإجهاد، نظراً لاحتوائه على عناصر مغذية وفيتامينات تساعد في تخفيف الحموضة المعوية وتروية الجسم بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الكركديه",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستعمل الكركديه في مركز دار الشفاء ضمن الوصفات الطبيعية للمساعدة في تنظيم ضغط الدم وتحسين الدورة الدموية، إضافة إلى دوره في إمداد الجسم بمضادات الأكسدة والانتعاش بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"القرض",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم القرض في مركز دار الشفاء لخصائصه القابضة والمطهرة، ويُعمد إليه في العناية بصحة الفم واللثة والجروح والتهابات الجلد والتقرحات بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"المحريب",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُدخل المحريب في برامج دار الشفاء العطرية والاسترخائية، ويُستخدم للمساعدة في تهدئة الأعصاب وتخفيف التوتر والاضطرابات الهضمية البسيطة والغازات بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"عرق النار",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم عرق النار في مركز دار الشفاء ضمن التركيبات التقليدية المخصصة لمقاومة بعض الآلام الموضعية والمفاصل وتنشيط الدورة الدموية في الأطراف بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الحنظل",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُوظف الحنظل بحذر شديد في مركز دار الشفاء ضمن بعض التركيبات الخارجية المخصصة لتخفيف آلام المفاصل والخشونة، أو بحسب التعليمات الدقيقة للشيخ في الحالات المرتبطة بذلك.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"السدر",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُعتمد على السدر في مركز دار الشفاء في برامج الرقية الشرعية والعناية بالشعر والجسم، إضافة إلى استخدامه في تطهير الجروح وتقوية بصيلات الشعر بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الحرجل",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم الحرجل في مركز دار الشفاء كعشب مهدئ للمعدة ومساعد في تخفيف آلام القولون والاضطرابات المعوية والغازات بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"عرق السوس",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستعمل عرق السوس في مركز دار الشفاء لدعم صحة الجهاز التنفسي وتهدئة السعال، وللمساعدة في تخفيف التهابات المعدة وقرحتها بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"المراية",
-price:50000,
-icon:"fa-leaf",
-benefits:"تُستخدم المراية في مركز دار الشفاء ضمن الوصفات الشعبية التقليدية المرتبطة بالعناية بالجسم وتنقية البشرة وبعض الاستخدامات العلاجية الخاصة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الغبيش",
-price:50000,
-icon:"fa-leaf",
-benefits:"تُستخدم أعشاب ومنتجات شجرة الغبيش في مركز دار الشفاء ضمن التركيبات الخاصة بدعم الجسم ومقاومة بعض الأمراض المحلية المتداولة في البيئة السودانية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الدايوت",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستعمل الدايوت في مركز دار الشفاء ضمن بعض الوصفات العشبية التقليدية الخاصة بالمعالجة والتحسين الصحي بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الحراز",
-price:50000,
-icon:"fa-leaf",
-benefits:"تُستخدم مشتقات شجرة الحراز (كاللحاء والأوراق) في مركز دار الشفاء ضمن الوصفات العشبية التقليدية لدعم التئام بعض الالتهابات والعناية بصحة الجسم بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"النبق",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم النبق (ثمار السدر البري) في مركز دار الشفاء لتقوية الجسم وتنشيط الدورة الدموية، ويُعتقد أن له دوراً في تهدئة الحلق وتخفيف السعال ومقاومة الضعف العام بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الدوم",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُعتمد على الدوم في مركز دار الشفاء لدعم صحة الجهاز الدوراني وتنظيم ضغط الدم، ويُستخدم كمشروب مقوٍ للذاكرة ومساعد في تخفيف آلام المفاصل وتصلب الشرايين بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"العُشر",
-price:50000,
-icon:"fa-leaf",
-benefits:"تُوظف بعض مشتقات شجرة العُشر بحذر شديد وبإشراف مباشر في مركز دار الشفاء ضمن تركيبات خارجية معينة مخصصة لبعض حالات الجلد المزمنة أو آلام المفاصل العميقة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الهَبِيل",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم الهَبِيل في مركز دار الشفاء ضمن الوصفات العشبية المحلية التقليدية المرتبطة بتنقية الجسم ودعم بعض الوظائف الحيوية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الهشاب",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُعد صمغ الهشاب الأساس الأجود للصمغ العربي، ويُستخدم في مركز دار الشفاء لدعم وظائف الكلى والجهاز الهضمي وتخفيف التهابات الغشاء المخاطي للمعدة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الحلبة",
-price:50000,
-icon:"fa-leaf",
-benefits:"تُستعمل الحلبة في مركز دار الشفاء لفتح الشهية وتقوية الدم ودعم الجهاز الهضمي، وللمساعدة في تنظيم مستويات السكر في الدم وتحسين صحة الأمراض الصدرية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"الكمون السوداني",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُدخل الكمون السوداني في تركيبات دار الشفاء لتخفيف اضطرابات القولون والغازات وتسكين المغص المعوي وتنشيط عملية الهضم بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"اعشاب",
-name:"القرنفل",
-price:50000,
-icon:"fa-leaf",
-benefits:"يُستخدم القرنفل في مركز دار الشفاء كمطهر قوي ومسكن موضعي لآلام الأسنان واللثة، ويُضاف إلى خلطات تقوية المناعة وتدفئة الجسم بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-
-/* =========================
-   الزيوت
-========================= */
-
-{
-cat:"زيوت",
-name:"الزيت المعجزة",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُعد الزيت المعجزة من التركيبات الخاصة بمركز دار الشفاء والمصممة خصيصاً لتغذية بصيلات الشعر بعمق، ومقاومة التساقط الشديد، وتنشيط فروة الرأس لتحفيز نمو الشعر الجديد بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت الزيتون",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستخدم زيت الزيتون البكر في مركز دار الشفاء كقاعدة أساسية للعديد من التركيبات العلاجية والرقية الشرعية، ويُعتمد عليه لترطيب الجلد، وتخفيف آلام المفاصل، وتغذية الشعر والجسم بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت السمسم",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستعمل زيت السمسم في مركز دار الشفاء لتنعيم وتليين الجلد الجاف، ودعم صحة المفاصل والعضلات عند الدهان، فضلًا عن دخوله في خلطات تقوية وتغذية الشعر بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت الحبة السوداء",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُعتمد على زيت الحبة السوداء في مركز دار الشفاء لتعزيز المناعة العامة، ودعم صحة الجهاز التنفسي، ومقاومة الالتهابات الجلدية والمفصلية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت الحلبة",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُدخل زيت الحلبة في برامج دار الشفاء الخاصة بزيادة الحجم وتغذية المناطق النحيلة، وتحسين مظهر ونضارة البشرة، وتقوية بصيلات الشعر الضعيفة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت النيم",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستخدم زيت النيم في مركز دار الشفاء لخصائصه المضادة للبكتيريا والفطريات، ويُعتمد عليه في مقاومة المشكلات الجلدية المزمنة، الحكة، والقشرة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت العُشر",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُوظف زيت العُشر بحذر وتحت إشراف دقيق في مركز دار الشفاء ضمن التركيبات الخارجية المخصصة لتخفيف آلام الروماتيزم والمفاصل العميقة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت السدر",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستعمل زيت السدر في مركز دار الشفاء لتقوية جذور الشعر، وزيادة لمعانه وكثافته، وتطهير فروة الرأس من القشرة والالتهابات بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت الخروع",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستخدم زيت الخروع في مركز دار الشفاء لتحفيز نمو الشعر والرموش، وتكثيف اللحية، وترطيب المناطق شديدة الجفاف، والمساعدة في لين الأمعاء بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت الثوم",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُدخل زيت الثوم في برامج دار الشفاء لتنشيط الدورة الدموية في فروة الرأس، ومقاومة الثعلبة وتحفيز نمو الشعر، إضافة إلى خصائصه المقوية للمناعة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت القرنفل",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُعتمد على زيت القرنفل في مركز دار الشفاء كمخدر ومسكن موضعي لآلام الأسنان والمفاصل، ولتطهير وتدفئة المنطقة المستهدفة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت البابونج",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستخدم زيت البابونج في مركز دار الشفاء لتهدئة الأعصاب، وتخفيف تهيج الجلد والالتهابات والحكة، ومساعدة الجسم على الاسترخاء بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"زيوت",
-name:"زيت الخردل",
-price:50000,
-icon:"fa-bottle-droplet",
-benefits:"يُستعمل زيت الخردل في مركز دار الشفاء لتسخين العضلات وتخفيف التشنجات والآلام الروماتيزمية، وتنشيط نمو الشعر عند الدهان بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-
-/* =========================
-   العسل
-========================= */
-
-{
-cat:"عسل",
-name:"عسل النحل المرقي",
-price:50000,
-icon:"fa-jar",
-benefits:"يُعد عسل النحل المرقي من المنتجات الأساسية في مركز دار الشفاء، حيث يُجمع بين فوائد العسل الطبيعي الخالص وبرامج الرقية الشرعية للمساعدة في الاستشفاء والتحصين ودعم الصحة النفسية والجسدية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل للمناعة",
-price:50000,
-icon:"fa-jar",
-benefits:"تُحضر خلطة العسل للمناعة في مركز دار الشفاء بعناية فائقة لتضم أجود أنواع العسل والأعشاب المقوية للجسم، وتُستخدم لرفع كفاءة الجهاز المناعي ومقاومة التعب والإجهاد العام بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل لجرثومة المعدة",
-price:50000,
-icon:"fa-jar",
-benefits:"تُستخدم خلطة العسل لجرثومة المعدة في مركز دار الشفاء للمساعدة في تهدئة الغشاء المخاطي للمعدة، ومقاومة البكتيريا الحلزونية، وتخفيف الحموضة والالتهابات المعوية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل للجهاز التنفسي",
-price:50000,
-icon:"fa-jar",
-benefits:"تُوظف خلطة العسل للجهاز التنفسي في مركز دار الشفاء لتوسيع الشعب الهوائية، وتخفيف السعال المزمن، وإلغاء البلغم، وتهدئة نوبات الحساسية والربو بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل لمرض السل والدرن",
-price:50000,
-icon:"fa-jar",
-benefits:"تُعد هذه الخلطة الخاصة في مركز دار الشفاء لدعم جهود الجسم في مقاومة أمراض الصدر المزمنة والسل، والمساعدة في تغذية الرئتين وتقوية المناعة الموضعية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل للضعف الجنسي",
-price:50000,
-icon:"fa-jar",
-benefits:"تُستعمل خلطة العسل للضعف الجنسي في مركز دار الشفاء لتعزيز الحيوية والطاقة البدنية، وتنشيط الدورة الدموية، ودعم الكفاءة الإنجابية والعامة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل لتنقية الكبد والسموم",
-price:50000,
-icon:"fa-jar",
-benefits:"تُستخدم هذه الخلطة المطورة في مركز دار الشفاء للمساعدة في تنشيط وظائف الكبد، وتسهيل عملية التخلص من السموم المتراكمة في الجسم، ودعم الحالات المرتبطة بالإرهاق الكبدي بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل لتصفية البشرة والنضارة",
-price:50000,
-icon:"fa-jar",
-benefits:"تُوظف خلطة العسل الخاصة بالتجميل والنضارة في مركز دار الشفاء لتغذية الجلد من الداخل، وتحسين صفاء البشرة، ومقاومة آثار الإجهاد والبهتان بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"عسل",
-name:"خلطة عسل النحل لتنشيط الذاكرة والتركيز",
-price:50000,
-icon:"fa-jar",
-benefits:"تُدخل هذه الخلطة في برنامج دار الشفاء لدعم وظائف الدماغ، وزيادة التركيز واليقظة الذهنية، ومقاومة النسيان والإجهاد الذهني بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-
-/* =========================
-   البخور
-========================= */
-
-{
-cat:"بخور",
-name:"البخور",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُستخدم البخور العام في مركز دار الشفاء ضمن برامج الطرد والتطهير المنزلي والروحاني، والمساعدة في نشر روائح طيبة تبعث على السكينة والطمأنينة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"صمغ اللبان المجهز",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُعتمد على صمغ اللبان المجهز في مركز دار الشفاء لتبخير الأجسام والمجالس في برامج الرقية الشرعية، للمساعدة في طرد الطاقة السلبية وتطهير الأجواء بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"الفاسوخ الأسود",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُستعمل الفاسوخ الأسود بحذر وعناية في مركز دار الشفاء ضمن جلسات الرقية الشرعية المخصصة لفك الضيق الشديد والعين والحسد والمس بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"الفاسوخ الأبيض",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُدخل الفاسوخ الأبيض في برامج دار الشفاء الروحانية والعلاجية لتطهير الأماكن وتخفيف الآثار الناتجة عن الطاقة السلبية والعين بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"الجاولي",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُستخدم صمغ الجاولي في مركز دار الشفاء لتعطير الأجواء وتهدئة الأعصاب، ويُوظف في بعض خلطات البخور المرتبطة بجلسات الاسترخاء والرقية الشرعية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"الكندر العدني",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُعد الكندر العدني من أجود أنواع اللبان الذكر، ويُستخدم في دار الشفاء للتبخير بهدف تنقية الأجواء، وتصفية الذهن، ومقاومة الصداع والآثار الروحانية الثقيلة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"العود",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُستعمل خشب وعود البخور في مركز دار الشفاء لإضفاء رائحة زكية ومميزة، وللمساعدة في بعث الطاقة الإيجابية ورفع معنويات الشخص وتهدئة النفس بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"الصندل",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُدخل خشب وبرادة الصندل في خلطات البخور بمركز دار الشفاء لتبريد الأجواء، وبعث روائح هادئة تساعد على الاسترخاء العميق وتخفيف التوتر والقلق بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"الحلتيت",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُستخدم بخور الحلتيت بحذر شديد ودقة بالغة في مركز دار الشفاء ضمن الحالات الخاصة المرتبطة بالاستفرام الروحاني والتحصين ضد العوارض القوية بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"بخور الشفاء الملكي",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُعد بخور الشفاء الملكي تركيبة خاصة ومبتكرة في مركز دار الشفاء، تدمج بين أجود الصموغ والأعشاب العطرية المخصصة لتحصين المكان والبدن وبعث الراحة التامة بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"بخور المسك الأبيض والزعفران",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"تُستخدم هذه الخلطة العطرية المميزة في مركز دار الشفاء لتعطير الأماكن وطرد الروائح الكريهة، وتُعتمد في الجلسات التي تتطلب طاقات نظيفة ومهدئة للنفس بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"بخور",
-name:"بخور ورق السدر والمحريب",
-price:50000,
-icon:"fa-fire-flame-simple",
-benefits:"يُوظف هذا البخور المطور في مركز دار الشفاء لدعم برامج الرقية الشرعية، والمساعدة في تخفيف ثقل الصدر وتهدئة الأجواء المحيطة بالشخص بحسب تقييم الحالة.",
-usage:"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-
-/* =========================
-   الحجامة
-========================= */
-
-{
-cat:"حجامة",
-name:"الحجامة النبوية العامة (السنة)",
-price:50000,
-icon:"fa-hand-holding-medical",
-benefits:"تُجرى الحجامة النبوية العامة في مركز دار الشفاء استنادا إلى قول النبي صلى الله عليه وسلم: (إن خير ما تداويتم به الحجم)، وتُستخدم لتنقية الدم، وتنشيط الدورة الدموية، ورفع كفاءة المناعة العامة وطرد الأخلاط الراكدة بحسب تقييم الحالة.",
-usage:"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"حجامة",
-name:"حجامة الأخدعين والكاثول (للرأس والصداع)",
-price:50000,
-icon:"fa-hand-holding-medical",
-benefits:"تُطبق حجامة الأخدعين والكاثول في مركز دار الشفاء اقتداء بهديه صلى الله عليه وسلم في الحجم على الأخدعين والكاهل، وتُعمد لتخفيف الصداع المزمني، وثقل الرأس، وآلام العنق والكتفين بحسب تقييم الحالة.",
-usage:"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"حجامة",
-name:"حجامة ظهر القدم (لعرق النسا والآلام العميقة)",
-price:50000,
-icon:"fa-hand-holding-medical",
-benefits:"تُستعمل حجامة ظهر القدم في مركز دار الشفاء بناء على التوجيه النبوي الشريف في الحجامة لعرق النسا، وتُستخدم للمساعدة في تخفيف الآلام العميقة في الأطراف وأسفل الظهر بحسب تقييم الحالة.",
-usage:"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"حجامة",
-name:"حجامة الظهر ووسط الورك (للنشاط وتخفيف التثاقل)",
-price:50000,
-icon:"fa-hand-holding-medical",
-benefits:"تُطبق هذه المواضع في مركز دار الشفاء للمساعدة في تخفيف احتقان العضلات، وتحسين تدفق الدم نحو النصف السفلي من الجسم، وتخفيف التعب المزمن والتثاقل البدني بحسب تقييم الحالة.",
-usage:"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"حجامة",
-name:"حجامة تنقية الكبد وتنشيط الدورة الدموية الكبدية",
-price:50000,
-icon:"fa-hand-holding-medical",
-benefits:"تُوظف هذه الجلسة المطورة في مركز دار الشفاء لدعم جهود الجسم في تخفيف العبء عن الكبد، وتنشيط الدورة الدموية الموضعية، والمساعدة في تقليل الإرهاق العام بحسب تقييم الحالة.",
-usage:"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"حجامة",
-name:"حجامة الظهر العلوية (لتخفيف احتقان الصدر وتنفس أفضل)",
-price:50000,
-icon:"fa-hand-holding-medical",
-benefits:"تُخصص هذه الجلسة في مركز دار الشفاء للمساعدة في تخفيف الضغط والاحتقان في منطقة الصدر والكتفين، وتسهيل التنفس ودعم الحالات المرتبطة بالإجهاد التنفسي بحسب تقييم الحالة.",
-usage:"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-
-/* =========================
-   الرقية الشرعية
-========================= */
-
-{
-cat:"رقية",
-name:"الرقية الشرعية العامة",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُعتبر الرقية الشرعية العامة الأساس في مركز دار الشفاء للتحصين والاستشفاء بالقرآن الكريم والسنة النبوية، وتُستخدم لطمأنينة القلوب، ودفع الأذى، ورفع البلاء العام عن الجسد والنفس بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية السحر",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُوظف رقية السحر في مركز دار الشفاء لفك عقد الأسحر وإبطال تأثيراتها المختلفة على الأبدان والعقول، بالاستعانة بآيات الإبطال والتوكل على الله بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية العين والحسد",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُستخدم رقية العين والحسد في مركز دار الشفاء لإبطال أثر الإصابة بالعين والحسد المتراكم في الجسد، وتخفيف ما تسببه من خمول، وصداع، وتعطيل مفاجئ بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية التعطيل",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُعمد رقية التعطيل في مركز دار الشفاء لمواجهة تعطيل الأمور الحياتية والرزق والزواج والعمل الناتج عن أسباب روحية أو عوارضا خفية، لفتح الأبواب الموصدة بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية سحر التفريق",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُخصص رقية سحر التفريق في مركز دار الشفاء لإصلاح ذات البين وإبطال الآثار الروحانية التي تستهدف إثارة البغضاء والشتات بين الأزواج أو الأقارب بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية سحر تشويه الجمال",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُستخدم هذه الرقية الخاصة في مركز دار الشفاء لمواجهة تأثيرات الأسحر والعيون الموجهة لإظهار الهيئة بصورة غير حقيقية أو إثارة البثور والنفور بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية الفضيحة",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُوظف رقية الفضيحة في مركز دار الشفاء للتحصين ضد الوساوس القوية والأعراض المرتبطة بإلقاء الريبة والافتراءات أو التسلط الخفي على سمعة الشخص بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية الريح الاحمر",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُستعمل رقية الريح الاحمر في مركز دار الشفاء للتعامل مع العوارض والآلام المتنقلة المفاجئة في الجسد والتي تتأثر بالرقية الشرعية والمأثورات بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية القرين",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُعتمد رقية القرين في مركز دار الشفاء لتخفيف تسلط الوساوس القوية، وضيق الصدر، والاضطرابات النفسية الحادة المرتبطة بتاثيرات القرين بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية المس الشيطاني",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُستخدم رقية المس الشيطاني في مركز دار الشفاء لإخراج العارض وتطهير الأبدان من أثره، مستندة إلى آيات التوحيد والعذاب والتحصين بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية المكان المهجور",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُخصص رقية المكان المهجور في مركز دار الشفاء لتطهير المنازل والمزارع والمساحات التي تشهد أثراً للطاقات السلبية أو العمار بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية التحصين الشامل وفك الأقفال الروحية",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُعد هذه الرقية المتقدمة في مركز دار الشفاء تركيبة شاملة للتحصين المنيع ضد كافة أنواع الأذى الخفي، وفتح المسارات المغلقة في الجسد بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-},
-
-{
-cat:"رقية",
-name:"رقية تطهير البيوت والمحلات التجارية",
-price:100000,
-icon:"fa-book-quran",
-benefits:"تُستخدم هذه الرقية الخاصة في مركز دار الشفاء لطرد العوارض وجلب البركة والرزق وتنقيتها من آثار الحسد والتعطيل التجاري بحسب تقييم الحالة.",
-usage:"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.",
-note:"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."
-}
+const WHATSAPP="249121494942";
+
+/* ضع هنا رابط صفحة دار الشفاء الحقيقية على فيسبوك */
+const FACEBOOK_URL="https://www.facebook.com/";
+
+/* ضع هنا رابط ماسنجر الخاص بصفحة دار الشفاء */
+const MESSENGER_URL="https://www.messenger.com/";
+
+const products=[
+
+/* ================= الأعشاب الطبيعية ================= */
+
+{"n":"العرديب","cat":"اعشاب","price":"50,000","benefits":"يُستخدم العرديب في مركز دار الشفاء ضمن وصفات دعم الجهاز الهضمي وتخفيف حموضة المعدة، ويُعتقد أن له دوراً في ترطيب الجسم وتخفيف العطش الشديد وخفض حرارة الجسم بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"اللَّالوب","cat":"اعشاب","price":"50,000","benefits":"يُستخدم اللَّالوب ضمن برامج دار الشفاء للعناية بالكبد والجسم، ويُعتمد عليه في المساعدة على تجديد خلايا الكبد وتنقية الجسم وطرد السموم، كما يدخل ضمن برامج العناية بالحالات المرتبطة بالملاريا واليرقان وأبو صفير بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"القسط الهندي","cat":"اعشاب","price":"50,000","benefits":"يُعتمد على القسط الهندي في مركز دار الشفاء لدعم المناعة والتقوية العامة، ويُستخدم ضمن برامج الرقية الشرعية والعناية بالجهاز التنفسي وتخفيف الالتهابات واضطرابات الحلق بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"السنا مكي","cat":"اعشاب","price":"50,000","benefits":"يُستعمل السنا مكي في مركز دار الشفاء كمنظف طبيعي للجهاز الهضمي والمساعدة على التخلص من الفضلات المتراكمة والسموم، ويُدخل بحذر في برامج التطهير المعوي بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الصمغ العربي","cat":"اعشاب","price":"50,000","benefits":"يُعد الصمغ العربي من الأساسيات في مركز دار الشفاء لدعم وظائف الكلى والجهاز الهضمي، ويُستخدم كمصدر غني بالألياف الطبيعية للمساعدة في خفض معدلات السكر والكوليسترول وتنظيم عمل الأمعاء بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"التبلدي","cat":"اعشاب","price":"50,000","benefits":"يُستخدم التبلدي في مركز دار الشفاء لرفع طاقة الجسم ومقاومة الإجهاد، نظراً لاحتوائه على عناصر مغذية وفيتامينات تساعد في تخفيف الحموضة المعوية وتروية الجسم بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الكركديه","cat":"اعشاب","price":"50,000","benefits":"يُستعمل الكركديه في مركز دار الشفاء ضمن الوصفات الطبيعية للمساعدة في تنظيم ضغط الدم وتحسين الدورة الدموية، إضافة إلى دوره في إمداد الجسم بمضادات الأكسدة والانتعاش بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"القرض","cat":"اعشاب","price":"50,000","benefits":"يُستخدم القرض في مركز دار الشفاء لخصائصه القابضة والمطهرة، ويُعمد إليه في العناية بصحة الفم واللثة والجروح والتهابات الجلد والتقرحات بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"المحريب","cat":"اعشاب","price":"50,000","benefits":"يُدخل المحريب في برامج دار الشفاء العطرية والاسترخائية، ويُستخدم للمساعدة في تهدئة الأعصاب وتخفيف التوتر والاضطرابات الهضمية البسيطة والغازات بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"عرق النار","cat":"اعشاب","price":"50,000","benefits":"يُستخدم عرق النار في مركز دار الشفاء ضمن التركيبات التقليدية المخصصة لمقاومة بعض الآلام الموضعية والمفاصل وتنشيط الدورة الدموية في الأطراف بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الحنظل","cat":"اعشاب","price":"50,000","benefits":"يُوظف الحنظل بحذر شديد في مركز دار الشفاء ضمن بعض التركيبات الخارجية المخصصة لتخفيف آلام المفاصل والخشونة، أو بحسب التعليمات الدقيقة للشيخ في الحالات المرتبطة بذلك.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"السدر","cat":"اعشاب","price":"50,000","benefits":"يُعتمد على السدر في مركز دار الشفاء في برامج الرقية الشرعية والعناية بالشعر والجسم، إضافة إلى استخدامه في تطهير الجروح وتقوية بصيلات الشعر بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الحرجل","cat":"اعشاب","price":"50,000","benefits":"يُستخدم الحرجل في مركز دار الشفاء كعشب مهدئ للمعدة ومساعد في تخفيف آلام القولون والاضطرابات المعوية والغازات بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"عرق السوس","cat":"اعشاب","price":"50,000","benefits":"يُستعمل عرق السوس في مركز دار الشفاء لدعم صحة الجهاز التنفسي وتهدئة السعال، وللمساعدة في تخفيف التهابات المعدة وقرحتها بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"المراية","cat":"اعشاب","price":"50,000","benefits":"تُستخدم المراية في مركز دار الشفاء ضمن الوصفات الشعبية التقليدية المرتبطة بالعناية بالجسم وتنقية البشرة وبعض الاستخدامات العلاجية الخاصة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الغبيش","cat":"اعشاب","price":"50,000","benefits":"تُستخدم أعشاب ومنتجات شجرة الغبيش في مركز دار الشفاء ضمن التركيبات الخاصة بدعم الجسم ومقاومة بعض الأمراض المحلية المتداولة في البيئة السودانية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الدايوت","cat":"اعشاب","price":"50,000","benefits":"يُستعمل الدايوت في مركز دار الشفاء ضمن بعض الوصفات العشبية التقليدية الخاصة بالمعالجة والتحسين الصحي بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الحراز","cat":"اعشاب","price":"50,000","benefits":"تُستخدم مشتقات شجرة الحراز في مركز دار الشفاء ضمن الوصفات العشبية التقليدية لدعم التئام بعض الالتهابات والعناية بصحة الجسم بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"النبق","cat":"اعشاب","price":"50,000","benefits":"يُستخدم النبق في مركز دار الشفاء لتقوية الجسم وتنشيط الدورة الدموية، ويُعتقد أن له دوراً في تهدئة الحلق وتخفيف السعال ومقاومة الضعف العام بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الدوم","cat":"اعشاب","price":"50,000","benefits":"يُعتمد على الدوم في مركز دار الشفاء لدعم صحة الجهاز الدوراني وتنظيم ضغط الدم، ويُستخدم كمشروب مقوٍ للذاكرة ومساعد في تخفيف آلام المفاصل وتصلب الشرايين بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"العُشر","cat":"اعشاب","price":"50,000","benefits":"تُوظف بعض مشتقات شجرة العُشر بحذر شديد وبإشراف مباشر في مركز دار الشفاء ضمن تركيبات خارجية معينة مخصصة لبعض حالات الجلد المزمنة أو آلام المفاصل العميقة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الهَبِيل","cat":"اعشاب","price":"50,000","benefits":"يُستخدم الهَبِيل في مركز دار الشفاء ضمن الوصفات العشبية المحلية التقليدية المرتبطة بتنقية الجسم ودعم بعض الوظائف الحيوية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الهشاب","cat":"اعشاب","price":"50,000","benefits":"يُعد صمغ الهشاب الأساس الأجود للصمغ العربي، ويُستخدم في مركز دار الشفاء لدعم وظائف الكلى والجهاز الهضمي وتخفيف التهابات الغشاء المخاطي للمعدة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الحلبة","cat":"اعشاب","price":"50,000","benefits":"تُستعمل الحلبة في مركز دار الشفاء لفتح الشهية وتقوية الدم ودعم الجهاز الهضمي، وللمساعدة في تنظيم مستويات السكر في الدم وتحسين صحة الأمراض الصدرية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الكمون السوداني","cat":"اعشاب","price":"50,000","benefits":"يُدخل الكمون السوداني في تركيبات دار الشفاء لتخفيف اضطرابات القولون والغازات وتسكين المغص المعوي وتنشيط عملية الهضم بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"القرنفل","cat":"اعشاب","price":"50,000","benefits":"يُستخدم القرنفل في مركز دار الشفاء كمطهر قوي ومسكن موضعي لآلام الأسنان واللثة، ويُضاف إلى خلطات تقوية المناعة وتدفئة الجسم بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+
+/* ================= الزيوت ================= */
+
+{"n":"الزيت المعجزة","cat":"زيوت","price":"50,000","benefits":"يُعد الزيت المعجزة من التركيبات الخاصة بمركز دار الشفاء والمصممة خصيصاً لتغذية بصيلات الشعر بعمق، ومقاومة التساقط الشديد، وتنشيط فروة الرأس لتحفيز نمو الشعر الجديد بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت الزيتون","cat":"زيوت","price":"50,000","benefits":"يُستخدم زيت الزيتون البكر في مركز دار الشفاء كقاعدة أساسية للعديد من التركيبات العلاجية والرقية الشرعية، ويُعتمد عليه لترطيب الجلد، وتخفيف آلام المفاصل، وتغذية الشعر والجسم بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت السمسم","cat":"زيوت","price":"50,000","benefits":"يُستعمل زيت السمسم في مركز دار الشفاء لتنعيم وتليين الجلد الجاف، ودعم صحة المفاصل والعضلات عند الدهان، فضلاً عن دخوله في خلطات تقوية وتغذية الشعر بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت الحبة السوداء","cat":"زيوت","price":"50,000","benefits":"يُعتمد على زيت الحبة السوداء في مركز دار الشفاء لتعزيز المناعة العامة، ودعم صحة الجهاز التنفسي، ومقاومة الالتهابات الجلدية والمفصلية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت الحلبة","cat":"زيوت","price":"50,000","benefits":"يُدخل زيت الحلبة في برامج دار الشفاء الخاصة بزيادة الحجم وتغذية المناطق النحيلة، وتحسين مظهر ونضارة البشرة، وتقوية بصيلات الشعر الضعيفة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت النيم","cat":"زيوت","price":"50,000","benefits":"يُستخدم زيت النيم في مركز دار الشفاء لخصائصه المضادة للبكتيريا والفطريات، ويُعتمد عليه في مقاومة المشكلات الجلدية المزمنة، الحكة، والقشرة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت العُشر","cat":"زيوت","price":"50,000","benefits":"يُوظف زيت العُشر بحذر وتحت إشراف دقيق في مركز دار الشفاء ضمن التركيبات الخارجية المخصصة لتخفيف آلام الروماتيزم والمفاصل العميقة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت السدر","cat":"زيوت","price":"50,000","benefits":"يُستعمل زيت السدر في مركز دار الشفاء لتقوية جذور الشعر، وزيادة لمعانه وكثافته، وتطهير فروة الرأس من القشرة والالتهابات بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت الخروع","cat":"زيوت","price":"50,000","benefits":"يُستخدم زيت الخروع في مركز دار الشفاء لتحفيز نمو الشعر والرموش، وتكثيف اللحية، وترطيب المناطق شديدة الجفاف، والمساعدة في لين الأمعاء بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت الثوم","cat":"زيوت","price":"50,000","benefits":"يُدخل زيت الثوم في برامج دار الشفاء لتنشيط الدورة الدموية في فروة الرأس، ومقاومة الثعلبة وتحفيز نمو الشعر، إضافة إلى خصائصه المقوية للمناعة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت القرنفل","cat":"زيوت","price":"50,000","benefits":"يُعتمد على زيت القرنفل في مركز دار الشفاء كمخدر ومسكن موضعي لآلام الأسنان والمفاصل، ولتطهير وتدفئة المنطقة المستهدفة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت البابونج","cat":"زيوت","price":"50,000","benefits":"يُستخدم زيت البابونج في مركز دار الشفاء لتهدئة الأعصاب، وتخفيف تهيج الجلد والالتهابات والحكة، ومساعدة الجسم على الاسترخاء بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"زيت الخردل","cat":"زيوت","price":"50,000","benefits":"يُستعمل زيت الخردل في مركز دار الشفاء لتسخين العضلات وتخفيف التشنجات والآلام الروماتيزمية، وتنشيط نمو الشعر عند الدهان بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+
+/* ================= العسل ================= */
+
+{"n":"عسل النحل المرقي","cat":"عسل","price":"50,000","benefits":"يُعد عسل النحل المرقي من المنتجات الأساسية في مركز دار الشفاء، حيث يُجمع بين فوائد العسل الطبيعي الخالص وبرامج الرقية الشرعية للمساعدة في الاستشفاء والتحصين ودعم الصحة النفسية والجسدية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل للمناعة","cat":"عسل","price":"50,000","benefits":"تُحضر خلطة العسل للمناعة في مركز دار الشفاء بعناية فائقة لتضم أجود أنواع العسل والأعشاب المقوية للجسم، وتُستخدم لرفع كفاءة الجهاز المناعي ومقاومة التعب والإجهاد العام بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل لجرثومة المعدة","cat":"عسل","price":"50,000","benefits":"تُستخدم خلطة العسل لجرثومة المعدة في مركز دار الشفاء للمساعدة في تهدئة الغشاء المخاطي للمعدة، ومقاومة البكتيريا الحلزونية، وتخفيف الحموضة والالتهابات المعوية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل للجهاز التنفسي","cat":"عسل","price":"50,000","benefits":"تُوظف خلطة العسل للجهاز التنفسي في مركز دار الشفاء لتوسيع الشعب الهوائية، وتخفيف السعال المزمن، وإلغاء البلغم، وتهدئة نوبات الحساسية والربو بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل لمرض السل والدرن","cat":"عسل","price":"50,000","benefits":"تُعد هذه الخلطة الخاصة في مركز دار الشفاء لدعم جهود الجسم في مقاومة أمراض الصدر المزمنة والسل، والمساعدة في تغذية الرئتين وتقوية المناعة الموضعية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل للضعف الجنسي","cat":"عسل","price":"50,000","benefits":"تُستعمل خلطة العسل للضعف الجنسي في مركز دار الشفاء لتعزيز الحيوية والطاقة البدنية، وتنشيط الدورة الدموية، ودعم الكفاءة الإنجابية والعامة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل لتنقية الكبد والسموم","cat":"عسل","price":"50,000","benefits":"تُستخدم هذه الخلطة المطورة في مركز دار الشفاء للمساعدة في تنشيط وظائف الكبد، وتسهيل عملية التخلص من السموم المتراكمة في الجسم، ودعم الحالات المرتبطة بالإرهاق الكبدي بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل لتصفية البشرة والنضارة","cat":"عسل","price":"50,000","benefits":"تُوظف خلطة العسل الخاصة بالتجميل والنضارة في مركز دار الشفاء لتغذية الجلد من الداخل، وتحسين صفاء البشرة، ومقاومة آثار الإجهاد والبهتان بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"خلطة عسل النحل لتنشيط الذاكرة والتركيز","cat":"عسل","price":"50,000","benefits":"تُدخل هذه الخلطة في برنامج دار الشفاء لدعم وظائف الدماغ، وزيادة التركيز واليقظة الذهنية، ومقاومة النسيان والإجهاد الذهني بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+
+/* ================= البخور ================= */
+
+{"n":"البخور","cat":"بخور","price":"50,000","benefits":"يُستخدم البخور العام في مركز دار الشفاء ضمن برامج الطرد والتطهير المنزلي والروحاني، والمساعدة في نشر روائح طيبة تبعث على السكينة والطمأنينة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"صمغ اللبان المجهز","cat":"بخور","price":"50,000","benefits":"يُعتمد على صمغ اللبان المجهز في مركز دار الشفاء لتبخير الأجسام والمجالس في برامج الرقية الشرعية، للمساعدة في طرد الطاقة السلبية وتطهير الأجواء بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الفاسوخ الأسود","cat":"بخور","price":"50,000","benefits":"يُستعمل الفاسوخ الأسود بحذر وعناية في مركز دار الشفاء ضمن جلسات الرقية الشرعية المخصصة لفك الضيق الشديد والعين والحسد والمس بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الفاسوخ الأبيض","cat":"بخور","price":"50,000","benefits":"يُدخل الفاسوخ الأبيض في برامج دار الشفاء الروحانية والعلاجية لتطهير الأماكن وتخفيف الآثار الناتجة عن الطاقة السلبية والعين بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الجاولي","cat":"بخور","price":"50,000","benefits":"يُستخدم صمغ الجاولي في مركز دار الشفاء لتعطير الأجواء وتهدئة الأعصاب، ويُوظف في بعض خلطات البخور المرتبطة بجلسات الاسترخاء والرقية الشرعية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الكندر العدني","cat":"بخور","price":"50,000","benefits":"يُعد الكندر العدني من أجود أنواع اللبان الذكر، ويُستخدم في دار الشفاء للتبخير بهدف تنقية الأجواء، وتصفية الذهن، ومقاومة الصداع والآثار الروحانية الثقيلة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"العود","cat":"بخور","price":"50,000","benefits":"يُستعمل خشب وعود البخور في مركز دار الشفاء لإضفاء رائحة زكية ومميزة، وللمساعدة في بعث الطاقة الإيجابية ورفع معنويات الشخص وتهدئة النفس بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الصندل","cat":"بخور","price":"50,000","benefits":"يُدخل خشب وبرادة الصندل في خلطات البخور بمركز دار الشفاء لتبريد الأجواء، وبعث روائح هادئة تساعد على الاسترخاء العميق وتخفيف التوتر والقلق بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الحلتيت","cat":"بخور","price":"50,000","benefits":"يُستخدم بخور الحلتيت بحذر شديد ودقة بالغة في مركز دار الشفاء ضمن الحالات الخاصة المرتبطة بالاستفرام الروحاني والتحصين ضد العوارض القوية بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"بخور الشفاء الملكي","cat":"بخور","price":"50,000","benefits":"يُعد بخور الشفاء الملكي تركيبة خاصة ومبتكرة في مركز دار الشفاء، تدمج بين أجود الصموغ والأعشاب العطرية المخصصة لتحصين المكان والبدن وبعث الراحة التامة بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"بخور المسك الأبيض والزعفران","cat":"بخور","price":"50,000","benefits":"تُستخدم هذه الخلطة العطرية المميزة في مركز دار الشفاء لتعطير الأماكن وطرد الروائح الكريهة، وتُعتمد في الجلسات التي تتطلب طاقات نظيفة ومهدئة للنفس بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"بخور ورق السدر والمحريب","cat":"بخور","price":"50,000","benefits":"يُوظف هذا البخور المطور في مركز دار الشفاء لدعم برامج الرقية الشرعية، والمساعدة في تخفيف ثقل الصدر وتهدئة الأجواء المحيطة بالشخص بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+
+/* ================= الحجامة ================= */
+
+{"n":"الحجامة النبوية العامة (السنة)","cat":"حجامة","price":"50,000","benefits":"تُجرى الحجامة النبوية العامة في مركز دار الشفاء استنادا إلى قول النبي صلى الله عليه وسلم: (إن خير ما تداويتم به الحجم)، وتُستخدم لتنقية الدم، وتنشيط الدورة الدموية، ورفع كفاءة المناعة العامة وطرد الأخلاط الراكدة بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"حجامة الأخدعين والكاثول (للرأس والصداع)","cat":"حجامة","price":"50,000","benefits":"تُطبق حجامة الأخدعين والكاهل في مركز دار الشفاء اقتداء بهديه صلى الله عليه وسلم في الحجم على الأخدعين والكاهل، وتُعمد لتخفيف الصداع المزمني، وثقل الرأس، وآلام العنق والكتفين بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"حجامة ظهر القدم (لعرق النسا والآلام العميقة)","cat":"حجامة","price":"50,000","benefits":"تُستعمل حجامة ظهر القدم في مركز دار الشفاء بناء على التوجيه النبوي الشريف في الحجامة لعرق النسا، وتُستخدم للمساعدة في تخفيف الآلام العميقة في الأطراف وأسفل الظهر بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"حجامة الظهر ووسط الورك (للنشاط وتخفيف التثاقل)","cat":"حجامة","price":"50,000","benefits":"تُطبق هذه المواضع في مركز دار الشفاء للمساعدة في تخفيف احتقان العضلات، وتحسين تدفق الدم نحو النصف السفلي من الجسم، وتخفيف التعب المزمن والتثاقل البدني بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"حجامة تنقية الكبد وتنشيط الدورة الدموية الكبدية","cat":"حجامة","price":"50,000","benefits":"تُوظف هذه الجلسة المطورة في مركز دار الشفاء لدعم جهود الجسم في تخفيف العبء عن الكبد، وتنشيط الدورة الدموية الموضعية، والمساعدة في تقليل الإرهاق العام بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"حجامة الظهر العلوية (لتخفيف احتقان الصدر وتنفس أفضل)","cat":"حجامة","price":"50,000","benefits":"تُخصص هذه الجلسة في مركز دار الشفاء للمساعدة في تخفيف الضغط والاحتقان في منطقة الصدر والكتفين، وتسهيل التنفس ودعم الحالات المرتبطة بالإجهاد التنفسي بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+
+/* ================= الرقية ================= */
+
+{"n":"الرقية الشرعية العامة","cat":"رقية","price":"100,000","benefits":"تُعتبر الرقية الشرعية العامة الأساس في مركز دار الشفاء للتحصين والاستشفاء بالقرآن الكريم والسنة النبوية، وتُستخدم لطمأنينة القلوب، ودفع الأذى، ورفع البلاء العام عن الجسد والنفس بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية السحر","cat":"رقية","price":"100,000","benefits":"تُوظف رقية السحر في مركز دار الشفاء لفك عقد الأسحر وإبطال تأثيراتها المختلفة على الأبدان والعقول، بالاستعانة بآيات الإبطال والتوكل على الله بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية العين والحسد","cat":"رقية","price":"100,000","benefits":"تُستخدم رقية العين والحسد في مركز دار الشفاء لإبطال أثر الإصابة بالعين والحسد المتراكم في الجسد، وتخفيف ما تسببه من خمول، وصداع، وتعطيل مفاجئ بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية التعطيل","cat":"رقية","price":"100,000","benefits":"تُعمد رقية التعطيل في مركز دار الشفاء لمواجهة تعطيل الأمور الحياتية والرزق والزواج والعمل الناتج عن أسباب روحية أو عوارض خفية، لفتح الأبواب الموصدة بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية سحر التفريق","cat":"رقية","price":"100,000","benefits":"تُخصص رقية سحر التفريق في مركز دار الشفاء لإصلاح ذات البين وإبطال الآثار الروحانية التي تستهدف إثارة البغضاء والشتات بين الأزواج أو الأقارب بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية سحر تشويه الجمال","cat":"رقية","price":"100,000","benefits":"تُستخدم هذه الرقية الخاصة في مركز دار الشفاء لمواجهة تأثيرات الأسحر والعيون الموجهة لإظهار الهيئة بصورة غير حقيقية أو إثارة البثور والنفور بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية الفضيحة","cat":"رقية","price":"100,000","benefits":"تُوظف رقية الفضيحة في مركز دار الشفاء للتحصين ضد الوساوس القوية والأعراض المرتبطة بإلقاء الريبة والافتراءات أو التسلط الخفي على سمعة الشخص بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية الريح الاحمر","cat":"رقية","price":"100,000","benefits":"تُستعمل رقية الريح الاحمر في مركز دار الشفاء للتعامل مع العوارض والآلام المتنقلة المفاجئة في الجسد والتي تتأثر بالرقية الشرعية والمأثورات بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية القرين","cat":"رقية","price":"100,000","benefits":"تُعتمد رقية القرين في مركز دار الشفاء لتخفيف تسلط الوساوس القوية، وضيق الصدر، والاضطرابات النفسية الحادة المرتبطة بتأثيرات القرين بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية المس الشيطاني","cat":"رقية","price":"100,000","benefits":"تُستخدم رقية المس الشيطاني في مركز دار الشفاء لإخراج العارض وتطهير الأبدان من أثره، مستندة إلى آيات التوحيد والعذاب والتحصين بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية المكان المهجور","cat":"رقية","price":"100,000","benefits":"تُخصص رقية المكان المهجور في مركز دار الشفاء لتطهير المنازل والمزارع والمساحات التي تشهد أثراً للطاقات السلبية أو العمار بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية التحصين الشامل وفك الأقفال الروحية","cat":"رقية","price":"100,000","benefits":"تُعد هذه الرقية المتقدمة في مركز دار الشفاء تركيبة شاملة للتحصين المنيع ضد كافة أنواع الأذى الخفي، وفتح المسارات المغلقة في الجسد بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"رقية تطهير البيوت والمحلات التجارية","cat":"رقية","price":"100,000","benefits":"تُستخدم هذه الرقية الخاصة في مركز دار الشفاء لطرد العوارض وجلب البركة والرزق وتنقيتها من آثار الحسد والتعطيل التجاري بحسب تقييم الحالة.","usage":"تتم جلسة الرقية بالطريقة والأسلوب الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+
+/* ================= الأدعية والأذكار ================= */
+
+{"n":"أذكار الصباح","cat":"اذكار","price":null,"benefits":"أذكار مباركة تُقال في بداية النهار لطلب الحفظ والبركة والتحصين من كل شر.","dua":"أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير."},
+{"n":"أذكار المساء","cat":"اذكار","price":null,"benefits":"أذكار مأثورة تُقال في المساء للاستعاذة بالله وحفظ النفس والأهل حتى الصباح.","dua":"أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير."},
+{"n":"أذكار الاستيقاظ من النوم","cat":"اذكار","price":null,"benefits":"أذكار الشكر والحمد لله على رد الروح وبداية يوم جديد بالعافية.","dua":"الحمد لله الذي أحيانا بعد ما أماتنا وإليه النشور."},
+{"n":"أذكار النوم","cat":"اذكار","price":null,"benefits":"أذكار الحفظ والتحصين والاستسلام لله تعالى قبل النوم.","dua":"باسمك ربي وضعت جنبي وبك أرفعه، إن أمسكت نفسي فارحمها، وإن أرسلتها فاحفظها بما تحفظ به عبادك الصالحين."},
+{"n":"أذكار الخروج من المنزل","cat":"اذكار","price":null,"benefits":"دعاء التوكل والاستعانة بالله عند مغادرة المنزل لطلب الحفظ والتوفيق.","dua":"بسم الله، توكلت على الله، ولا حول ولا قوة إلا بالله."},
+{"n":"أذكار الدخول إلى المنزل","cat":"اذكار","price":null,"benefits":"دعاء لطلب البركة والخير عند دخول البيت.","dua":"اللهم إني أسألك خير المولج وخير المخرج، بسم الله ولجنا، وبسم الله خرجنا، وعلى الله ربنا توكلنا."},
+{"n":"أذكار دخول المسجد","cat":"اذكار","price":null,"benefits":"دعاء طلب الرحمة والتوفيق عند ارتياد بيوت الله.","dua":"اللهم افتح لي أبواب رحمتك."},
+{"n":"أذكار الخروج من المسجد","cat":"اذكار","price":null,"benefits":"دعاء استسقاء فضل الله ورزقه عند الانصراف من المسجد.","dua":"اللهم إني أسألك من فضلك."},
+{"n":"أذكار الكرب والشدائد","cat":"اذكار","price":null,"benefits":"أذكار تقال عند اشتداد الهموم لطلب الفرج والسكينة من الله.","dua":"لا إله إلا الله العظيم الحليم، لا إله إلا الله رب العرش العظيم، لا إله إلا الله رب السماوات ورب الأرض ورب العرش الكريم."},
+{"n":"أذكار الرزق وقضاء الدين","cat":"اذكار","price":null,"benefits":"أذكار للاستعانة بالله في تيسير المعيشة وسداد الديون.","dua":"اللهم اكفني بحلالك عن حرامك، وأغنني بفضلك عمن سواك."},
+{"n":"أذكار الاستغفار والتوبة","cat":"اذكار","price":null,"benefits":"صيغ مباركة لطلب المغفرة والرجوع إلى الله.","dua":"أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه."},
+{"n":"أذكار الصلاة على النبي صلى الله عليه وسلم","cat":"اذكار","price":null,"benefits":"صيغة مباركة للصلاة على النبي صلى الله عليه وسلم.","dua":"اللهم صل وسلم على نبينا محمد وعلى آله وصحبه أجمعين."},
+{"n":"أذكار دفع الوساوس والقلق","cat":"اذكار","price":null,"benefits":"أذكار للاستعاذة بالله من نزغات الشيطان ووساوس الصدر.","dua":"آمنت بالله ورسله."},
+{"n":"أذكار نزول المطر","cat":"اذكار","price":null,"benefits":"دعاء مستحب عند نزول المطر لطلب البركة والخير.","dua":"اللهم صيبًا نافعًا."},
+{"n":"أذكار الرضا والطمأنينة","cat":"اذكار","price":null,"benefits":"دعاء لشكر نعم الله وإدامة الرضا بالقدر.","dua":"رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد صلى الله عليه وسلم نبيًا ورسولًا."},
+
+{"n":"دعاء الشفاء","cat":"اذكار","price":null,"benefits":"دعاء لطلب الشفاء والعافية من الله تعالى.","dua":"اللهم رب الناس، أذهب البأس، اشفِ أنت الشافي، لا شفاء إلا شفاؤك، شفاءً لا يغادر سقماً."},
+{"n":"دعاء التحصين","cat":"اذكار","price":null,"benefits":"دعاء للتحصين والاستعانة بالله من كل سوء.","dua":"أعوذ بكلمات الله التامات من شر ما خلق."},
+{"n":"دعاء النجاح والتوفيق","cat":"اذكار","price":null,"benefits":"دعاء لطلب التوفيق وتيسير الأمور والنجاح فيما فيه الخير.","dua":"رب اشرح لي صدري ويسر لي أمري."},
+{"n":"دعاء البركة","cat":"اذكار","price":null,"benefits":"دعاء لطلب البركة في الرزق والعمل والأهل والحياة.","dua":"اللهم بارك لي فيما أعطيتني، وبارك لي في رزقي وأهلي وعملي."},
+{"n":"دعاء تفريج الهم","cat":"اذكار","price":null,"benefits":"دعاء لطلب الفرج وإزالة الهم والكرب.","dua":"حسبي الله لا إله إلا هو، عليه توكلت وهو رب العرش العظيم."},
+{"n":"دعاء قضاء الحوائج","cat":"اذكار","price":null,"benefits":"دعاء لطلب تيسير الحاجة وقضائها بما فيه الخير.","dua":"اللهم اقضِ حاجتي ويسر أمري واختر لي ولا تخيرني لنفسي."},
+{"n":"دعاء حفظ الأهل والأبناء","cat":"اذكار","price":null,"benefits":"دعاء لحفظ الأهل والأبناء والاستعانة بالله عليهم.","dua":"اللهم احفظ أهلي وأبنائي بعينك التي لا تنام، واكلأهم برعايتك وحفظك."},
+{"n":"دعاء راحة القلب وطمأنينة النفس","cat":"اذكار","price":null,"benefits":"دعاء لطلب السكينة وراحة القلب وطمأنينة النفس.","dua":"اللهم اجعل في قلبي نوراً وسكينة وطمأنينة، واصرف عني الهم والحزن."},
+{"n":"دعاء الرزق الواسع","cat":"اذكار","price":null,"benefits":"دعاء لطلب الرزق الحلال الواسع المبارك.","dua":"اللهم ارزقني رزقاً واسعاً حلالاً طيباً مباركاً فيه."},
+{"n":"دعاء الحفظ من العين والحسد","cat":"اذكار","price":null,"benefits":"دعاء للتحصين والاستعاذة بالله من العين والحسد وسائر الشرور.","dua":"أعوذ بكلمات الله التامات من كل شيطان وهامة ومن كل عين لامة."},
+{"n":"دعاء السفر","cat":"اذكار","price":null,"benefits":"دعاء مأثور عند السفر لطلب الحفظ والتيسير.","dua":"سبحان الذي سخر لنا هذا وما كنا له مقرنين وإنا إلى ربنا لمنقلبون."}
 
 ];
 
+let currentCat="all";
 
-/* =========================
-   الأدعية والأذكار
-========================= */
-
-const duas = [
-
-{
-cat:"ادعية",
-name:"أذكار الصباح",
-price:null,
-icon:"fa-sun",
-benefits:"أذكار مباركة تُقَال في بداية النهار لطلب الحفظ والبركة والتحصين من كل شر.",
-dua:"أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير."
-},
-
-{
-cat:"ادعية",
-name:"أذكار المساء",
-price:null,
-icon:"fa-moon",
-benefits:"أذكار مأثورة تُقَال في المساء للاستعاذة بالله وحفظ النفس والأهلي حتى الصباح.",
-dua:"أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الاستيقاظ من النوم",
-price:null,
-icon:"fa-bed",
-benefits:"أذكار الشكر والحمد لله على رد الروح وبداية يوم جديد بالعافية.",
-dua:"الحمْدُ للّهِ الّذي أحيانا بعد ما أماتنا وإليه النشور."
-},
-
-{
-cat:"ادعية",
-name:"أذكار النوم",
-price:null,
-icon:"fa-bed",
-benefits:"أذكار الحفظ والتحصين والاستسلام لله تعالى قبل النوم.",
-dua:"باسمك ربي وضعت جنبي وبك أرفعه، إن أمسكت نفسي فارحمها، وإن أرسلتها فاحفظها بما تحفظ به عبادك الصالحين."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الخروج من المنزل",
-price:null,
-icon:"fa-door-open",
-benefits:"دعاء التوكل والاستعانة بالله عند مغادرة المنزل لطلب الحفظ والتوفيق.",
-dua:"بسم الله، توكلت على الله، ولا حول ولا قوة إلا بالله."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الدخول إلى المنزل",
-price:null,
-icon:"fa-house",
-benefits:"دعاء لطلب البركة والخير وطرد الشياطين عند دخول البيت.",
-dua:"اللهم إني أسألك خير المولج وخير المخرج، بسم الله ولجنا، وبسم الله خرجنا، وعلى الله ربنا توكلنا."
-},
-
-{
-cat:"ادعية",
-name:"أذكار دخول المسجد",
-price:null,
-icon:"fa-mosque",
-benefits:"دعاء طلب الرحمة والتوفيق عند ارتياد بيوت الله.",
-dua:"اللهم افتح لي أبواب رحمتك."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الخروج من المسجد",
-price:null,
-icon:"fa-mosque",
-benefits:"دعاء استسقاء فضل الله ورزقه عند الانصراف من المسجد.",
-dua:"اللهم إني أسألك من فضلك."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الكرب والشدائد",
-price:null,
-icon:"fa-hands-praying",
-benefits:"أذكار تقال عند اشتداد الهموم لطلب الفرج والسكينة من الله.",
-dua:"لا إله إلا الله العظيم الحليم، لا إله إلا الله رب العرش العظيم، لا إله إلا الله رب السماوات ورب الأرض ورب العرش الكريم."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الرزق وقضاء الدين",
-price:null,
-icon:"fa-coins",
-benefits:"أذكار للاستعانة بالله في تيسير المعيشة وسداد الديون.",
-dua:"اللهم اكفني بحلالك عن حرامك، وأغنني بفضلك عمن سواك."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الاستغفار والتوبة",
-price:null,
-icon:"fa-heart",
-benefits:"صيغ مباركة لطلب المغفرة والرجوع إلى الله.",
-dua:"أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الصلاة على النبي صلى الله عليه وسلم",
-price:null,
-icon:"fa-star-and-crescent",
-benefits:"صيغة مباركة لزيادة القرب وبركة الأعمال بالصلاة على النبي.",
-dua:"اللهم صل وسلم على نبينا محمد وعلى آله وصحبه أجمعين."
-},
-
-{
-cat:"ادعية",
-name:"أذكار دفع الوساوس والقلق",
-price:null,
-icon:"fa-shield-heart",
-benefits:"أذكار للاستعاذة بالله من نزغات الشيطان ووساوس الصدر.",
-dua:"آمنت بالله ورسله، اللهم رد عنا كيد الشيطان وهمزه ولمزه."
-},
-
-{
-cat:"ادعية",
-name:"أذكار نزول المطر",
-price:null,
-icon:"fa-cloud-rain",
-benefits:"دعاء مستحب عند نزول المطر لطلب البركة والخير.",
-dua:"اللهم صيبًا نافعًا."
-},
-
-{
-cat:"ادعية",
-name:"أذكار الرضا والطمأنينة",
-price:null,
-icon:"fa-heart",
-benefits:"دعاء لشكر نعم الله وإدامة الرضا بالقدر.",
-dua:"رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد صلى الله عليه وسلم نبيًا ورسولًا."
-},
-
-{
-cat:"ادعية",
-name:"دعاء الشفاء",
-price:null,
-icon:"fa-heart-pulse",
-benefits:"دعاء لطلب الشفاء والعافية من الله تعالى.",
-dua:"اللهم رب الناس، أذهب البأس، اشفِ أنت الشافي، لا شفاء إلا شفاؤك، شفاءً لا يغادر سقماً."
-},
-
-{
-cat:"ادعية",
-name:"دعاء التحصين",
-price:null,
-icon:"fa-shield-halved",
-benefits:"دعاء للاستعانة بالله وطلب الحفظ والتحصين.",
-dua:"أعوذ بكلمات الله التامات من شر ما خلق."
-},
-
-{
-cat:"ادعية",
-name:"دعاء النجاح والتوفيق",
-price:null,
-icon:"fa-trophy",
-benefits:"دعاء لطلب التوفيق والسداد وتيسير الأمور.",
-dua:"اللهم وفقني وسددني، ويسر لي أمري، واكتب لي الخير حيث كان."
-},
-
-{
-cat:"ادعية",
-name:"دعاء البركة",
-price:null,
-icon:"fa-hand-holding-heart",
-benefits:"دعاء لطلب البركة في الرزق والعمر والعمل والأهل.",
-dua:"اللهم بارك لي في رزقي وعملي وأهلي ووقتي، واجعل فيه الخير والبركة."
-},
-
-{
-cat:"ادعية",
-name:"دعاء تفريج الهم",
-price:null,
-icon:"fa-cloud-sun",
-benefits:"دعاء لطلب تفريج الهم والكرب وطمأنينة القلب.",
-dua:"اللهم إني أعوذ بك من الهم والحزن، وأسألك فرجاً قريباً ورحمةً واسعة."
-},
-
-{
-cat:"ادعية",
-name:"دعاء قضاء الحوائج",
-price:null,
-icon:"fa-hands-praying",
-benefits:"دعاء لطلب تيسير الحاجة وقضائها بما فيه الخير.",
-dua:"اللهم اقضِ حاجتي، ويسر أمري، واكتب لي الخير فيما أطلب، واصرف عني ما فيه شر."
-},
-
-{
-cat:"ادعية",
-name:"دعاء السكينة وراحة القلب",
-price:null,
-icon:"fa-heart",
-benefits:"دعاء لطلب السكينة وراحة القلب وطمأنينة النفس.",
-dua:"اللهم أنزل على قلبي سكينتك، واملأ صدري طمأنينة، وارزقني الرضا بك وحسن التوكل عليك."
-},
-
-{
-cat:"ادعية",
-name:"دعاء حفظ الأهل والأبناء",
-price:null,
-icon:"fa-people-roof",
-benefits:"دعاء لطلب حفظ الأهل والأبناء من كل سوء.",
-dua:"اللهم احفظ أهلي وأبنائي بعينك التي لا تنام، واكلأهم برعايتك، واصرف عنهم كل سوء."
-},
-
-{
-cat:"ادعية",
-name:"دعاء سعة الرزق",
-price:null,
-icon:"fa-sack-dollar",
-benefits:"دعاء لطلب الرزق الحلال والبركة فيه.",
-dua:"اللهم ارزقني رزقاً حلالاً طيباً واسعاً مباركاً فيه، واغنني بفضلك عمن سواك."
-},
-
-{
-cat:"ادعية",
-name:"دعاء الحفظ من الشر",
-price:null,
-icon:"fa-shield",
-benefits:"دعاء لطلب الحفظ من الشرور والمكروهات.",
-dua:"اللهم احفظني من بين يدي ومن خلفي وعن يميني وعن شمالي ومن فوقي، وأعوذ بعظمتك أن أغتال من تحتي."
+function iconFor(cat){
+const icons={
+اعشاب:"🌿",زيوت:"🫙",عسل:"🍯",بخور:"🔥",
+حجامة:"🩸",رقية:"📖",اذكار:"🤲"
+};
+return icons[cat]||"🌿";
 }
-
-];
-
-
-let currentCat = "all";
-
-
-function formatPrice(n){
-
-  if(n === null){
-    return "بدون سعر";
-  }
-
-  return Number(n).toLocaleString("ar-EG") + " جنيه سوداني";
-
-}
-
-
-function escapeHtml(s){
-
-  return String(s).replace(
-    /[&<>"']/g,
-    m => ({
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#039;"
-    }[m])
-  );
-
-}
-
 
 function renderProducts(){
+const q=document.getElementById("search").value.trim().toLowerCase();
 
-  const q =
-    document.getElementById("search")
-    .value
-    .trim()
-    .toLowerCase();
+const list=products.filter(p=>{
+const catOk=currentCat==="all"||p.cat===currentCat;
+const text=(p.n+" "+(p.benefits||"")+" "+(p.dua||"")).toLowerCase();
+return catOk&&text.includes(q);
+});
 
-  const list = products.filter(p =>
+const box=document.getElementById("products");
 
-    (currentCat === "all" || p.cat === currentCat) &&
-
-    (
-      !q ||
-      p.name.toLowerCase().includes(q) ||
-      p.cat.toLowerCase().includes(q) ||
-      p.benefits.toLowerCase().includes(q)
-    )
-
-  );
-
-  const box = document.getElementById("products");
-
-  if(!list.length){
-
-    box.innerHTML =
-      '<div class="card" style="grid-column:1/-1;text-align:center;color:var(--muted)">لا توجد نتائج مطابقة.</div>';
-
-    return;
-  }
-
-
-  box.innerHTML = list.map(p => {
-
-    const index = products.indexOf(p);
-
-    return `
-
-    <article class="card product">
-
-      <div class="icon">
-        <i class="fas ${p.icon}"></i>
-      </div>
-
-      <div>
-        <small style="color:var(--green)">
-          ${escapeHtml(categoryName(p.cat))}
-        </small>
-
-        <h3>
-          ${escapeHtml(p.name)}
-        </h3>
-      </div>
-
-      <p>
-        ${escapeHtml(p.benefits)}
-      </p>
-
-      <div class="price">
-        ${formatPrice(p.price)}
-      </div>
-
-      <div class="product-actions">
-
-        <button
-          class="btn btn-dark"
-          onclick="showProduct(${index})"
-        >
-          التفاصيل
-        </button>
-
-        <button
-          class="btn btn-primary"
-          onclick="orderProduct(${index})"
-        >
-          طلب
-        </button>
-
-      </div>
-
-    </article>
-
-    `;
-
-  }).join("");
-
+if(!list.length){
+box.innerHTML='<div class="card" style="grid-column:1/-1;text-align:center;color:var(--muted)">لا توجد نتائج مطابقة للبحث.</div>';
+return;
 }
 
-
-function renderDuas(){
-
-  const box = document.getElementById("duasList");
-
-  box.innerHTML = duas.map((d,i) => `
-
-    <article class="card product">
-
-      <div class="icon">
-        <i class="fas ${d.icon}"></i>
-      </div>
-
-      <div>
-        <small style="color:var(--green)">الأدعية والأذكار</small>
-
-        <h3>
-          ${escapeHtml(d.name)}
-        </h3>
-      </div>
-
-      <p>
-        ${escapeHtml(d.benefits)}
-      </p>
-
-      <div class="price free">
-        بدون سعر
-      </div>
-
-      <div class="product-actions">
-
-        <button
-          class="btn btn-primary"
-          onclick="showDua(${i})"
-        >
-          <i class="fas fa-book-open"></i>
-          عرض الدعاء
-        </button>
-
-      </div>
-
-    </article>
-
-  `).join("");
-
+box.innerHTML=list.map((p,i)=>`
+<div class="card product">
+<div class="icon">${iconFor(p.cat)}</div>
+<h3>${p.n}</h3>
+<p>${p.benefits||p.dua||""}</p>
+${p.price
+?`<div class="price">${p.price} جنيه سوداني</div>`
+:`<div class="free">بدون سعر</div>`}
+<div class="product-actions">
+<button class="btn btn-dark" onclick="showDetails(${products.indexOf(p)})">التفاصيل</button>
+<button class="btn btn-primary" onclick="orderProduct(${products.indexOf(p)})">
+<i class="fab fa-whatsapp"></i> طلب
+</button>
+</div>
+</div>
+`).join("");
 }
-
-
-function categoryName(cat){
-
-  const names = {
-    اعشاب:"الأعشاب الطبيعية",
-    زيوت:"الزيوت المستخلصة",
-    عسل:"عسل النحل والخلطات",
-    بخور:"البخور والمواد العطرية",
-    حجامة:"الحجامة النبوية",
-    رقية:"الرقية الشرعية",
-    ادعية:"الأدعية والأذكار"
-  };
-
-  return names[cat] || cat;
-
-}
-
 
 function filterCat(cat,el){
-
-  currentCat = cat;
-
-  document
-    .querySelectorAll(".cat")
-    .forEach(x => x.classList.remove("active"));
-
-  el.classList.add("active");
-
-  renderProducts();
-
-  document
-    .getElementById("shop")
-    .scrollIntoView({behavior:"smooth"});
-
+currentCat=cat;
+document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));
+el.classList.add("active");
+renderProducts();
+document.getElementById("shop").scrollIntoView({behavior:"smooth"});
 }
-
 
 function clearSearch(){
-
-  document.getElementById("search").value = "";
-
-  renderProducts();
-
+document.getElementById("search").value="";
+renderProducts();
 }
 
+function showDetails(index){
+const p=products[index];
 
-function orderProduct(i){
+document.getElementById("modalTitle").textContent=p.n;
 
-  const p = products[i];
+let body=`
+<div class="detail-label">الوصف</div>
+<p class="detail-text">${p.benefits||""}</p>
+`;
 
-  openWhatsApp(
-`السلام عليكم ورحمة الله وبركاته
-
-أريد طلب:
-${p.name}
-
-القسم:
-${categoryName(p.cat)}
-
-السعر:
-${formatPrice(p.price)}
-
-أرجو تأكيد التوفر وتفاصيل الطلب.
-`
-  );
-
+if(p.usage){
+body+=`
+<div class="detail-label">طريقة الاستخدام</div>
+<p class="detail-text">${p.usage}</p>
+`;
 }
 
-
-function showProduct(i){
-
-  const p = products[i];
-
-  document.getElementById("modalTitle").textContent = p.name;
-
-  document.getElementById("modalPrice").textContent =
-    formatPrice(p.price);
-
-  document.getElementById("modalContent").innerHTML = `
-
-    <div class="detail-section">
-
-      <div class="detail-title">
-        القسم
-      </div>
-
-      <p class="detail-text">
-        ${escapeHtml(categoryName(p.cat))}
-      </p>
-
-    </div>
-
-    <div class="detail-section">
-
-      <div class="detail-title">
-        الفوائد والاستخدام في دار الشفاء
-      </div>
-
-      <p class="detail-text">
-        ${escapeHtml(p.benefits)}
-      </p>
-
-    </div>
-
-    <div class="detail-section">
-
-      <div class="detail-title">
-        طريقة الاستخدام
-      </div>
-
-      <p class="detail-text">
-        ${escapeHtml(p.usage)}
-      </p>
-
-    </div>
-
-    <div class="detail-section">
-
-      <div class="detail-title">
-        ملاحظة
-      </div>
-
-      <p class="detail-text">
-        ${escapeHtml(p.note)}
-      </p>
-
-    </div>
-
-  `;
-
-  document.getElementById("modalOrder").style.display = "inline-flex";
-
-  document.getElementById("modalOrder").onclick =
-    () => orderProduct(i);
-
-  document.getElementById("modal").classList.add("show");
-
+if(p.note){
+body+=`
+<div class="detail-label">ملاحظة</div>
+<p class="detail-text">${p.note}</p>
+`;
 }
 
-
-function showDua(i){
-
-  const d = duas[i];
-
-  document.getElementById("modalTitle").textContent = d.name;
-
-  document.getElementById("modalPrice").textContent =
-    "بدون سعر";
-
-  document.getElementById("modalContent").innerHTML = `
-
-    <div class="detail-section">
-
-      <div class="detail-title">
-        نبذة
-      </div>
-
-      <p class="detail-text">
-        ${escapeHtml(d.benefits)}
-      </p>
-
-    </div>
-
-    <div class="detail-section">
-
-      <div class="detail-title">
-        الدعاء
-      </div>
-
-      <div class="dua-box">
-        ${escapeHtml(d.dua)}
-      </div>
-
-    </div>
-
-  `;
-
-  document.getElementById("modalOrder").style.display = "none";
-
-  document.getElementById("modal").classList.add("show");
-
+if(p.dua){
+body+=`
+<div class="detail-label">الدعاء</div>
+<p class="detail-text" style="font-family:Amiri;font-size:1.25rem">${p.dua}</p>
+`;
 }
 
+document.getElementById("modalBody").innerHTML=body;
+
+document.getElementById("modalPrice").innerHTML=
+p.price?`${p.price} جنيه سوداني`:`<span class="free">بدون سعر</span>`;
+
+const orderBtn=document.getElementById("modalOrder");
+
+if(p.price){
+orderBtn.style.display="inline-flex";
+orderBtn.onclick=()=>orderProduct(index);
+}else{
+orderBtn.style.display="none";
+}
+
+document.getElementById("modal").classList.add("show");
+}
 
 function closeModal(){
-
-  document
-    .getElementById("modal")
-    .classList.remove("show");
-
+document.getElementById("modal").classList.remove("show");
 }
 
+function orderProduct(index){
+const p=products[index];
 
-function openWhatsApp(text){
+let msg=
+`السلام عليكم، أريد طلب منتج من دار الشفاء:%0A%0A`+
+`المنتج: ${p.n}%0A`;
 
-  window.open(
-    "https://wa.me/" +
-    WHATSAPP +
-    "?text=" +
-    encodeURIComponent(text),
-    "_blank"
-  );
+if(p.price) msg+=`السعر: ${p.price} جنيه سوداني%0A`;
+else msg+=`السعر: بدون سعر%0A`;
 
+msg+=`%0Aأرجو إفادتي بالتفاصيل وطريقة الاستلام.`;
+
+window.open(`https://wa.me/${WHATSAPP}?text=${msg}`,"_blank");
 }
 
+function openWhatsApp(message){
+window.open(
+`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
+"_blank"
+);
+}
+
+function openFacebook(){
+window.open(FACEBOOK_URL,"_blank");
+}
+
+function openMessenger(){
+window.open(MESSENGER_URL,"_blank");
+}
 
 function sendContact(){
+const name=document.getElementById("contactName").value.trim();
+const msg=document.getElementById("contactMsg").value.trim();
 
-  const name =
-    document.getElementById("contactName")
-    .value
-    .trim();
-
-  const msg =
-    document.getElementById("contactMsg")
-    .value
-    .trim();
-
-  if(!msg){
-
-    toast("اكتب الاستفسار أولاً");
-
-    return;
-  }
-
-  openWhatsApp(
-`السلام عليكم ورحمة الله وبركاته
-
-أنا ${name || "زائر الموقع"}.
-
-${msg}
-`
-  );
-
+if(!msg){
+toast("يرجى كتابة الاستفسار أولاً");
+return;
 }
 
+const text=
+`السلام عليكم،%0A`+
+`الاسم: ${name||"زائر"}%0A%0A`+
+`الاستفسار:%0A${msg}`;
 
-function toast(msg){
-
-  const t = document.getElementById("toast");
-
-  t.textContent = msg;
-
-  t.classList.add("show");
-
-  setTimeout(
-    () => t.classList.remove("show"),
-    2500
-  );
-
+window.open(`https://wa.me/${WHATSAPP}?text=${text}`,"_blank");
 }
 
+function enterAsGuest(){
+try{
+localStorage.setItem("darAlshifaGuest","1");
+}catch(e){}
+
+document.getElementById("visitorGate").classList.add("hidden");
+document.getElementById("guestModal").classList.remove("show");
+
+toast("مرحباً بك، يمكنك تصفح الموقع كزائر.");
+}
+
+function loginAsGuest(){
+enterAsGuest();
+}
+
+function closeGuestLogin(){
+document.getElementById("guestModal").classList.remove("show");
+}
 
 function toggleMenu(){
-
-  document
-    .getElementById("navlinks")
-    .classList.toggle("open");
-
+document.getElementById("navlinks").classList.toggle("open");
 }
 
+function toast(message){
+const t=document.getElementById("toast");
+t.textContent=message;
+t.classList.add("show");
+setTimeout(()=>t.classList.remove("show"),3000);
+}
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+function showVisitorGate(){
+let entered=false;
+
+try{
+entered=localStorage.getItem("darAlshifaGuest")==="1";
+}catch(e){}
+
+if(entered){
+document.getElementById("visitorGate").classList.add("hidden");
+}
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
 
 renderProducts();
-renderDuas();
-
+showVisitorGate();
 </script>
 
 </body>
-    </html>
+</html>
