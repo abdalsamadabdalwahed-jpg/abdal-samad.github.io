@@ -328,7 +328,8 @@ input:focus,textarea:focus{
 
     <img src="logo.png"
          class="main-logo mb-5"
-         alt="شعار مركز دار الشفاء - الشيخ عبدالصمد عبدالواحد">
+         alt="شعار مركز دار الشفاء - الشيخ عبدالصمد عبدالواحد"
+         onerror="this.src='https://via.placeholder.com/185/063b1c/d4af37?text=دار+الشفاء'">
 
     <h1 class="text-4xl md:text-5xl font-bold green">
       مركز دار الشفاء
@@ -384,8 +385,9 @@ input:focus,textarea:focus{
     <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center gap-3">
         <div class="flex items-center gap-3">
             <img src="logo.png"
-                 class="w-12 h-12 rounded-full border border-yellow-500"
-                 alt="دار الشفاء">
+                 class="w-12 h-12 rounded-full border border-yellow-500 object-cover"
+                 alt="دار الشفاء"
+                 onerror="this.src='https://via.placeholder.com/48/063b1c/d4af37?text=شفاء'">
             <div>
                 <div class="green font-bold text-xl">
                     دار الشفاء
@@ -574,6 +576,22 @@ input:focus,textarea:focus{
 </footer>
 
 <script>
+/* ================= التحقق المسبق لحفظ اسم الدخول ================= -->
+window.addEventListener("DOMContentLoaded", function(){
+    const savedName = localStorage.getItem("visitorName");
+    if(savedName){
+        const nameInput = document.getElementById("userName");
+        if(nameInput) nameInput.value = savedName;
+        const loginPage = document.getElementById("loginPage");
+        const mainDashboard = document.getElementById("mainDashboard");
+        if(loginPage && mainDashboard){
+            loginPage.classList.add("hidden-section");
+            mainDashboard.classList.remove("hidden-section");
+            showHome();
+        }
+    }
+});
+
 /* ================= إعداد الجزيئات ================= -->
 particlesJS("particles-js",{
     particles:{
@@ -588,12 +606,14 @@ particlesJS("particles-js",{
 
 /* ================= إدارة المستخدم والدخول ================= -->
 function enterSite(){
-    const name=document.getElementById("userName").value.trim();
+    const nameInput = document.getElementById("userName");
+    if(!nameInput) return;
+    const name = nameInput.value.trim();
     if(!name){
         alert("يرجى كتابة اسمك للدخول إلى موقع مركز دار الشفاء.");
         return;
     }
-    localStorage.setItem("visitorName",name);
+    localStorage.setItem("visitorName", name);
     document.getElementById("loginPage").classList.add("hidden-section");
     document.getElementById("mainDashboard").classList.remove("hidden-section");
     showHome();
@@ -675,7 +695,7 @@ const products=[
 {"n":"بخور ورق السدر والمحريب","cat":"بخور","price":"50,000","benefits":"يُوظف هذا البخور المطور في مركز دار الشفاء لدعم برامج الرقية الشرعية، والمساعدة في تخفيف ثقل الصدر وتهدئة الأجواء المحيطة بالشخص بحسب تقييم الحالة.","usage":"يستخدم بالطريقة والكمية التي يحددها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة الاستخدام والكمية المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
 
 /* ================= الحجامة ================= -->
-{"n":"الحجامة النبوية العامة (السنة)","cat":"حجامة","price":"50,000","benefits":"تُجرى الحجامة النبوية العامة في مركز دار الشفاء استنادا إلى قول النبي صلى الله عليه وسلم: (إن خير ما تداويتم به الحجم)، وتُستخدم لتنقية الدم، وتنشيط الدورة الدموية، ورفع كفاءة المناعة العامة وطرد الأخلاط الراكدة بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
+{"n":"الحجامة النبوية العامة (السنة)","cat":"حجامة","price":"50,000","benefits":"تُجرى الحجامة النبوية العامة في مركز دار الشفاء استنادا إلى قول النبي صلى الله عليه وسلم: (إن خير ما تداويتم به الحجم)، وتُستخدم لتنقية الدم، وتنشيط الدورة الدموية، ورفع كفاءة المناعة العامة وطرد الأخلاط الراكدة بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يححدها الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
 {"n":"حجامة الأخدعين والكاثول (للرأس والصداع)","cat":"حجامة","price":"50,000","benefits":"تُطبق حجامة الأخدعين والكاهل في مركز دار الشفاء اقتداء بهديه صلى الله عليه وسلم في الحجم على الأخدعين والكاهل، وتُعمد لتخفيف الصداع المزمني، وثقل الرأس، وآلام العنق والكتفين بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
 {"n":"حجامة ظهر القدم (لعرق النسا والآلام العميقة)","cat":"حجامة","price":"50,000","benefits":"تُستعمل حجامة ظهر القدم في مركز دار الشفاء بناء على التوجيه النبوي الشريف في الحجامة لعرق النسا، وتُستخدم للمساعدة في تخفيف الآلام العميقة في الأطراف وأسفل الظهر بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
 {"n":"حجامة الظهر ووسط الورك (للنشاط وتخفيف التثاقل)","cat":"حجامة","price":"50,000","benefits":"تُطبق هذه المواضع في مركز دار الشفاء للمساعدة في تخفيف احتقان العضلات، وتحسين تدفق الدم نحو النصف السفلي من الجسم، وتخفيف التعب المزمن والتثاقل البدني بحسب تقييم الحالة.","usage":"تُجرى الحجامة بالطريقة والكمية والتوقيت الذي يحدده الشيخ عبدالصمد عبدالواحد وفق الحالة.","note":"يحدد الشيخ طريقة وطبيعة الجلسة المناسبة لكل حالة، وبحسب طبيعة الأعراض ووضع الشخص الصحي."},
@@ -817,7 +837,7 @@ function renderProductsGrid(items){
         grid.innerHTML+=`
         <article class="glass-card product-card">
             ${productImage(item.cat)}
-            <div class="product-content">
+            <div class="product-content p-5">
                 <h3 class="text-2xl font-bold gold">${item.n}</h3>
                 <div class="price">${isFree?"مجاني":item.price+" جنيه سوداني"}</div>
                 <div class="info-box">
@@ -839,7 +859,8 @@ function renderProductsGrid(items){
 function showHome(){
     document.getElementById("categoryView").classList.add("hidden-section");
     document.getElementById("homeView").classList.remove("hidden-section");
-    document.getElementById("globalSearch").value="";
+    const searchInput = document.getElementById("globalSearch");
+    if(searchInput) searchInput.value="";
     window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -859,8 +880,10 @@ function openProduct(index){
 
     document.getElementById("orderNotes").value="";
     document.getElementById("orderNotes").style.display="block";
-    document.querySelector("#productModal button.btn-green").style.display="block";
-    document.querySelector("#productModal button.bg-blue-600").style.display="block";
+    const btnGreen = document.querySelector("#productModal button.btn-green");
+    const btnMessenger = document.querySelector("#productModal button.bg-blue-600");
+    if(btnGreen) btnGreen.style.display="block";
+    if(btnMessenger) btnMessenger.style.display="block";
     document.getElementById("productModal").classList.remove("hidden-section");
 }
 
@@ -877,8 +900,10 @@ function openFreeItem(index){
     `;
 
     document.getElementById("orderNotes").style.display="none";
-    document.querySelector("#productModal button.btn-green").style.display="none";
-    document.querySelector("#productModal button.bg-blue-600").style.display="none";
+    const btnGreen = document.querySelector("#productModal button.btn-green");
+    const btnMessenger = document.querySelector("#productModal button.bg-blue-600");
+    if(btnGreen) btnGreen.style.display="none";
+    if(btnMessenger) btnMessenger.style.display="none";
     document.getElementById("productModal").classList.remove("hidden-section");
 }
 
@@ -931,15 +956,10 @@ function sendConsultationMessenger(){
 }
 
 /* ================= الأحداث العامة لإغلاق النوافذ ================= -->
-document.getElementById("productModal").addEventListener("click",function(e){if(e.target===this)closeProduct();});
-document.getElementById("consultModal").addEventListener("click",function(e){if(e.target===this)closeConsultation();});
-
-window.addEventListener("load",function(){
-    const savedName=localStorage.getItem("visitorName");
-    if(savedName){
-        document.getElementById("userName").value=savedName;
-    }
-});
+const pModal = document.getElementById("productModal");
+if(pModal) pModal.addEventListener("click",function(e){if(e.target===this)closeProduct();});
+const cModal = document.getElementById("consultModal");
+if(cModal) cModal.addEventListener("click",function(e){if(e.target===this)closeConsultation();});
 </script>
 
 </body>
